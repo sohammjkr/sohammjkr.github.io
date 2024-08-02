@@ -8,13 +8,13 @@ var typewriter = new Typewriter(app, {
 typewriter
   .pauseFor(1000)
   .typeString('I am an Electrical Engineer based in the United States.') //Add your own tagline
-  .pauseFor(3000)
+  .pauseFor(2000)
   .start()
 
 
 var granimInstance = new Granim({
     element: '#canvas-image-blending',
-    direction: 'top-bottom',
+    direction: 'left-right',
     isPausedWhenNotInView: true,
     image : {
         source: 'assets/lab7circuit.PNG', //change image for intro section if desired
@@ -22,13 +22,19 @@ var granimInstance = new Granim({
     },
     states : {
         "default-state": {
-            gradients: [
-                ['#29323c', '#485563'],
-                ['#FF6B6B', '#556270'],
-                ['#80d3fe', '#7ea0c4'],
-                ['#f0ab51', '#eceba3']
-            ],
-            transitionSpeed: 8000
+          gradients: [
+            ['#1a2a6c', '#b21f1f'],
+                ['#b21f1f', '#fdbb2d'],
+                ['#fdbb2d', '#1a2a6c'],
+                ['#0f0c29', '#302b63'],
+                ['#302b63', '#24243e'],
+                ['#24243e', '#0f0c29'],
+                ['#654ea3', '#eaafc8'],
+                ['#eaafc8', '#654ea3'],
+                ['#ff9966', '#ff5e62'],
+                ['#ff5e62', '#ff9966']
+        ],
+            transitionSpeed: 4000
         }
     }
 });
