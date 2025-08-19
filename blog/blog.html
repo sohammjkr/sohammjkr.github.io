@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soham Manjrekar — Blog</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Disable text highlighting globally --- */
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;         /* Standard */
+}
+
+/* --- Disable all clicks by default --- */
+body {
+  pointer-events: none;
+}
+
+/* --- Re-enable clicks only for links --- */
+a {
+  pointer-events: auto;
+}
+
+:root {
+  /* Palette: sand + aubergine */
+  --bg:    #f8f6f1;  /* soft sand */
+  --text:  #2c2a28;  /* deep neutral */
+  --link:  #5e425f;  /* aubergine (links) */
+  --muted: #9c8b8f;  /* muted mauve (subtle UI) */
+  --accent:#5a465b;  /* darker aubergine for headings/accents */
+  --max:   1100px;   /* expanded from 860px for wider layout */
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:hover { opacity: .88; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 32px; /* more breathing room left/right */
+}
+
+header { text-align: center; margin-bottom: 28px; }
+
+.brand {
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+hr.rule {
+  border: 0;
+  margin: 28px auto;
+  text-align: center;
+}
+hr.rule:after {
+  content: "—\03A9—";
+  font-family: "Source Serif 4", serif;
+  color: var(--muted);
+  letter-spacing: 2px;
+}
+
+.intro {
+  font-family: "Source Serif 4", serif;
+  font-size: 18px;       /* slightly smaller than before (was 20px) */
+  line-height: 1.75;     /* adjusted for readability */
+  margin: 0 auto 36px;
+}
+.intro a { color: var(--link); }
+
+.meta-bar {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #6f6a5a;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+.meta-bar a { color: var(--muted); text-decoration: underline; }
+
+.category-pill { text-transform: capitalize; }
+
+article {
+  margin: 56px 0;
+  font-family: "Source Serif 4", serif;
+}
+article h2 {
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: var(--accent);
+}
+article h2 a { text-decoration: none; }
+article p {
+  font-size: 18px;   /* match intro for consistency */
+  line-height: 1.85;
+  margin: 16px 0;
+}
+
+figure { margin: 22px 0; }
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+figcaption {
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 6px;
+}
+
+footer {
+  text-align: center;
+  padding: 36px 0 12px;
+  color: #847a5a;
+  font-family: Inter, sans-serif;
+}
+
+.cats-nav {
+  margin-top: 10px;
+  font-size: 15px;
+}
+.cats-nav a { margin-right: 8px; }
+
+/* small screens */
+@media (max-width: 520px) {
+  .brand { font-size: 32px; }
+  article h2 { font-size: 28px; }
+  .intro, article p { font-size: 17px; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">
+        <a href="../index.html" style="text-decoration:none; color:inherit;">
+          SOHAM MANJREKAR
+        </a>
+      </div>
+    </header>
+
+    <section class="intro" id="intro">
+
+<p>
+Much of my time is currently devoted to research, sleep, and food. I’ve created this Journal as a way to hold myself accountable to the small and important things in life and remind myself that time is steadily moving for all of us.
+
+<p style="font-style: italic; margin-left: 20px; color: inherit;"> "Don't forget to sing in the Lifeboats" — <a href="https://www.google.com/search?q=%22don%27t+forget+to+sing+in+the+lifeboats%22:+uncommon+wisdom+for+uncommon+times&ved=1t:238573&ictx=111&biw=1592&bih=844&dpr=2" target="_blank" rel="noopener noreferrer"> Kathryn Petras and Ross Petras </a> </p>
+
+If you’re curious about my professional background, you can skim my
+<a href="/files/FA25_Resume_08_18.pdf" target="_blank" rel="noopener noreferrer">Resume</a>.
+</p>
+
+<p>I'm <span id="age">23</span> years old and live in Atlanta, Georgia. I am currently pursuing my Master’s in Electrical and Computer Engineering at Georgia Tech, where my research focuses on power electronics. I design, model, and prototype converters that integrate distributed energy resources to power a next-gen grid. I am also the Chair of the IEEE Power & Energy Society at Georgia Tech, where I lead student initiatives and foster industry engagement. I am passionate about developing solutions that drive the energy transition and empower communities.
+
+</p>
+<script>
+  (function () {
+    // Set your birthday here: year, monthIndex (0=Jan), day
+    const dob = new Date(2002, 4, 18); // May 18, 2002
+
+    function computeAge(refDate = new Date()) {
+      let age = refDate.getFullYear() - dob.getFullYear();
+      const hasHadBirthday =
+        refDate.getMonth() > dob.getMonth() ||
+        (refDate.getMonth() === dob.getMonth() && refDate.getDate() >= dob.getDate());
+      if (!hasHadBirthday) age--;
+      return age;
+    }
+
+    function updateAge() {
+      document.getElementById("age").textContent = computeAge();
+    }
+
+    // Initial paint
+    updateAge();
+
+    // Schedule an update at the next birthday (so it flips without a reload)
+    const now = new Date();
+    let next = new Date(now.getFullYear(), dob.getMonth(), dob.getDate(), 0, 0, 1);
+    if (next <= now) next.setFullYear(next.getFullYear() + 1);
+    setTimeout(function tick() {
+      updateAge();
+      // Schedule again for the following year
+      next.setFullYear(next.getFullYear() + 1);
+      setTimeout(tick, next - new Date());
+    }, next - now);
+  })();
+</script>
+
+In my free time, I enjoy writing, traveling, and working on side projects. I also run tabletop roleplaying games for friends, a new hobby for me! I’m always eager to learn new things and push myself with fresh challenges.
+<br><br>
+This Journal is both a record and an experiment: Through it, I hope to capture snapshots of thoughts and experiences as I move forward in my academic, professional, and personal journey. To traverse it, you can scroll to view it in reverse chronological order, or sort by category. 
+</p>
+
+
+      <div class="cats-nav">
+        <a href="?cat=travel">Travel</a> |
+        <a href="?cat=projects">Hobbys</a> |
+        <a href="?cat=life">Life</a> |
+        <a href="?cat=life">Finance</a> |
+        <a href="?cat=life">Sports</a> |
+        <a href="?">All</a>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- POSTS -->
+    <main id="posts">
+
+<article data-category="travel">
+  <h2>
+    <a class="post-title" href="posts/new_post.html" target="_blank" rel="noopener noreferrer">Post Title Goes Here</a>
+  </h2>
+  <div class="meta-bar">
+    <a class="post-date" href="posts/new_post.html" target="_blank" rel="noopener noreferrer">August 6, 2025, 5:27 PM</a>
+    <span>•</span>
+    <a class="category-pill" href="?cat=travel">travel</a>
+  </div>
+  <p>Excerpt text here.</p>
+</article>
+
+
+    </main>
+
+    <hr class="rule" />
+
+<footer>
+  <div>© <span id="year"></span> Soham Manjrekar</div>
+  <div class="cats-nav">
+        <a href="?cat=travel">Travel</a> |
+        <a href="?cat=projects">Hobbys</a> |
+        <a href="?cat=life">Life</a> |
+        <a href="?cat=life">Finance</a> |
+        <a href="?cat=life">Sports</a> |
+        <a href="?">All</a>
+      </div>
+  <div style="margin-top: 8px; font-size: 13px; color: #9a9278; font-style: italic;">
+    Inspired by <a href="https://parkzer.com" target="_blank" rel="noopener noreferrer"> Adam Parkzer’s design</a>.  
+    All styling credits go to him, .
+  </div>
+</footer>
+  </div>
+
+  <script>
+    // Open post titles and dates in a new tab
+    document.querySelectorAll('.post-title, .post-date').forEach(a => {
+      a.setAttribute('target','_blank');
+      a.setAttribute('rel','noopener noreferrer');
+    });
+
+    // Category filtering via ?cat=travel etc.
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      const cat = (params.get('cat') || '').toLowerCase();
+      const posts = Array.from(document.querySelectorAll('main article'));
+      if(!cat) return;
+
+      posts.forEach(el => {
+        const matches = (el.dataset.category || '').toLowerCase() === cat;
+        el.style.display = matches ? '' : 'none';
+      });
+
+      // Optional: update intro line to indicate filter
+      const intro = document.getElementById('intro');
+      const label = cat[0]?.toUpperCase() + cat.slice(1);
+      if(intro && label){
+        const note = document.createElement('p');
+        note.style.fontFamily = '"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif';
+        note.style.color = '#6f6a5a';
+        note.style.fontSize = '14px';
+        note.textContent = 'Showing category: ' + label + ' — use the links to switch or clear.';
+        intro.appendChild(note);
+      }
+    })();
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

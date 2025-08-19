@@ -1,0 +1,140 @@
+<!--
+<article data-category="travel">
+  <h2>
+    <a class="post-title" href="posts/new_post.html" target="_blank" rel="noopener noreferrer">Post Title Goes Here</a>
+  </h2>
+  <div class="meta-bar">
+    <a class="post-date" href="posts/new_post.html" target="_blank" rel="noopener noreferrer">August 6, 2025, 5:27 PM</a>
+    <span>•</span>
+    <a class="category-pill" href="?cat=travel">travel</a>
+  </div>
+  <p>Excerpt text here.</p>
+</article>
+-->```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post Title — Soham Manjrekar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --text:#2b2b2b;
+      --muted:#a08f63;
+      --link:#8a7a4e;
+      --bg:#faf8f4;
+      --max:1000px;
+    }
+    html,body{background:var(--bg); color:var(--text); margin:0; padding:0;}
+    a{color:var(--link); text-decoration:underline;}
+    a:hover{opacity:.85;}
+    .wrap{max-width:var(--max); width:90%; margin:0 auto; padding:56px 20px;}
+
+    header{ text-align:center; margin-bottom:28px;}
+    .brand{
+      font-family: "Source Serif 4", serif;
+      font-weight: 600;
+      font-size: 38px;
+      letter-spacing: 2px;
+    }
+    .brand a{ color:inherit; text-decoration:none; }
+
+    .meta-bar{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:13px; color:#6f6a5a;
+      margin-top:8px; margin-bottom:4px;
+      display:flex; gap:12px; flex-wrap:wrap;
+    }
+    .meta-bar a{ color: var(--muted); text-decoration: underline; }
+    .category-pill{ text-transform: capitalize; }
+
+    article{
+      margin: 10px 0 56px;
+      font-family:"Source Serif 4", serif;
+    }
+    article h1{
+      font-size: 30px; line-height:1.25; margin: 0 0 8px;
+      font-weight: 600; color:#7d734f;
+    }
+    article p{ font-size:18px; line-height:1.8; margin: 14px 0; }
+    figure{ margin: 20px 0; }
+    figure img{ width:100%; height:auto; border-radius:8px; display:block; }
+    figcaption{ font-size:13px; color:#817961; text-align:center; margin-top:6px; }
+
+    footer{ text-align:center; padding:36px 0 12px; color:#847a5a; font-family: Inter, sans-serif; font-size:13px;}
+    .cats-nav{ margin-top: 10px; font-size: 14px;}
+    .cats-nav a{ margin-right:8px; }
+
+    /* disable text selection globally but keep links clickable */
+    body{
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      pointer-events: none;
+    }
+    a{ pointer-events: auto; }
+
+    @media (max-width: 520px){
+      .brand{ font-size: 28px; }
+      article h1{ font-size: 24px; }
+      article p{ font-size:16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand"><a href="/index.html">SOHAM MANJREKAR</a></div>
+    </header>
+
+    <article data-category="travel"><!-- set the category -->
+      <h1>Post Title Goes Here</h1> <!-- update title -->
+      <div class="meta-bar">
+        <time datetime="2025-08-06T17:27:00-04:00">August 6, 2025, 5:27 PM</time>
+        <span>•</span>
+        <a class="category-pill" href="/blog.html?cat=travel">travel</a>
+        <span>•</span>
+        <a href="/blog.html">Back to all entries</a>
+      </div>
+
+      <!-- post content -->
+      <p>
+        Write your entry here. Keep paragraphs simple and let images break up the flow.
+      </p>
+
+      <figure>
+        <img src="/assets/Serious2020.jpg" alt="Example">
+        <figcaption>Caption if needed.</figcaption>
+      </figure>
+
+      <p>
+        More text. Link out as needed.
+      </p>
+    </article>
+
+    <footer>
+      <div>© <span id="year"></span> Soham Manjrekar</div>
+      <div class="cats-nav">
+        Categories:
+        <a href="/blog.html?cat=travel">Travel</a> ·
+        <a href="/blog.html?cat=projects">Projects</a> ·
+        <a href="/blog.html?cat=life">Life</a> ·
+        <a href="/blog.html">All</a>
+      </div>
+      <div style="margin-top:12px; font-size:12px;">
+        Style inspired by <a href="https://parkzer.com" target="_blank" rel="noopener noreferrer">Parkzer.com (Adam Parkzer)</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

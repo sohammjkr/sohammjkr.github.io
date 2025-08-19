@@ -1,82 +1,174 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Define title -->
-    <title>Carl Barks</title>
+    <!-- Title -->
+    <title>Soham Manjrekar</title>
 
-    <!-- Include favicon. Use, e.g., https://favicon.io/ -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
 
-    <!-- Include style sheets -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="main.css" />
 
-    <!-- Fonts from Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
 
-    <!-- Load FontAwesome (for icons) -->
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
       crossorigin="anonymous"
     />
-
-    <!-- Load Academicons (for more icons) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css"
       integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg=="
       crossorigin="anonymous"
     />
+
+    <style>
+      /* Simple slider styles */
+      /* Photo slider styles */
+/* Marquee slider */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;   /* tweak as you like */
+  height: 420px;       /* viewing window height */
+  margin: 0 auto 1rem;
+  overflow: hidden;    /* clip whatever overflows */
+  border-radius: 12px;
+}
+
+.slides {
+  display: inline-flex;      /* width grows to fit all images */
+  align-items: center;
+  gap: 12px;                 /* spacing between images */
+  width: max-content;
+  height: 100%;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.slides img {
+  height: 100%;      /* fill slider height */
+  width: auto;       /* keep natural aspect ratio */
+  flex: 0 0 auto;    /* prevent shrinking */
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Pause on hover (optional) */
+.slider:hover .slides { animation-play-state: paused; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .slides { animation: none; }
+}
+
+/* Move one full set width left, then loop */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* since we duplicated the set, -50% = one full set */
+}
+
+
+
+    </style>
   </head>
 
   <body>
     <section id="content">
-      <!-- Avatar image -->
-      <img src="image.jpg" alt="Carl Barks" class="avatar" />
+      <!-- Avatar image slider -->
+      <div class="slider">
+  <div class="slides">
+    <!-- 1st set -->
+    <img src="/assets/Funny202.jpg" alt="Funny202" />
+    <img src="/assets/GovernorSchoolBall.jpg" alt="GovernorSchoolBall" />
+    <img src="/assets/Lads.jpg" alt="Lads" />
+    <img src="/assets/profile1.jpg" alt="profile1" />
+    <img src="/assets/Serious2020.jpg" alt="Serious2020" />
+    <img src="/assets/profile2.jpg" alt="profile2" />
+    <img src="/assets/pwrsprkys.jpg" alt="profile2" />
+    <img src="/assets/standLads.jpg" alt="standLads" />
+    <img src="/assets/SubodhAmandaFamilyPhoto.jpg" alt="SubodhAmandaFamilyPhoto" />
+
+    <!-- 2nd set (duplicate for seamless loop) -->
+    <img src="/assets/Funny202.jpg" alt="Funny202" />
+    <img src="/assets/GovernorSchoolBall.jpg" alt="GovernorSchoolBall" />
+    <img src="/assets/Lads.jpg" alt="Lads" />
+    <img src="/assets/profile1.jpg" alt="profile1" />
+    <img src="/assets/Serious2020.jpg" alt="Serious2020" />
+    <img src="/assets/standLads.jpg" alt="standLads" />
+    <img src="/assets/profile2.jpg" alt="profile2" />
+    <img src="/assets/pwrsprkys.jpg" alt="profile2" />
+    <img src="/assets/SubodhAmandaFamilyPhoto.jpg" alt="SubodhAmandaFamilyPhoto" />
+  </div>
+</div>
+      </div>
 
       <!-- Text -->
-      <h1>Hi, I'm Carl Barks!</h1>
+      <h1>Welcome, I'm Soham Manjrekar</h1>
       <p>
-        I am a Ph.D. student in empirical barkology at Woof University.
+       I am currently an MSECE student at Georgia Tech and a Graduate Research Assistant at the Center for Distributed Energy.
       </p>
       <p>
-        Most of my current research is driven by trying to find an answer to the age-old question of “Who is a good boy?"
+       I graduated from the University of Illinois Urbana-Champaign with my BSECE in May 2024. 
+
+
       </p>
       <p>
-        Please feel free to get in touch!
+        This page links to my professional accounts, Resume/CV, a selection of my work, and a personal blog.
       </p>
+
+     <!-- Quick links -->
+<p class="cta">
+  <a class="btn" href="/files/FA25_Resume_08_18.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  <a class="btn" href="projects.html" target="_blank" rel="noopener noreferrer">Projects</a>
+  <a class="btn" href="/blog/blog.html" target="_blank" rel="noopener noreferrer">Blog</a>
+</p>
+
 
       <!-- Icons -->
       <ul class="icons">
         <li>
-          <a href="" title="Institutional website"><i class="fas fa-university"></i></a>
+          <a href="https://www.gatech.edu/research/cde" title="Georgia Tech / CDE site"><i class="fas fa-university"></i></a>
         </li>
         <li>
-          <a href="" title="E-Mail"><i class="fas fa-envelope"></i></a>
+          <a href="mailto:smanjrekar6@gatech.edu" title="Email"><i class="fas fa-envelope"></i></a>
         </li>
         <li>
-          <a href="" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/sohammjkr" title="GitHub"><i class="fab fa-github"></i></a>
         </li>
         <li>
-          <a href="" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/sohammjkr/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </li>
         <li>
-          <a href="" title="NASA / ADS"><i class="ai ai-ads"></i></a>
-        </li>
-        <li>
-          <a href="" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://ieeexplore.ieee.org/author/854462305536516" title="IEEE Author Profile"><i class="ai ai-ads"></i></a>
         </li>
       </ul>
     </section>
+
+    <!-- Minimal inline styles that play well with the provided main.css -->
+    <style>
+      .btn {
+        display: inline-block;
+        padding: 0.5rem 0.9rem;
+        border: 1px solid currentColor;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-right: 0.5rem;
+      }
+      .cta { margin: 1rem 0 0.25rem; }
+    </style>
   </body>
- 
 </html>
