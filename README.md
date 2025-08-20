@@ -1,20 +1,18 @@
 # sohammjkr.github.io
-Personal Website
+My Spaghetti Code that keeps my personal website together. 
 
 To Do: 
 
 Undergraduate Projects: 
-
 Piezsole
 CAT Acoustic Weld Machine Learning Algo Report
 Power Quality Submetering Device
 
 Graduate Projects: 
-
 Solar Plug
 AC Cube
 UMC HEMU
 GT PES
-Patent
+Patent(s)
 Thesis: Integrated Home Energy Charger
 MVDC
