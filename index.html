@@ -11,8 +11,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="main.css" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/index.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,520 +27,7 @@
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
       crossorigin="anonymous"
     />
-
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #fafafa;
-      }
-
-      /* Navigation Bar */
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: transparent;
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 1000;
-        padding: 0;
-      }
-
-      .nav-container {
-        width: 100%;
-        margin: 0;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0 2rem;
-      }
-
-      .nav-menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        display: flex;
-        width: 100%;
-      }
-
-
-      .nav-menu li:last-child {
-        float: right;
-      }
-
-      .nav-link {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-      }
-
-
-
-
-      /* Mobile Navigation */
-      .nav-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.2rem;
-        cursor: pointer;
-        color: white;
-      }
-
-      @media (max-width: 768px) {
-        .nav-menu {
-          flex-direction: column;
-          width: 100%;
-        }
-
-        .nav-menu li {
-          float: none;
-          width: 100%;
-        }
-
-        .nav-menu li:last-child {
-          float: none;
-        }
-
-        .nav-link {
-          padding: 16px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-link:last-child {
-          border-bottom: none;
-        }
-      }
-
-      /* Main Content */
-      #content {
-        padding-top: 1300px;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        text-align: center;
-      }
-
-      /* Hero Section */
-      .hero-section {
-        margin-bottom: 1rem;
-        padding-top: 1rem;
-      }
-
-      .hero-title {
-        font-size: 3rem;
-        font-weight: 300;
-        margin-bottom: 1rem;
-        color: #333;
-        line-height: 1.2;
-      }
-
-      .hero-subtitle {
-        font-size: 1rem;
-        font-weight: 400;
-        color: #666;
-        margin-bottom: 3rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      /* Photo slider styles */
-      .slider {
-        position: relative;
-        width: 100%;
-        max-width: 1000px;
-        height: 550px;
-        margin: 2rem auto 3rem auto;
-        padding: 2rem;
-        overflow: hidden;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      }
-
-      .slides {
-        display: inline-flex;
-        align-items: center;
-        min-width: 200%;
-        gap: 3px;
-        width: max-content;
-        height: 100%;
-        animation: marquee 60s linear infinite;
-        will-change: transform;
-      }
-
-      .slides img {
-        height: 100%;
-        width: auto;
-        flex: 0 0 auto;
-        object-fit: cover;
-        user-select: none;
-        pointer-events: none;
-        border-radius: 6px;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .slides { 
-          animation: none; 
-        }
-      }
-
-      @keyframes marquee {
-        from { transform: translateX(0); }
-        to   { transform: translateX(-50%); }
-      }
-
-      /* About Section */
-      .about-section {
-        margin: 3rem 0;
-        text-align: left;
-      }
-
-      .about-content {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        border: 1px solid rgba(0, 0, 0, 0.05);
-      }
-
-      .about-content h2 {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-        color: #333;
-        font-weight: 500;
-        text-align: left;
-      }
-
-      .about-content h3 {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-        color: #555;
-        font-weight: 500;
-        text-align: left;
-      }
-
-      .about-content h4 {
-        font-size: 1.1rem;
-        margin: 2rem 0 1rem 0;
-        color: #eaeaea;
-        font-weight: 600;
-        text-align: left;
-        border-bottom: 2px solid #e0e0e0;
-        padding-bottom: 0.5rem;
-      }
-
-      .about-content .intro-section,
-      .about-content .current-work,
-      .about-content .background,
-      .about-content .interests,
-      .about-content .personal,
-      .about-content .closing {
-        margin-bottom: 2rem;
-      }
-
-      .about-content ul {
-        margin: 1rem 0;
-        padding-left: 1.5rem;
-      }
-
-      .about-content li {
-        margin-bottom: 0.5rem;
-        color: #eaeaea;
-        line-height: 1.6;
-      }
-
-      .about-content p {
-        font-size: 1rem;
-        line-height: 1.7;
-        margin-bottom: 1rem;
-        color: #555;
-        font-weight: 400;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      }
-
-      .about-content p:last-child {
-        margin-bottom: 0;
-      }
-
-      /* Timeline Styles */
-      .timeline {
-        position: relative;
-        margin: 2rem 0;
-        padding-left: 2rem;
-      }
-
-      .timeline::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: #ddd;
-      }
-
-      .timeline-item {
-        position: relative;
-        margin-bottom: 2rem;
-        padding-left: 2rem;
-      }
-
-      .timeline-item::before {
-        content: '';
-        position: absolute;
-        left: -1.5rem;
-        top: 0.5rem;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        border: 2px solid white;
-        z-index: 2;
-      }
-
-      .timeline-item.uiuc::before {
-        background: linear-gradient(135deg, #ff6b35, #004d99);
-      }
-
-      .timeline-item.gatech::before {
-        background: linear-gradient(135deg, #b8860b, #001f5b);
-      }
-
-      .timeline-card {
-        background: white;
-        padding: 1rem;
-        border-radius: 6px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        max-width: 500px;
-      }
-
-      .timeline-card:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-      }
-
-      .timeline-card.uiuc {
-        background: linear-gradient(135deg, #ff6b35, #004d99);
-        color: white;
-      }
-
-      .timeline-card.gatech {
-        background: linear-gradient(135deg, #b8860b, #001f5b);
-        color: white;
-      }
-
-      .timeline-year {
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 0.4rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .timeline-title {
-        font-size: 1rem;
-        font-weight: 600;
-        color: white;
-        margin-bottom: 0.4rem;
-      }
-
-      .timeline-subtitle {
-        font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 0.4rem;
-      }
-
-      .timeline-description {
-        font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.9);
-        line-height: 1.5;
-      }
-
-      /* Social Section */
-      .social-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 2rem;
-  padding: 2rem 1rem;
-}
-
-.social-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-.icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.icons li {
-  display: center;
-}
-
-
-      .icons li a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        background: #f0f0f0;
-        color: #666;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 1.2rem;
-        transition: all 0.2s ease;
-      }
-
-      .icons li a:hover {
-        background: #e0e0e0;
-        color: #333;
-        transform: translateY(-2px);
-      }
-
-      /* Responsive Design */
-              @media (max-width: 768px) {
-          #content {
-            padding: 800px 100rem 100rem 100rem;
-          }
-        .slider {
-          height: 350px;
-          max-width: 100%;
-        }
-
-        .hero-title {
-          font-size: 2.5rem;
-        }
-
-        .about-content {
-          padding: 1.5rem;
-        }
-
-        .icons {
-          gap: 1rem;
-        }
-
-        .icons li a {
-          width: 45px;
-          height: 45px;
-          font-size: 1.1rem;
-        }
-      }
-
-      /* Dark mode support */
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #1a1a1a;
-          color: #e0e0e0;
-        }
-
-        .navbar {
-          background: rgba(26, 26, 26, 0.95);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-
-        .nav-link {
-          color: white;
-        }
-
-        .nav-link:hover {
-          color: white;
-          background: rgba(255, 255, 255, 0.2);
-        }
-
-        .hero-title {
-          color: #e0e0e0;
-        }
-
-        .hero-subtitle {
-          color: #b0b0b0;
-        }
-
-        .about-content {
-          background: #2a2a2a;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .about-content h2 {
-          color: #e0e0e0;
-        }
-
-        .about-content p {
-          color: #c0c0c0;
-        }
-
-        .timeline::before {
-          background: #444;
-        }
-
-        .timeline-card {
-          background: #3a3a3a;
-        }
-
-        .timeline-card.uiuc {
-          background: linear-gradient(135deg, #ff6b35, #004d99);
-        }
-
-        .timeline-card.gatech {
-          background: linear-gradient(135deg, #b8860b, #001f5b);
-        }
-
-        .timeline-title {
-          color: #e0e0e0;
-        }
-
-        .timeline-subtitle {
-          color: #b0b0b0;
-        }
-
-        .timeline-description {
-          color: #c0c0c0;
-        }
-
-        .social-title {
-          color: #e0e0e0;
-        }
-
-        .icons li a {
-          background: #3a3a3a;
-          color: #b0b0b0;
-        }
-
-        .icons li a:hover {
-          background: #4a4a4a;
-          color: #e0e0e0;
-        }
-      }
-    </style>
+    
   </head>
 
   <body>
@@ -548,13 +36,13 @@
         <div class="nav-container">
           <ul class="nav-menu" id="navMenu">
             <li class="nav-item">
-              <a href="#" class="nav-link active">Soham Manjrekar</a>
+              <a href="index.html" class="nav-link active">Soham Manjrekar</a>
             </li>
             <li class="nav-item">
               <a href="/files/FA25_Resume_08_18.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a>
             </li>
             <li class="nav-item">
-              <a href="projects.html" class="nav-link" target="_blank" rel="noopener noreferrer">Projects</a>
+              <a href="/Project/projects.html" class="nav-link" target="_blank" rel="noopener noreferrer">Projects</a>
             </li>
             <li class="nav-item">
               <a href="/blog/blog.html" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a>
@@ -600,12 +88,25 @@
           <div class="current-work">
             <h4>Current Professional Focus</h4>
             <p>
-              I am an <strong>MSECE</strong> student at the <strong><span style="color:#b8860b;">Georgia Institute of Technology</span></strong>, working under <strong><span style="color:#b8860b;">Prof. Deepak Divan</span></strong> at the <strong><span style="color:#b8860b;">Center for Distributed Energy (CDE)</span></strong> as a <strong>Graduate Research Assistant</strong>. My research focuses on designing, modeling, and prototyping power converters that integrate distributed energy resources to support the next-generation grid.
+              I am an <strong>MSECE</strong> student at the <strong><span style="color:#b8860b;">Georgia Institute of Technology</span></strong>, working on my thesis under <strong><span style="color:#b8860b;">Prof. Deepak Divan</span></strong> at the 
+              
+              <strong>
+                <a href="https://cde.gatech.edu" target="_blank" rel="noopener noreferrer" class="cde-link">
+                  Center for Distributed Energy (CDE)
+                </a>
+              </strong> 
+              
+              as a <strong>Graduate Research Assistant</strong>. My research focuses on designing, modeling, and prototyping power converters that integrate distributed energy resources to support the next-generation grid.
             </p>
             
             
             <p>
-              I also serve as Chair of the <strong><span style="color:#001e5b;">IEEE Power & Energy Society</span></strong> at Georgia Tech, where I lead student initiatives and foster industry engagement. I am passionate about developing practical solutions that accelerate the energy transition and empower communities around the world.
+              I also serve as Chair of the <strong>
+                <a href="https://ieee-pes.org" target="_blank" rel="noopener noreferrer" class="ieee-gradient">
+                  IEEE Power &amp; Energy Society
+                </a>
+              </strong>
+               at Georgia Tech, where I lead student initiatives and foster industry engagement. I am passionate about developing practical solutions that accelerate the energy transition and empower communities around the world.
             </p>
           </div>
 
