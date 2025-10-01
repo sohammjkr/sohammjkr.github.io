@@ -18,27 +18,19 @@
     crossorigin="anonymous"
   />
 
-  <!-- Stylesheets -->
+  <!-- Global theme + page styles -->
   <link rel="stylesheet" href="/CSS/main.css" />
   <link rel="stylesheet" href="/CSS/projects.css" />
 </head>
 <body>
-<!-- Navigation Bar -->
-<nav class="navbar">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
     <div class="nav-container">
       <ul class="nav-menu" id="navMenu">
-        <li class="nav-item">
-          <a href="/index.html" class="nav-link">Soham Manjrekar</a>
-        </li>
-        <li class="nav-item">
-          <a href="/files/FA25_Resume_08_18.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a href="/Project/projects.html" class="nav-link active">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a href="/blog/blog.html" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a>
-        </li>
+        <li class="nav-item"><a href="/index.html" class="nav-link">Soham Manjrekar</a></li>
+        <li class="nav-item"><a href="/files/FA25_Resume_08_18.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li class="nav-item"><a href="/Project/projects.html" class="nav-link active">Projects</a></li>
+        <li class="nav-item"><a href="/blog/blog.html" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
       </ul>
     </div>
   </nav>
@@ -46,195 +38,212 @@
   <div class="container">
     <header>
       <h1>My Projects</h1>
-      <p class="subtitle">A collection of my recent work</p>
+      <p class="subtitle">Completed and In-Progress work</p>
     </header>
+
     <section class="projects">
-        <div class="projects-grid">
-      
-          <!-- Card -->
-          <article class="project-card">
-            <img src="/assets/solar-plug.jpg" alt="Solar Plug project cover" class="project-cover" />
-            <div class="project-body">
-              <h3 class="project-title">Solar Plug</h3>
-              <p class="project-tags">
-                <span class="chip">Solar</span>
-                <span class="chip">Power Electronics</span>
-              </p>
-              <p class="project-desc">
-                Plug‑and‑play PV integration using isolated inline converters with onboard MPPT, enabling simple ad‑hoc solar expansion.
-              </p>
-              <div class="project-links">
-                <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">View Details</a>
-                <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Documentation</a>
-              </div>
+      <div class="projects-grid">
+
+        <!-- Solar Plug -->
+        <article class="project-card">
+          <img src="/assets/solar-plug.jpg" alt="Solar Plug project cover" class="project-cover" />
+          <div class="project-body">
+            <h3 class="project-title">Solar Plug – Universal Off-Grid Microconverter</h3>
+            <p class="project-tags">
+              <span class="chip">Energy Access</span>
+              <span class="chip">Power Electronics</span>
+              <span class="chip">MPPT</span>
+            </p>
+            <p class="project-desc">
+              Plug-and-play PV integration using isolated inline converters with onboard MPPT to enable low-cost Tier-1–4 energy access.
+            </p>
+            <div class="project-links">
+              <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">IDEAS 2025 (Presented)</a>
+              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Paper / Slides</a>
             </div>
-          </article>
-      
-          <article class="project-card">
-            <img src="/assets/ac-cube.jpg" alt="AC Cube converter project cover" class="project-cover" />
-            <div class="project-body">
-              <h3 class="project-title">“AC Cube”</h3>
-              <p class="project-tags">
-                <span class="chip">Grid</span>
-                <span class="chip">Control</span>
-              </p>
-              <p class="project-desc">
-                Single‑stage PV/Battery/Grid energy router based on an inertia‑less isolated converter; improves power quality and integration.
-              </p>
-              <div class="project-links">
-                <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Project</a>
-                <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Tech Report</a>
-              </div>
+          </div>
+        </article>
+
+        <!-- AC Cube -->
+        <article class="project-card">
+          <img src="/assets/ac-cube.jpg" alt="AC Cube converter project cover" class="project-cover" />
+          <div class="project-body">
+            <h3 class="project-title">AC Cube – Single-Stage PV/Battery/Grid Energy Router</h3>
+            <p class="project-tags">
+              <span class="chip">Grid</span>
+              <span class="chip">Controls</span>
+              <span class="chip">Isolated Converter</span>
+            </p>
+            <p class="project-desc">
+              Inertia-less isolated architecture that unifies PV, storage, and grid into one stage to improve PQ and integration.
+            </p>
+            <div class="project-links">
+              <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">ECCE-Asia 2025</a>
+              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Tech Report</a>
             </div>
-          </article>
-      
-          <article class="project-card">
-            <img src="/assets/umc-hemu.jpg" alt="UMC HEMU cover" class="project-cover" />
-            <div class="project-body">
-              <h3 class="project-title">UMC HEMU</h3>
-              <p class="project-tags">
-                <span class="chip">IoT</span>
-                <span class="chip">Energy Mgmt</span>
-              </p>
-              <p class="project-desc">
-                Unified management controller for home energy systems with monitoring and coordinated control.
-              </p>
-              <div class="project-links">
-                <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
-                <a class="btn" href="#" target="_blank" rel="noopener noreferrer">System Design</a>
-              </div>
+          </div>
+        </article>
+
+        <!-- Regenerative Clamp Converter -->
+        <article class="project-card">
+          <img src="/assets/reg-clamp.jpg" alt="Regenerative clamp converter cover" class="project-cover" />
+          <div class="project-body">
+            <h3 class="project-title">Regenerative Clamp Converter</h3>
+            <p class="project-tags">
+              <span class="chip">PEBB</span>
+              <span class="chip">Energy Recovery</span>
+              <span class="chip">DHB / DAB</span>
+            </p>
+            <p class="project-desc">
+              Clamp topology that recycles device stress energy back to the source via an auxiliary port; sim + hardware in progress.
+            </p>
+            <div class="project-links">
+              <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Thesis Chapter</a>
+              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Simulation Results</a>
             </div>
-          </article>
-      
-          <article class="project-card">
-            <img src="/assets/gt-pes.jpg" alt="GT PES cover" class="project-cover" />
-            <div class="project-body">
-              <h3 class="project-title">GT PES</h3>
-              <p class="project-tags">
-                <span class="chip">Research</span>
-                <span class="chip">Power</span>
-              </p>
-              <p class="project-desc">
-                Student‑led research and industry engagement to advance power conversion and grid integration solutions.
-              </p>
-              <div class="project-links">
-                <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Research Paper</a>
-                <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Slides</a>
-              </div>
+          </div>
+        </article>
+
+        <!-- Single-Stage Bidirectional IIC -->
+        <article class="project-card">
+          <img src="/assets/iic.jpg" alt="Single-Stage Bidirectional IIC cover" class="project-cover" />
+          <div class="project-body">
+            <h3 class="project-title">Single-Stage Bidirectional Inertia-less Isolated Converter</h3>
+            <p class="project-tags">
+              <span class="chip">Isolated</span>
+              <span class="chip">Bidirectional</span>
+              <span class="chip">High Density</span>
+            </p>
+            <p class="project-desc">
+              High-power single-stage isolation with bidirectional operation; groundwork for AC Cube style energy routing.
+            </p>
+            <div class="project-links">
+              <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">APEC 2024</a>
+              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Paper</a>
             </div>
-          </article>
-      
-          <article class="project-card">
-            <img src="/assets/patent.jpg" alt="Patent cover" class="project-cover" />
-            <div class="project-body">
-              <h3 class="project-title">Patent(s)</h3>
-              <p class="project-tags">
-                <span class="chip">IP</span>
-                <span class="chip">Innovation</span>
-              </p>
-              <p class="project-desc">
-                Filed applications covering novel power electronics architectures and methods.
-              </p>
-              <div class="project-links">
-                <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Details</a>
-                <a class="btn" href="#" target="_blank" rel="noopener noreferrer">USPTO</a>
-              </div>
+          </div>
+        </article>
+
+        <!-- Rogowski Coil + Integrator PCB -->
+        <article class="project-card">
+          <img src="/assets/rogowski.jpg" alt="Rogowski coil PCB cover" class="project-cover" />
+          <div class="project-body">
+            <h3 class="project-title">Rogowski-Coil Current Sensing Analog Circuit</h3>
+            <p class="project-tags">
+              <span class="chip">Measurement</span>
+              <span class="chip">Analog</span>
+              <span class="chip">HF Power</span>
+            </p>
+            <p class="project-desc">
+              PCB integrator design + parameter sweeps for accurate HF current measurement in compact power converters.
+            </p>
+            <div class="project-links">
+              <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Design Files</a>
+              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Validation Data</a>
             </div>
-          </article>
-      
-          <article class="project-card">
-            <img src="/assets/thesis.jpg" alt="Thesis cover" class="project-cover" />
-            <div class="project-body">
-              <h3 class="project-title">Thesis: Integrated Home Energy Charger</h3>
-              <p class="project-tags">
-                <span class="chip">EV</span>
-                <span class="chip">Grid</span>
-              </p>
-              <p class="project-desc">
-                Combining EV charging with renewables and grid services in one integrated platform.
-              </p>
-              <div class="project-links">
-                <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Read Thesis</a>
-                <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Defense Slides</a>
-              </div>
+          </div>
+        </article>
+
+        <!-- Power Quality Submeter -->
+        <article class="project-card">
+          <img src="/assets/pq-submeter.jpg" alt="Power quality submeter cover" class="project-cover" />
+          <div class="project-body">
+            <h3 class="project-title">Power Quality & Submetering Device</h3>
+            <p class="project-tags">
+              <span class="chip">Embedded</span>
+              <span class="chip">DSP</span>
+              <span class="chip">PQ</span>
+            </p>
+            <p class="project-desc">
+              Comprehensive PQ monitoring platform with fine-grained measurements for analysis and compliance reporting.
+            </p>
+            <div class="project-links">
+              <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Specs</a>
+              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Firmware</a>
             </div>
-          </article>
-      
-          <article class="project-card">
-            <img src="/assets/mvdc.jpg" alt="MVDC cover" class="project-cover" />
-            <div class="project-body">
-              <h3 class="project-title">MVDC</h3>
-              <p class="project-tags">
-                <span class="chip">Medium Voltage</span>
-                <span class="chip">Distribution</span>
-              </p>
-              <p class="project-desc">
-                Efficient DC distribution for modern grids; architecture and component tradeoffs.
-              </p>
-              <div class="project-links">
-                <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Overview</a>
-                <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Analysis</a>
-              </div>
+          </div>
+        </article>
+
+        <!-- MVDC -->
+        <article class="project-card">
+          <img src="/assets/mvdc.jpg" alt="MVDC cover" class="project-cover" />
+          <div class="project-body">
+            <h3 class="project-title">Medium-Voltage DC Distribution</h3>
+            <p class="project-tags">
+              <span class="chip">MV</span>
+              <span class="chip">Architecture</span>
+              <span class="chip">Tradeoffs</span>
+            </p>
+            <p class="project-desc">
+              MVDC architecture evaluation and component trade studies for future distribution grids and DER integration.
+            </p>
+            <div class="project-links">
+              <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Overview</a>
+              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Analysis Notes</a>
             </div>
-          </article>
-      
-          <article class="project-card">
-            <img src="/assets/piezsole.jpg" alt="Piezsole cover" class="project-cover" />
-            <div class="project-body">
-              <h3 class="project-title">Piezsole</h3>
-              <p class="project-tags">
-                <span class="chip">Piezo</span>
-                <span class="chip">Wearables</span>
-              </p>
-              <p class="project-desc">
-                Harvesting walking energy using piezoelectric soles; power conditioning and storage.
-              </p>
-              <div class="project-links">
-                <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Project</a>
-                <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Demo Video</a>
-              </div>
+          </div>
+        </article>
+
+        <!-- UMC HEMU -->
+        <article class="project-card">
+          <img src="/assets/umc-hemu.jpg" alt="UMC HEMU cover" class="project-cover" />
+          <div class="project-body">
+            <h3 class="project-title">UMC HEMU – Unified Home Energy Controller</h3>
+            <p class="project-tags">
+              <span class="chip">IoT</span>
+              <span class="chip">Controls</span>
+              <span class="chip">Energy Mgmt</span>
+            </p>
+            <p class="project-desc">
+              Centralized monitoring and coordinated control for home PV, storage, and flexible loads.
+            </p>
+            <div class="project-links">
+              <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">System Design</a>
+              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Demo</a>
             </div>
-          </article>
-      
-          <article class="project-card">
-            <img src="/assets/cat-weld-ml.jpg" alt="CAT acoustic weld ML cover" class="project-cover" />
-            <div class="project-body">
-              <h3 class="project-title">CAT Acoustic Weld ML</h3>
-              <p class="project-tags">
-                <span class="chip">ML</span>
-                <span class="chip">Signals</span>
-              </p>
-              <p class="project-desc">
-                Machine‑learning assessment of acoustic weld quality to improve manufacturing yield.
-              </p>
-              <div class="project-links">
-                <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Report</a>
-                <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Algorithm</a>
-              </div>
+          </div>
+        </article>
+
+        <!-- Piezsole -->
+        <article class="project-card">
+          <img src="/assets/piezsole.jpg" alt="Piezsole cover" class="project-cover" />
+          <div class="project-body">
+            <h3 class="project-title">Piezsole – Piezoelectric Smart Shoe Insole</h3>
+            <p class="project-tags">
+              <span class="chip">Wearables</span>
+              <span class="chip">UIUC</span>              
+            </p>
+            <p class="project-desc">
+              Smartshoe insole marketing project.
+            </p>
+            <div class="project-links">
+              <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Project</a>
+              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Demo Video</a>
             </div>
-          </article>
-      
-          <article class="project-card">
-            <img src="/assets/pq-submeter.jpg" alt="Power quality submeter cover" class="project-cover" />
-            <div class="project-body">
-              <h3 class="project-title">Power Quality Submeter</h3>
-              <p class="project-tags">
-                <span class="chip">Measurement</span>
-                <span class="chip">Embedded</span>
-              </p>
-              <p class="project-desc">
-                Comprehensive PQ monitoring and submetering device for detailed electrical analysis.
-              </p>
-              <div class="project-links">
-                <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Specs</a>
-                <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Design Files</a>
-              </div>
+          </div>
+        </article>
+
+        <!-- CAT Acoustic Weld ML -->
+        <article class="project-card">
+          <img src="/assets/cat-weld-ml.jpg" alt="CAT acoustic weld ML cover" class="project-cover" />
+          <div class="project-body">
+            <h3 class="project-title">Acoustic-Signal ML for Weld Quality (CAT)</h3>
+            <p class="project-tags">
+              <span class="chip">ML</span>
+              <span class="chip">Signal Processing</span>
+            </p>
+            <p class="project-desc">
+              Pipeline to predict weld quality from acoustic signatures to improve manufacturing yield.
+            </p>
+            <div class="project-links">
+              <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Report</a>
+              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Algorithm</a>
             </div>
-          </article>
-      
-        </div>
-      </section>
-      
+          </div>
+        </article>
+
+      </div>
+    </section>
   </div>
 </body>
 </html>

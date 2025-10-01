@@ -1,13 +1,13 @@
-/* ===== PROJECTS PAGE SPECIFIC STYLES ===== */
+/* ===== PROJECTS PAGE (uses theme tokens from main.css) ===== */
 
-/* ===== MAIN CONTENT ===== */
+/* Layout */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 120px 2rem 2rem 2rem;
 }
 
-/* ===== HEADER ===== */
+/* Header */
 header {
   text-align: center;
   margin-bottom: 4rem;
@@ -16,13 +16,13 @@ header {
 h1 {
   font-size: 3rem;
   font-weight: 300;
-  color: #333;
+  color: var(--text);
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 .subtitle {
-  color: #666;
+  color: var(--subtle);
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -30,7 +30,7 @@ h1 {
   margin-bottom: 3rem;
 }
 
-/* Container spacing inherited from your page; this focuses on cards */
+/* Grid */
 .projects { margin: 1rem 0 4rem; }
 
 .projects-grid {
@@ -43,38 +43,37 @@ h1 {
 .project-card {
   display: flex;
   flex-direction: column;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,.06);
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+  box-shadow: var(--shadow);
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
 .project-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(0,0,0,.08);
-  border-color: rgba(0,0,0,.12);
+  box-shadow: 0 8px 28px rgba(0,0,0,.10);
+  border-color: var(--line);
 }
 
 .project-cover {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  background: #f2f2f2;
+  background: var(--icon-bg);
 }
 
-.project-body {
-  padding: 1rem 1rem 1.2rem;
-}
+.project-body { padding: 1rem 1rem 1.2rem; }
 
 .project-title {
   margin: 0 0 .4rem 0;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text);
 }
 
+/* Tags / chips */
 .project-tags { margin: .2rem 0 .6rem; }
 
 .chip {
@@ -85,15 +84,16 @@ h1 {
   margin-right: .35rem;
   margin-bottom: .35rem;
   border-radius: 999px;
-  background: #eef2f7;
-  color: #506079;
-  border: 1px solid #e2e8f0;
+  background: var(--icon-bg);
+  color: var(--icon-fg);
+  border: 1px solid var(--border);
 }
 
+/* Copy */
 .project-desc {
   margin: 0 0 1rem 0;
   font-size: .95rem;
-  color: #555;
+  color: var(--muted);
   line-height: 1.55;
 }
 
@@ -107,73 +107,26 @@ h1 {
   text-decoration: none;
   padding: .6rem .9rem;
   border-radius: 10px;
-  background: #f3f4f6;
-  color: #333;
-  border: 1px solid #e5e7eb;
+  background: var(--icon-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
   transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
 }
-.btn:hover { background: #e9ecf1; transform: translateY(-1px); }
+.btn:hover { background: var(--icon-bg-hover); transform: translateY(-1px); }
 
 .btn.primary {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: var(--accent-gold);
   color: #fff;
-  border: none;
-  box-shadow: 0 6px 14px rgba(118, 75, 162, .25);
+  border: 1px solid transparent;
+  box-shadow: 0 6px 14px rgba(184, 134, 11, .25);
 }
-.btn.primary:hover { box-shadow: 0 8px 18px rgba(118, 75, 162, .32); }
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  .project-card { background: #242424; border-color: rgba(255,255,255,.08); box-shadow: none; }
-  .project-card:hover { border-color: rgba(255,255,255,.16); box-shadow: 0 10px 24px rgba(0,0,0,.4); }
-  .project-cover { background: #1f1f1f; }
-  .project-title { color: #e8e8e8; }
-  .chip { background: #2e3440; color: #d0d6e1; border-color: #3b4252; }
-  .project-desc { color: #cfcfcf; }
-  .btn { background: #2c2c2c; color: #e6e6e6; border-color: #3a3a3a; }
-  .btn:hover { background: #343434; }
+.btn.primary:hover {
+  background: var(--accent-gold-hover);
+  box-shadow: 0 8px 18px rgba(184, 134, 11, .35);
 }
 
-/* ===== DARK MODE SUPPORT ===== */
-@media (prefers-color-scheme: dark) {
-  h1 {
-    color: #e0e0e0;
-  }
-
-  .subtitle {
-    color: #b0b0b0;
-  }
-
-  .project-section h2 {
-    color: #e0e0e0;
-    border-bottom-color: #444;
-  }
-
-  .project {
-    background: #2a2a2a;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .project h3 {
-    color: #e0e0e0;
-  }
-
-  .project p {
-    color: #c0c0c0;
-  }
-
-  .tech-stack {
-    color: #b0b0b0;
-  }
-
-  .project-link.secondary {
-    background: #3a3a3a;
-    color: #b0b0b0;
-    border-color: #555;
-  }
-
-  .project-link.secondary:hover {
-    background: #4a4a4a;
-    color: #e0e0e0;
-  }
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .project-card { transition: none; }
+  .btn { transition: none; }
 }
