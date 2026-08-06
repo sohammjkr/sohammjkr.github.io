@@ -1,0 +1,80 @@
+\title{Audible Frequency Response of Stable and Unstable Control Algorithms}
+\subtitle{ECE 598 final project · University of Illinois Urbana-Champaign · Instructor: Dr.\ Arijit Banerjee}
+\period{Spring 2024}
+\date{2024-05}
+\status{Lab developed}
+\order{10}
+\tags{converters, control, uiuc}
+
+\attach{Final report}{/files/ECE 598 Final Report.docx}
+
+\begin{document}
+
+A teaching lab that lets you \textit{hear} a control loop go unstable. Much of
+a power converter's transfer function lives inside the audible band, and the
+ear reads sound as a frequency spectrum — so a boost converter wired to a
+speaker turns loop stability into something you can identify by listening,
+before you have read a single Bode plot.
+
+\section{The idea}
+
+The converter switches between two operating points once a second. Every time
+it steps, the output rings according to the transfer function, and that ringing
+is audible. Change the control and the sound changes with it — same circuit,
+same operating point, different character.
+
+\begin{itemize}
+  \item \textbf{Open loop} --- duty cycle alternating between 20\% and 60\% at
+        a fixed 10~V input, with no feedback to correct the overshoot.
+  \item \textbf{Closed loop} --- reference voltage alternating between 14~V and
+        18~V, with $K_p$ and $K_i$ swept from wildly unstable to critically
+        damped.
+  \item \textbf{Frequency sweep} --- available in either mode, walking the step
+        rate from 20~Hz to 5~kHz over 5 or 10 seconds.
+\end{itemize}
+
+\section{Hardware}
+
+A conventional boost converter on ECE 469 boards into a 50~$\Omega$ load, with
+a speaker in series with a 220~$\mu$F capacitor to block the DC. Switching
+signal, output current, output voltage and the mid-point sense node are all
+probed, so the scope trace and the sound can be read against each other.
+
+The closed-loop controller borrows the buck implementation and inverts the
+integral term, which behaves closely enough to a true boost controller for the
+purpose. The topology is incidental here — what matters is being able to dial
+the stability margin freely, and that a boost output swings hard enough to
+drive a speaker at a useful volume.
+
+\section{What it sounds like}
+
+\begin{tabular}{lll}
+  Mode & Control & Sound \\
+  Open loop & no feedback & a bouncing rubber ball --- impact, then reverberation \\
+  Mode 0 & unstable, eventually settles & a turbine winding down, high to low \\
+  Mode 1 & stable but uncontrolled & an alarm; grainy, resonant, unclear pitch \\
+  Mode 2 & near the stability edge & the same pitch as Mode 1, much less sibilance \\
+  Mode 3 & critically damped & near silence; a faint low thump on each step \\
+\end{tabular}
+
+Mode 1 and Mode 2 are the useful pair. Their waveforms look alike and they
+measure the same loudness, so nothing on the scope separates them at a glance
+--- but the resonance and grain that Mode 2 removes are immediately obvious by
+ear. Mode 1 overshoots to nearly twice the intended output and still reads as a
+single clean impulse, because a stable controller does not sustain the ring;
+Mode 0, which is genuinely unstable, is the one that keeps going.
+
+The sweeps make the same point on a longer time base. In Mode 2 the
+peak-to-peak output grows as the step rate climbs, and the sound picks up
+chirps and digital artefacts exactly where the waveform jumps. Mode 3 holds its
+amplitude across the whole sweep and stays quiet throughout, apart from one
+brief chirp where the sweep resets.
+
+\section{Why it works as a lab}
+
+The diagnostic is the point: stability margin becomes a perceptual judgement
+rather than a measurement. A student who has heard Mode 1 and Mode 3 back to
+back has a reference for what an underdamped loop does, and can recognise it in
+a converter that has no speaker attached at all.
+
+\end{document}

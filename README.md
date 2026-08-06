@@ -43,7 +43,7 @@ blog/
   assets/                       GENERATED — images copied in from src/
 
 projects/
-  projects.html                 GENERATED — do not edit
+  projects_main.html            GENERATED — do not edit
   <slug>.html                   GENERATED — one page per project
   src/
     _intro.tex                  intro + the publications and patents list
@@ -53,8 +53,11 @@ projects/
   assets/                       GENERATED — files copied in from each src folder
 
 files/                          résumés, reports, slide decks
+  <name>.docx / .pptx           the original document
+  <name>.pdf                    its rendition, for embedding — see below
 thesis/                         the MS thesis PDF
 assets/                         photos used by the home page
+tools/convert_docs_to_pdf.ps1   makes those .pdf renditions (Windows only)
 ```
 
 Anything marked GENERATED is overwritten on every build. Edit the `.tex` sources
@@ -90,6 +93,42 @@ linking to directly.
 
 `\order{N}` controls position on the index; lower sorts higher, default 999.
 
+### Filter tags
+
+The project filter bar is fixed, in this order, by `PROJECT_TAGS` in
+`build.py`: **converters, sensors, control, uiuc, gt, ml/ai, product**. Tags are matched
+lower-cased; `TAG_LABELS` beside it sets the casing the pill actually reads as,
+so `gt` shows up as **GT**. A tag outside the list still works — it just sorts
+to the end of the bar.
+
+### Attached documents
+
+`\attach{Label}{path}` marks a document as belonging to the project. Every
+attachment is embedded, already expanded, in a **Documents** block at the end of
+the project's own page, each with a button that opens it in a new tab. On the
+projects listing the same block collapses to buttons that jump to the project
+page. Use `\link` instead for anything hosted elsewhere — a DOI, a repo.
+
+Browsers cannot render `.docx` or `.pptx`, so build.py embeds a PDF rendition
+sitting beside the file under the same basename, and offers the original as a
+download underneath the viewer. Generate the renditions with:
+
+```bash
+powershell -ExecutionPolicy Bypass -File tools/convert_docs_to_pdf.ps1
+```
+
+That script drives Word and PowerPoint over COM, so it is Windows-only and is
+**not** part of the build — `build.py` stays pure stdlib and runs anywhere. It
+skips PDFs that are already newer than their source, so re-running is cheap.
+Commit the generated PDFs. Elsewhere, LibreOffice does the same job:
+
+```bash
+soffice --headless --convert-to pdf --outdir files "files/Some Report.docx"
+```
+
+Miss the step and nothing breaks: the document falls back to a download button
+and the build prints a warning naming the file.
+
 ### Where files live
 
 There are two kinds of path, and the difference matters:
@@ -116,6 +155,7 @@ so an unknown command degrades to plain text rather than breaking the build.
 | `\date{}` | both | `YYYY`, `YYYY-MM`, `YYYY-MM-DD`, or `YYYY-MM-DD HH:MM`. Sorts the feed. |
 | `\tags{a, b}` | both | comma-separated, lower-cased |
 | `\link{Label}{url}` | both | a button under the title; repeatable |
+| `\attach{Label}{path}` | projects | a document embedded at the end of the page; repeatable |
 | `\subtitle{}` | projects | the line under the title |
 | `\period{}` | projects | free text, e.g. `Aug 2024 -- Present` |
 | `\status{}` | projects | short pill, e.g. `Published` |
@@ -128,7 +168,8 @@ so an unknown command degrades to plain text rather than breaking the build.
 
 **Blocks**: `\section` `\subsection` `\lead{}` `\pullquote{}` `\callout{}`
 `\sep` (an Ω spacer inside the entry) `\img{path}{caption}`
-`\pdf{path}{caption}` (an embedded, collapsible PDF viewer).
+`\pdf{path}{caption}` (a PDF viewer embedded mid-body, open by default and
+collapsible). For documents that belong to the project, prefer `\attach`.
 
 **Environments**: `itemize` `enumerate` `quote` `quotation` `center` `abstract`
 `figure` (with `\includegraphics` and `\caption`) `table` `tabular` `verbatim`
@@ -181,8 +222,9 @@ Two small extras: `\age{}` prints my current age, computed from `DOB` in
   and home pages stay selectable on purpose, so people can copy a citation.
 - **The favicon is `favicon.svg`** — an Ω on aubergine, matching the rules
   between sections. Replace the file if you want something else.
-- **`Project/projects.html`** (capital P) is now a redirect stub to
-  `/projects/projects.html`. Delete it once nothing links to the old path.
+- **The projects landing page is `projects/projects_main.html`.** It used to be
+  `projects/projects.html`; the old path is gone, so any external link pointing
+  at it now 404s. Add a redirect stub there if that matters.
 - **One deploy workflow.** `.github/workflows/static.yml` uploads the repo to
   GitHub Pages on every push to `main`. The two Jekyll workflows that used to
   sit beside it were removed — all three targeted the same `pages` concurrency

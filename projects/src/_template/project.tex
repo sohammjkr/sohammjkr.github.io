@@ -27,11 +27,27 @@
 \date{2025-06}                    % YYYY, YYYY-MM or YYYY-MM-DD; used for sorting
 \status{Ongoing}                  % optional pill: Ongoing / Published / Shipped
 \order{50}                        % lower number sorts higher; default 999
-\tags{power electronics, hardware}
+\tags{converters, gt}             % filter bar: converters, sensors, control,
+                                  % uiuc, gt, ml/ai, product
+                                  % — see PROJECT_TAGS in build.py
 
 % Buttons under the title. Repeat as needed; the first one is highlighted.
+% Use \link for things that live elsewhere — papers, DOIs, repos.
 \link{Paper}{https://doi.org/10.1109/EXAMPLE}
-\link{Report (PDF)}{report.pdf}
+
+% Documents that belong TO the project. Each one is embedded, expanded, in a
+% "Documents" block at the end of the project's own page, with a button to open
+% it in a new tab. On the projects listing the same block shows buttons that
+% jump to the project page. Repeat as needed; order is preserved.
+%
+% .docx and .pptx work too — browsers cannot render them, so build.py embeds a
+% PDF rendition sitting beside the file under the same name and offers the
+% original as a download underneath. Generate the renditions with
+%     powershell -ExecutionPolicy Bypass -File tools/convert_docs_to_pdf.ps1
+% and commit them; without one the document degrades to a download button and
+% the build warns.
+\attach{Final report}{report.pdf}
+\attach{Presentation}{slides.pptx}
 
 % --- body ------------------------------------------------------------------
 \begin{document}
@@ -65,8 +81,7 @@ set on its own line:
   Switching & 100 kHz \\
 \end{tabular}
 
-\section{Documents}
-
-\pdf{report.pdf}{Read the full report}
+% No \section{Documents} needed — the \attach entries above render their own
+% block at the end. \pdf{} still exists if you want a PDF embedded mid-body.
 
 \end{document}

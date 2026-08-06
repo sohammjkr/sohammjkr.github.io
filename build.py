@@ -13,7 +13,7 @@ Inputs                                Outputs
 ------------------------------------  --------------------------------------
 blog/src/_intro.tex                   blog/blog.html   (one continuous page)
 blog/src/YYYY-MM-DD-slug.tex
-projects/src/_intro.tex               projects/projects.html
+projects/src/_intro.tex               projects/projects_main.html
 projects/src/<slug>/project.tex       projects/<slug>.html
 
 index.html is hand-written — it is not generated. Everything shares CSS/site.css.
@@ -46,6 +46,17 @@ DOB          = date(2002, 5, 18)                     # powers the \age command
 
 # Tags that always appear in the blog tag bar, in this order, even at zero posts.
 BLOG_TAGS = ["food", "travel", "friends", "hobbies", "life"]
+
+# The project filter bar, in this order. Tags are matched lowercase; anything a
+# project declares that is not listed here still works, it just sorts to the end.
+PROJECT_TAGS = ["converters", "sensors", "control", "uiuc", "gt", "ml/ai",
+                "product"]
+
+# Display-only casing. Tags are stored and filtered lowercase; this is purely
+# what the pill reads as, so acronyms do not come out as "uiuc" and "ml/ai".
+TAG_LABELS = {"converters": "Converters", "sensors": "Sensors",
+              "control": "Control", "uiuc": "UIUC", "gt": "GT",
+              "ml/ai": "ML/AI", "product": "Product"}
 
 MATHJAX = (
     '<script>window.MathJax={tex:{inlineMath:[["\\\\(","\\\\)"]],'
@@ -507,8 +518,9 @@ def link_html(href: str, inner: str) -> str:
 
 def tag_html(t: str, count: int | None = None, cls: str = "tag") -> str:
     n = f' <span class="count">{count}</span>' if count is not None else ""
-    return (f'<a class="{cls}" href="?tag={quote(t)}" data-tag="{attr(t)}">'
-            f'{esc(t)}{n}</a>')
+    label = TAG_LABELS.get(t, t)
+    return (f'<a class="{cls}" href="?tag={quote(t)}" data-tag="{attr(t)}" '
+            f'data-label="{attr(label)}">{esc(label)}{n}</a>')
 
 
 # ---------------------------------------------------------------------------
@@ -726,7 +738,7 @@ def figure_html(src: str, caption: str, ctx: Ctx) -> str:
 def pdf_html(src: str, caption: str, ctx: Ctx, filename: str) -> str:
     label = convert_inline(caption, ctx) if caption.strip() else "View PDF"
     return (
-        '<details class="pdf-embed">\n'
+        '<details class="pdf-embed" open>\n'
         f'  <summary>{label}<span class="pdf-file">{esc(filename)}</span></summary>\n'
         f'  <iframe class="pdf-frame" src="{attr(src)}#view=FitH" '
         f'title="{attr(filename)}" loading="lazy"></iframe>\n'
@@ -735,6 +747,105 @@ def pdf_html(src: str, caption: str, ctx: Ctx, filename: str) -> str:
         'Open the PDF in a new tab</a>.</div>\n'
         "</details>"
     )
+
+
+# ---------------------------------------------------------------------------
+# Attachments — \attach{Label}{path}
+#
+# Every attached document is shown embedded at the end of the project, and
+# every embed is a PDF: browsers cannot render .docx or .pptx inline. For an
+# Office document we look for a PDF rendition sitting beside it under the same
+# name, which tools/convert_docs_to_pdf.ps1 produces. Without one the document
+# degrades to a download button and the build warns.
+# ---------------------------------------------------------------------------
+
+EMBEDDABLE = {".pdf"}
+CONVERTIBLE = {".docx": "DOCX", ".doc": "DOC",
+               ".pptx": "PPTX", ".ppt": "PPT"}
+
+
+def local_path(ctx: Ctx, raw: str) -> str | None:
+    """Absolute path on disk for a LaTeX path, or None if it is a URL."""
+    raw = re.sub(r"\\([%&_#$~^{}])", r"\1", raw.strip())
+    if not raw or re.match(r"^(https?:|mailto:|tel:|#|//)", raw):
+        return None
+    if raw.startswith("/"):
+        return os.path.join(ROOT, raw.lstrip("/"))
+    return os.path.join(ctx.src_dir, raw)
+
+
+def resolve_attachment(ctx: Ctx, label: str, raw: str) -> dict:
+    raw = re.sub(r"\\([%&_#$~^{}])", r"\1", raw.strip())
+    ext = os.path.splitext(raw)[1].lower()
+    src = local_path(ctx, raw)
+    item = {
+        "label": label,
+        "filename": os.path.basename(raw),
+        "kind": CONVERTIBLE.get(ext, ext.lstrip(".").upper() or "FILE"),
+        "href": ctx.resolve(raw),
+        "pdf": None,
+        "original": None,
+    }
+
+    if ext in EMBEDDABLE:
+        item["pdf"] = item["href"]
+        return item
+
+    # an Office document: embed its PDF rendition if one exists
+    pdf_raw = raw[: len(raw) - len(ext)] + ".pdf" if ext else raw + ".pdf"
+    pdf_src = local_path(ctx, pdf_raw)
+    if src is not None and pdf_src and os.path.exists(pdf_src):
+        item["pdf"] = ctx.resolve(pdf_raw)
+        item["original"] = item["href"]
+    elif src is not None:
+        warn(f"no PDF rendition for {raw} — run tools/convert_docs_to_pdf.ps1; "
+             "it will show as a download button only")
+    return item
+
+
+def attachments_html(items: list, slug: str) -> str:
+    """The Documents block that closes a project's own page.
+
+    The listing does not call this — it links to `<slug>.html#documents`
+    instead, from the same button row as the project's external links.
+    """
+    if not items:
+        return ""
+
+    blocks = []
+    for i in items:
+        orig = (f' <span class="doc-orig">Source: '
+                f'<a href="{attr(i["original"])}">{esc(i["filename"])}</a>'
+                f"</span>") if i["original"] else ""
+        if not i["pdf"]:
+            blocks.append(
+                '<div class="doc-embed no-embed">\n'
+                f'  <div class="doc-head"><span class="doc-label">'
+                f'{esc(i["label"])}<span class="doc-file">{esc(i["filename"])}'
+                f'</span></span>\n'
+                f'  <a class="btn" href="{attr(i["href"])}">'
+                f'Download {esc(i["kind"])}</a></div>\n'
+                "</div>")
+            continue
+        blocks.append(
+            '<figure class="doc-embed">\n'
+            '  <figcaption class="doc-head">\n'
+            f'    <span class="doc-label">{esc(i["label"])}'
+            f'<span class="doc-file">{esc(i["filename"])}</span></span>\n'
+            f'    <a class="btn primary" href="{attr(i["pdf"])}" '
+            'target="_blank" rel="noopener noreferrer">Open PDF ↗</a>\n'
+            "  </figcaption>\n"
+            f'  <iframe class="pdf-frame" src="{attr(i["pdf"])}#view=FitH" '
+            f'title="{attr(i["label"])}" loading="lazy"></iframe>\n'
+            '  <div class="pdf-fallback">Not rendering? '
+            f'<a href="{attr(i["pdf"])}" target="_blank" '
+            'rel="noopener noreferrer">Open the PDF in a new tab</a>.'
+            f"{orig}</div>\n"
+            "</figure>")
+
+    return ('<section class="attachments" id="documents">\n'
+            '  <h3 class="attachments-head">Documents</h3>\n'
+            + "\n".join(blocks) + "\n</section>")
 
 
 # ---------------------------------------------------------------------------
@@ -751,22 +862,25 @@ def parse_doc(path: str, ctx: Ctx) -> dict:
 
     text = protect(raw, ctx)
 
-    meta: dict = {"links": []}
+    meta: dict = {"links": [], "attachments": []}
 
-    # \link{Label}{url} may appear anywhere; pull them all out
-    def take_links(s: str) -> str:
+    # \link{Label}{url} and \attach{Label}{path} may appear anywhere in the
+    # file; pull them all out into their own lists.
+    def take_pairs(s: str, cmd: str, into: str) -> str:
         out, pos = [], 0
+        pat = re.compile(r"\\" + cmd + r"\s*\{")
         while True:
-            m = re.compile(r"\\link\s*\{").search(s, pos)
+            m = pat.search(s, pos)
             if not m:
                 out.append(s[pos:]); break
             out.append(s[pos:m.start()])
             (label, url), i = read_args(s, m.end() - 1, 2)
-            meta["links"].append((label, url))
+            meta[into].append((label, url))
             pos = i
         return "".join(out)
 
-    text = take_links(text)
+    text = take_pairs(text, "link", "links")
+    text = take_pairs(text, "attach", "attachments")
 
     for key in META_1:
         m = re.compile(r"\\" + key + r"\s*\{").search(text)
@@ -835,9 +949,9 @@ def nav_html(prefix: str, active: str) -> str:
         ("Home", f"{prefix}index.html", "home"),
         ("Journal", f"{prefix}blog/blog.html" if prefix == "" else
                     ("blog.html" if active == "blog" else f"{prefix}blog/blog.html"), "blog"),
-        ("Projects", f"{prefix}projects/projects.html" if prefix == "" else
-                     ("projects.html" if active == "projects" else
-                      f"{prefix}projects/projects.html"), "projects"),
+        ("Projects", f"{prefix}projects/projects_main.html" if prefix == "" else
+                     ("projects_main.html" if active == "projects" else
+                      f"{prefix}projects/projects_main.html"), "projects"),
         ("Resume", f"{prefix}{RESUME_PDF}", "resume"),
     ]
     lis = []
@@ -915,7 +1029,8 @@ FILTER_JS = """
     if (note) {
       note.classList.toggle('is-on', !!tag);
       if (tag) {
-        what.textContent  = tag;
+        var pill = document.querySelector('.tagbar .tag[data-tag="' + tag + '"]');
+        what.textContent  = (pill && pill.dataset.label) || tag;
         tally.textContent = shown + (shown === 1 ? ' entry' : ' entries');
       }
     }
@@ -1140,7 +1255,8 @@ def build_projects() -> int:
         dt, _ = parse_date(meta.get("date", ""))
         body = ctx.unstash(render_body(meta["body_tex"], ctx))
         notes = ctx.unstash(footnotes_html(ctx))
-        has_math = has_math or ctx.has_math
+        # NB: no `has_math` roll-up here — project bodies do not appear on the
+        # listing, so its need for MathJax depends on the intro alone.
 
         try:
             order = int(meta.get("order", "999"))
@@ -1159,6 +1275,8 @@ def build_projects() -> int:
             "dt": dt or datetime.min,
             "tags": split_tags(meta.get("tags", "")),
             "links": [(l, ctx.resolve(u)) for l, u in meta["links"]],
+            "attachments": [resolve_attachment(ctx, l, u)
+                            for l, u in meta["attachments"]],
             "html": body + notes,
             "math": ctx.has_math,
         })
@@ -1180,13 +1298,22 @@ def build_projects() -> int:
         if p["status"]:
             bits.append(f'<span class="honor">{esc(p["status"])}</span>')
         meta_left = "".join(bits) or "<span></span>"
-        links = ""
-        if p["links"]:
-            btns = "".join(
-                f'<a class="btn{" primary" if n == 0 else ""}" href="{attr(u)}" '
+
+        btns = [f'<a class="btn{" primary" if n == 0 else ""}" href="{attr(u)}" '
                 f'target="_blank" rel="noopener noreferrer">{esc(l)}</a>'
-                for n, (l, u) in enumerate(p["links"]))
-            links = f'<div class="linkrow">{btns}</div>'
+                for n, (l, u) in enumerate(p["links"])]
+        if not standalone:
+            # The listing carries no write-up, so the documents join the same
+            # row and point at the project page, where they are embedded.
+            btns += [f'<a class="btn" href="{attr(p["slug"])}.html#documents">'
+                     f'{esc(a["label"])}</a>' for a in p["attachments"]]
+        links = f'<div class="linkrow">{"".join(btns)}</div>' if btns else ""
+        # The write-up lives on the project's own page only; the listing is an
+        # index — title, meta and the buttons that lead into it.
+        body = ("  <div class=\"entry-body\">\n"
+                f"{p['html']}\n{attachments_html(p['attachments'], p['slug'])}\n"
+                "  </div>") if standalone else ""
+
         title = (p["title"] if standalone else
                  f'<a href="{attr(p["slug"])}.html">{p["title"]}</a>')
         sub = f'<div class="entry-sub">{p["subtitle"]}</div>' if p["subtitle"] else ""
@@ -1202,9 +1329,7 @@ def build_projects() -> int:
     {meta_left}{pills}{anchor}
   </div>
   {links}
-  <div class="entry-body">
-{p['html']}
-  </div>{rule}
+{body}{rule}
 </article>"""
 
     # ---- index page --------------------------------------------------------
@@ -1225,11 +1350,11 @@ def build_projects() -> int:
 {intro_html}
   </section>
 
-{tagbar_html(counts, sorted(counts, key=lambda t: (-counts[t], t)))}
+{tagbar_html(counts, PROJECT_TAGS)}
 
   <hr class="rule">
 
-  <main id="feed">
+  <main id="feed" class="index-feed">
 {chr(10).join(entry_html(p, False) for p in projects)}
   </main>
 
@@ -1243,7 +1368,7 @@ def build_projects() -> int:
 </body>
 </html>
 """
-    write(os.path.join(ROOT, "projects", "projects.html"), page)
+    write(os.path.join(ROOT, "projects", "projects_main.html"), page)
 
     # ---- one standalone page per project -----------------------------------
     for p in projects:
@@ -1257,7 +1382,7 @@ def build_projects() -> int:
   <header class="masthead">
     <h1 class="brand"><a href="../index.html"><img class="brand-mark"
        src="../favicon.svg" alt=""><span>{SITE_BRAND}</span></a></h1>
-    <div class="tagline"><a href="projects.html"
+    <div class="tagline"><a href="projects_main.html"
        style="color:inherit;text-decoration:none">\u2190 All projects</a></div>
   </header>
 
@@ -1268,7 +1393,7 @@ def build_projects() -> int:
   </main>
 
   <hr class="rule">
-  <p class="center"><a class="btn" href="projects.html">Back to all projects</a></p>
+  <p class="center"><a class="btn" href="projects_main.html">Back to all projects</a></p>
 
 {footer_html(credit=False)}
 </div>

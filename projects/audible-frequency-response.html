@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audible Frequency Response of Stable and Unstable Control Algorithms — Soham Manjrekar</title>
+<meta name="description" content="ECE 598 final project · University of Illinois Urbana-Champaign · Instructor: Dr. Arijit Banerjee">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/site.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"}};</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<nav class="site-nav"><ul>
+  <li><a href="../index.html">Home</a></li>
+  <li><a href="../blog/blog.html">Journal</a></li>
+  <li><a href="projects_main.html" class="active">Projects</a></li>
+  <li><a href="../files/sohammjkr_resume_10_25.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+</ul></nav>
+<div class="wrap">
+
+  <header class="masthead">
+    <h1 class="brand"><a href="../index.html"><img class="brand-mark"
+       src="../favicon.svg" alt=""><span>SOHAM MANJREKAR</span></a></h1>
+    <div class="tagline"><a href="projects_main.html"
+       style="color:inherit;text-decoration:none">← All projects</a></div>
+  </header>
+
+  <hr class="rule">
+
+  <main>
+<article class="entry" id="audible-frequency-response"
+         data-tags="converters,control,uiuc">
+  <h2 class="entry-title">Audible Frequency Response of Stable and Unstable Control Algorithms</h2>
+  <div class="entry-sub">ECE 598 final project · University of Illinois Urbana-Champaign · Instructor: Dr. Arijit Banerjee</div>
+  <div class="meta-bar">
+    <span>Spring 2024</span><span class="honor">Lab developed</span><span class="dot">·</span><a class="tag" href="?tag=converters" data-tag="converters" data-label="Converters">Converters</a><a class="tag" href="?tag=control" data-tag="control" data-label="Control">Control</a><a class="tag" href="?tag=uiuc" data-tag="uiuc" data-label="UIUC">UIUC</a>
+  </div>
+  
+  <div class="entry-body">
+<p>A teaching lab that lets you <em>hear</em> a control loop go unstable. Much of
+a power converter’s transfer function lives inside the audible band, and the
+ear reads sound as a frequency spectrum — so a boost converter wired to a
+speaker turns loop stability into something you can identify by listening,
+before you have read a single Bode plot.</p>
+<h3>The idea</h3>
+<p>The converter switches between two operating points once a second. Every time
+it steps, the output rings according to the transfer function, and that ringing
+is audible. Change the control and the sound changes with it — same circuit,
+same operating point, different character.</p>
+<ul>
+<li><strong>Open loop</strong> — duty cycle alternating between 20% and 60% at
+a fixed 10 V input, with no feedback to correct the overshoot.</li>
+<li><strong>Closed loop</strong> — reference voltage alternating between 14 V and
+18 V, with \(K_p\) and \(K_i\) swept from wildly unstable to critically
+damped.</li>
+<li><strong>Frequency sweep</strong> — available in either mode, walking the step
+rate from 20 Hz to 5 kHz over 5 or 10 seconds.</li>
+</ul>
+<h3>Hardware</h3>
+<p>A conventional boost converter on ECE 469 boards into a 50 \(\Omega\) load, with
+a speaker in series with a 220 \(\mu\)F capacitor to block the DC. Switching
+signal, output current, output voltage and the mid-point sense node are all
+probed, so the scope trace and the sound can be read against each other.</p>
+<p>The closed-loop controller borrows the buck implementation and inverts the
+integral term, which behaves closely enough to a true boost controller for the
+purpose. The topology is incidental here — what matters is being able to dial
+the stability margin freely, and that a boost output swings hard enough to
+drive a speaker at a useful volume.</p>
+<h3>What it sounds like</h3>
+<div class="table-scroll"><table><thead><tr><th>Mode</th><th>Control</th><th>Sound</th></tr></thead><tbody><tr><td>Open loop</td><td>no feedback</td><td>a bouncing rubber ball — impact, then reverberation</td></tr><tr><td>Mode 0</td><td>unstable, eventually settles</td><td>a turbine winding down, high to low</td></tr><tr><td>Mode 1</td><td>stable but uncontrolled</td><td>an alarm; grainy, resonant, unclear pitch</td></tr><tr><td>Mode 2</td><td>near the stability edge</td><td>the same pitch as Mode 1, much less sibilance</td></tr><tr><td>Mode 3</td><td>critically damped</td><td>near silence; a faint low thump on each step</td></tr></tbody></table></div>
+<p>Mode 1 and Mode 2 are the useful pair. Their waveforms look alike and they
+measure the same loudness, so nothing on the scope separates them at a glance
+— but the resonance and grain that Mode 2 removes are immediately obvious by
+ear. Mode 1 overshoots to nearly twice the intended output and still reads as a
+single clean impulse, because a stable controller does not sustain the ring;
+Mode 0, which is genuinely unstable, is the one that keeps going.</p>
+<p>The sweeps make the same point on a longer time base. In Mode 2 the
+peak-to-peak output grows as the step rate climbs, and the sound picks up
+chirps and digital artefacts exactly where the waveform jumps. Mode 3 holds its
+amplitude across the whole sweep and stays quiet throughout, apart from one
+brief chirp where the sweep resets.</p>
+<h3>Why it works as a lab</h3>
+<p>The diagnostic is the point: stability margin becomes a perceptual judgement
+rather than a measurement. A student who has heard Mode 1 and Mode 3 back to
+back has a reference for what an underdamped loop does, and can recognise it in
+a converter that has no speaker attached at all.</p>
+<section class="attachments" id="documents">
+  <h3 class="attachments-head">Documents</h3>
+<figure class="doc-embed">
+  <figcaption class="doc-head">
+    <span class="doc-label">Final report<span class="doc-file">ECE 598 Final Report.docx</span></span>
+    <a class="btn primary" href="../files/ECE%20598%20Final%20Report.pdf" target="_blank" rel="noopener noreferrer">Open PDF ↗</a>
+  </figcaption>
+  <iframe class="pdf-frame" src="../files/ECE%20598%20Final%20Report.pdf#view=FitH" title="Final report" loading="lazy"></iframe>
+  <div class="pdf-fallback">Not rendering? <a href="../files/ECE%20598%20Final%20Report.pdf" target="_blank" rel="noopener noreferrer">Open the PDF in a new tab</a>. <span class="doc-orig">Source: <a href="../files/ECE%20598%20Final%20Report.docx">ECE 598 Final Report.docx</a></span></div>
+</figure>
+</section>
+  </div>
+</article>
+  </main>
+
+  <hr class="rule">
+  <p class="center"><a class="btn" href="projects_main.html">Back to all projects</a></p>
+
+<footer class="site-footer">
+  <div>© <span class="year">2026</span> Soham Manjrekar</div>
+</footer>
+</div>
+</body>
+</html>

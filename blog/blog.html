@@ -20,7 +20,7 @@
 <nav class="site-nav"><ul>
   <li><a href="../index.html">Home</a></li>
   <li><a href="blog.html" class="active">Journal</a></li>
-  <li><a href="../projects/projects.html">Projects</a></li>
+  <li><a href="../projects/projects_main.html">Projects</a></li>
   <li><a href="../files/sohammjkr_resume_10_25.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
 </ul></nav>
 <div class="wrap">
@@ -32,15 +32,15 @@
   </header>
 
   <section class="lead narrow">
-<p>Much of my time is currently devoted to research, sleep, and food. As a result, I’ve created
+<p>Much of my time is currently devoted to research, sleep, and food. I’ve created
 this Journal as a way to hold myself accountable to the small and important
-things in life, and to remind myself that each day comes once in a lifetime.</p>
+things in life, and to remind myself that time is steadily moving for all of us.</p>
 <p class="pull">“Don’t forget to sing in the lifeboats” —
 <a href="https://www.google.com/search?q=don%27t+forget+to+sing+in+the+lifeboats" target="_blank" rel="noopener noreferrer">Kathryn
 and Ross Petras</a></p>
 <p>If you’re curious about my professional background, you can skim my
 <a href="../files/sohammjkr_resume_10_25.pdf" target="_blank" rel="noopener noreferrer">résumé</a> or look through my
-<a href="../projects/projects.html">projects</a>.</p>
+<a href="../projects/projects_main.html">projects</a>.</p>
 <p>I’m <span class="age-auto">24</span> years old and live in Atlanta, Georgia. I recently finished my
 Master’s in Electrical and Computer Engineering at Georgia Tech, where my
 research focused on power electronics — designing, modeling and prototyping
@@ -51,20 +51,17 @@ run tabletop roleplaying games for friends, a fairly new hobby for me. I’m alw
 eager to learn new things and push myself with fresh challenges.</p>
 <p>This Journal is both a record and an experiment. Through it I hope to capture
 snapshots of thoughts and experiences as I move forward in my academic,
-professional and personal life.</p>
-<p>
-Scroll to read entries newest-first, or pick a
-tag below to narrow things down.
-</p>
+professional and personal life. Scroll to read entries newest-first, or pick a
+tag below to narrow things down.</p>
   </section>
 
   <div class="tagbar">
     <span class="tagbar-label">Filter</span>
-    <a class="tag" href="?tag=food" data-tag="food">food <span class="count">0</span></a>
-    <a class="tag" href="?tag=travel" data-tag="travel">travel <span class="count">0</span></a>
-    <a class="tag" href="?tag=friends" data-tag="friends">friends <span class="count">0</span></a>
-    <a class="tag" href="?tag=hobbies" data-tag="hobbies">hobbies <span class="count">1</span></a>
-    <a class="tag" href="?tag=life" data-tag="life">life <span class="count">1</span></a>
+    <a class="tag" href="?tag=food" data-tag="food" data-label="food">food <span class="count">0</span></a>
+    <a class="tag" href="?tag=travel" data-tag="travel" data-label="travel">travel <span class="count">0</span></a>
+    <a class="tag" href="?tag=friends" data-tag="friends" data-label="friends">friends <span class="count">0</span></a>
+    <a class="tag" href="?tag=hobbies" data-tag="hobbies" data-label="hobbies">hobbies <span class="count">1</span></a>
+    <a class="tag" href="?tag=life" data-tag="life" data-label="life">life <span class="count">1</span></a>
   </div>
   <div class="filter-note" id="filter-note">
     <span>Showing only <span class="what" id="filter-what"></span></span>
@@ -79,7 +76,7 @@ tag below to narrow things down.
          data-tags="life,hobbies">
   <h2 class="entry-title"><a href="#starting-the-journal">Starting the Journal</a></h2>
   <div class="meta-bar">
-    <time datetime="2026-08-06T18:30:00">August 6, 2026 · 6:30 PM</time><span class="dot">·</span><a class="tag" href="?tag=life" data-tag="life">life</a><a class="tag" href="?tag=hobbies" data-tag="hobbies">hobbies</a>
+    <time datetime="2026-08-06T18:30:00">August 6, 2026 · 6:30 PM</time><span class="dot">·</span><a class="tag" href="?tag=life" data-tag="life" data-label="life">life</a><a class="tag" href="?tag=hobbies" data-tag="hobbies" data-label="hobbies">hobbies</a>
     <a class="anchor" href="#starting-the-journal" aria-label="Link to this entry">#</a>
   </div>
   <div class="entry-body">
@@ -170,7 +167,8 @@ footnote. It is not very interesting, but it renders.</li>
     if (note) {
       note.classList.toggle('is-on', !!tag);
       if (tag) {
-        what.textContent  = tag;
+        var pill = document.querySelector('.tagbar .tag[data-tag="' + tag + '"]');
+        what.textContent  = (pill && pill.dataset.label) || tag;
         tally.textContent = shown + (shown === 1 ? ' entry' : ' entries');
       }
     }
