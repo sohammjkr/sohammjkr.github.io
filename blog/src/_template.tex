@@ -1,0 +1,48 @@
+% ===========================================================================
+% BLOG POST TEMPLATE
+%
+% 1. Copy this file to  blog/src/YYYY-MM-DD-short-slug.tex
+% 2. Fill in the metadata below and write the entry.
+% 3. Run  python build.py   from the repo root.
+%
+% The filename date is a fallback; \date{} below wins. The slug part of the
+% filename becomes the entry's anchor (e.g. #short-slug).
+%
+% Files starting with "_" are ignored by the builder, so this template is
+% never published.
+% ===========================================================================
+
+% --- metadata --------------------------------------------------------------
+\title{Post Title Goes Here}
+\date{2026-01-01 18:30}          % YYYY-MM-DD, optionally with HH:MM (24h)
+\tags{life, food}                % any of: food, travel, friends, hobbies, life
+% \link{Something related}{https://example.com}   % optional buttons, repeatable
+
+% --- body ------------------------------------------------------------------
+\begin{document}
+
+Write the entry here. A blank line starts a new paragraph, exactly as in
+ordinary LaTeX.
+
+\section{A heading inside the post}
+
+You have \textbf{bold}, \textit{italics}, \texttt{monospace},
+\href{https://example.com}{links}, and footnotes.\footnote{Like this one. They
+collect at the bottom of the entry.}
+
+\begin{itemize}
+  \item Bulleted lists work,
+  \item and so do nested ones.
+\end{itemize}
+
+\begin{quote}
+Block quotes look like this.
+\end{quote}
+
+\img{/assets/profile1.jpg}{A caption for the picture.}
+
+\sep
+
+That \verb|\sep| above draws an omega spacer inside the entry.
+
+\end{document}

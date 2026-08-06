@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AC Cube — Single-Stage PV/Battery/Grid Energy Router — Soham Manjrekar</title>
+<meta name="description" content="Center for Distributed Energy, Georgia Tech · ECCE-Asia 2025, Bengaluru">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/site.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"}};</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<nav class="site-nav"><ul>
+  <li><a href="../index.html">Home</a></li>
+  <li><a href="../blog/blog.html">Journal</a></li>
+  <li><a href="projects.html" class="active">Projects</a></li>
+  <li><a href="../files/sohammjkr_resume_10_25.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+</ul></nav>
+<div class="wrap">
+
+  <header class="masthead">
+    <h1 class="brand"><a href="../index.html"><img class="brand-mark"
+       src="../favicon.svg" alt=""><span>SOHAM MANJREKAR</span></a></h1>
+    <div class="tagline"><a href="projects.html"
+       style="color:inherit;text-decoration:none">← All projects</a></div>
+  </header>
+
+  <hr class="rule">
+
+  <main>
+<article class="entry" id="ac-cube-energy-router"
+         data-tags="power electronics,publication,grid,solar,storage,controls">
+  <h2 class="entry-title">AC Cube — Single-Stage PV/Battery/Grid Energy Router</h2>
+  <div class="entry-sub">Center for Distributed Energy, Georgia Tech · ECCE-Asia 2025, Bengaluru</div>
+  <div class="meta-bar">
+    <span>2024 – 2025</span><span class="honor">Published</span><span class="dot">·</span><a class="tag" href="?tag=power%20electronics" data-tag="power electronics">power electronics</a><a class="tag" href="?tag=publication" data-tag="publication">publication</a><a class="tag" href="?tag=grid" data-tag="grid">grid</a><a class="tag" href="?tag=solar" data-tag="solar">solar</a><a class="tag" href="?tag=storage" data-tag="storage">storage</a><a class="tag" href="?tag=controls" data-tag="controls">controls</a>
+  </div>
+  <div class="linkrow"><a class="btn primary" href="https://doi.org/10.1109/ECCE-Asia63110.2025.11111930" target="_blank" rel="noopener noreferrer">Paper (IEEE Xplore)</a></div>
+  <div class="entry-body">
+<p>A single-stage isolated converter that unifies PV, battery and grid into one
+conversion stage instead of the usual stack of separate converters. Built on the
+inertia-less isolated converter, the prototype delivers 240 Vac from a 48 Vdc
+source using a \(\Sigma\)–\(\Delta\) modulation scheme.</p>
+<h3>Why single-stage</h3>
+<p>A conventional PV-plus-storage installation chains several converters together,
+each with its own DC link, its own capacitor bank and its own losses. Collapsing
+that into one isolated stage removes the intermediate storage element — the
+“inertia” — and with it the component that most often ends the system’s
+life.</p>
+<h3>Approach</h3>
+<ul>
+<li>Bidirectional single-stage isolated topology with an ultra-low-leakage
+transformer.</li>
+<li>Pulse density modulation (\(\Sigma\)–\(\Delta\)) for AC synthesis.</li>
+<li>Zero-voltage and zero-current switching across the operating range.</li>
+<li>AC-side switching, with PV, battery pack and grid all routed through the
+one stage.</li>
+</ul>
+<h3>Prototype</h3>
+<div class="table-scroll"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Power</td><td>1 kW</td></tr><tr><td>Input</td><td>48 Vdc</td></tr><tr><td>Output</td><td>240 Vac</td></tr><tr><td>Modulation</td><td>\(\Sigma\)–\(\Delta\) / pulse density</td></tr></tbody></table></div>
+<h3>Citation</h3>
+<p>S. Manjrekar, A. Marellapudi, S. Belkhode, J. Benzaquen and D. Divan,
+“<a href="https://doi.org/10.1109/ECCE-Asia63110.2025.11111930" target="_blank" rel="noopener noreferrer">‘AC Cube’: A
+Single-Stage PV/Battery/Grid Energy Router</a>,” <em>2025 IEEE Energy
+Conversion Congress &amp; Exposition Asia (ECCE-Asia)</em>, Bengaluru, India, 2025,
+pp. 1–6.</p>
+  </div>
+</article>
+  </main>
+
+  <hr class="rule">
+  <p class="center"><a class="btn" href="projects.html">Back to all projects</a></p>
+
+<footer class="site-footer">
+  <div>© <span class="year">2026</span> Soham Manjrekar</div>
+</footer>
+</div>
+</body>
+</html>

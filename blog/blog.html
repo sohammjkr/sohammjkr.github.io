@@ -1,308 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Soham Manjrekar — Blog</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    /* --- Disable text highlighting globally --- */
-body {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
-  user-select: none;         /* Standard */
-}
-
-/* --- Disable all clicks by default --- */
-body {
-  pointer-events: none;
-}
-
-/* --- Re-enable clicks only for links --- */
-a {
-  pointer-events: auto;
-}
-
-:root {
-  /* Palette: sand + aubergine */
-  --bg:    #f8f6f1;  /* soft sand */
-  --text:  #2c2a28;  /* deep neutral */
-  --link:  #5e425f;  /* aubergine (links) */
-  --muted: #9c8b8f;  /* muted mauve (subtle UI) */
-  --accent:#5a465b;  /* darker aubergine for headings/accents */
-  --max:   1100px;   /* expanded from 860px for wider layout */
-}
-
-html, body {
-  background: var(--bg);
-  color: var(--text);
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: var(--link);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-a:hover { opacity: .88; }
-
-.wrap {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 56px 32px; /* more breathing room left/right */
-}
-
-header { text-align: center; margin-bottom: 28px; }
-
-.brand {
-  font-family: "Source Serif 4", serif;
-  font-weight: 600;
-  font-size: 42px;
-  letter-spacing: 2px;
-  color: var(--accent);
-}
-
-hr.rule {
-  border: 0;
-  margin: 28px auto;
-  text-align: center;
-}
-hr.rule:after {
-  content: "—\03A9—";
-  font-family: "Source Serif 4", serif;
-  color: var(--muted);
-  letter-spacing: 2px;
-}
-
-.intro {
-  font-family: "Source Serif 4", serif;
-  font-size: 18px;       /* slightly smaller than before (was 20px) */
-  line-height: 1.75;     /* adjusted for readability */
-  margin: 0 auto 36px;
-}
-.intro a { color: var(--link); }
-
-.meta-bar {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-size: 14px;
-  color: #6f6a5a;
-  margin-top: 8px;
-  margin-bottom: 4px;
-  display: flex; gap: 12px; flex-wrap: wrap;
-}
-.meta-bar a { color: var(--muted); text-decoration: underline; }
-
-.category-pill { text-transform: capitalize; }
-
-article {
-  margin: 56px 0;
-  font-family: "Source Serif 4", serif;
-}
-article h2 {
-  font-size: 34px;
-  line-height: 1.25;
-  margin: 0 0 8px;
-  font-weight: 600;
-  color: var(--accent);
-}
-article h2 a { text-decoration: none; }
-article p {
-  font-size: 18px;   /* match intro for consistency */
-  line-height: 1.85;
-  margin: 16px 0;
-}
-
-figure { margin: 22px 0; }
-figure img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-}
-figcaption {
-  font-size: 14px;
-  color: var(--muted);
-  text-align: center;
-  margin-top: 6px;
-}
-
-footer {
-  text-align: center;
-  padding: 36px 0 12px;
-  color: #847a5a;
-  font-family: Inter, sans-serif;
-}
-
-.cats-nav {
-  margin-top: 10px;
-  font-size: 15px;
-}
-.cats-nav a { margin-right: 8px; }
-
-/* small screens */
-@media (max-width: 520px) {
-  .brand { font-size: 32px; }
-  article h2 { font-size: 28px; }
-  .intro, article p { font-size: 17px; }
-}
-
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soham Manjrekar — Journal</title>
+<meta name="description" content="Notes on food, travel, friends, hobbies and life.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/site.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"}};</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
-  <div class="wrap">
+<body class="no-select">
+<nav class="site-nav"><ul>
+  <li><a href="../index.html">Home</a></li>
+  <li><a href="blog.html" class="active">Journal</a></li>
+  <li><a href="../projects/projects.html">Projects</a></li>
+  <li><a href="../files/sohammjkr_resume_10_25.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+</ul></nav>
+<div class="wrap">
 
-    <header>
-      <div class="brand">
-        <a href="../index.html" style="text-decoration:none; color:inherit;">
-          SOHAM MANJREKAR
-        </a>
-      </div>
-    </header>
+  <header class="masthead">
+    <h1 class="brand"><a href="../index.html"><img class="brand-mark"
+       src="../favicon.svg" alt=""><span>SOHAM MANJREKAR</span></a></h1>
+    <div class="tagline">Journal</div>
+  </header>
 
-    <section class="intro" id="intro">
-
+  <section class="lead narrow">
+<p>Much of my time is currently devoted to research, sleep, and food. As a result, I’ve created
+this Journal as a way to hold myself accountable to the small and important
+things in life, and to remind myself that each day comes once in a lifetime.</p>
+<p class="pull">“Don’t forget to sing in the lifeboats” —
+<a href="https://www.google.com/search?q=don%27t+forget+to+sing+in+the+lifeboats" target="_blank" rel="noopener noreferrer">Kathryn
+and Ross Petras</a></p>
+<p>If you’re curious about my professional background, you can skim my
+<a href="../files/sohammjkr_resume_10_25.pdf" target="_blank" rel="noopener noreferrer">résumé</a> or look through my
+<a href="../projects/projects.html">projects</a>.</p>
+<p>I’m <span class="age-auto">24</span> years old and live in Atlanta, Georgia. I recently finished my
+Master’s in Electrical and Computer Engineering at Georgia Tech, where my
+research focused on power electronics — designing, modeling and prototyping
+converters that integrate distributed energy resources into a next-generation
+grid.</p>
+<p>In my free time I enjoy writing, traveling, and working on side projects. I also
+run tabletop roleplaying games for friends, a fairly new hobby for me. I’m always
+eager to learn new things and push myself with fresh challenges.</p>
+<p>This Journal is both a record and an experiment. Through it I hope to capture
+snapshots of thoughts and experiences as I move forward in my academic,
+professional and personal life.</p>
 <p>
-Much of my time is currently devoted to research, sleep, and food. I’ve created this Journal as a way to hold myself accountable to the small and important things in life and remind myself that time is steadily moving for all of us.
-
-<p style="font-style: italic; margin-left: 20px; color: inherit;"> "Don't forget to sing in the Lifeboats" — <a href="https://www.google.com/search?q=%22don%27t+forget+to+sing+in+the+lifeboats%22:+uncommon+wisdom+for+uncommon+times&ved=1t:238573&ictx=111&biw=1592&bih=844&dpr=2" target="_blank" rel="noopener noreferrer"> Kathryn Petras and Ross Petras </a> </p>
-
-If you’re curious about my professional background, you can skim my
-<a href="/files/FA25_Resume_08_18.pdf" target="_blank" rel="noopener noreferrer">Resume</a>.
+Scroll to read entries newest-first, or pick a
+tag below to narrow things down.
 </p>
+  </section>
 
-<p>I'm <span id="age">23</span> years old and live in Atlanta, Georgia. I am currently pursuing my Master’s in Electrical and Computer Engineering at Georgia Tech, where my research focuses on power electronics. I design, model, and prototype converters that integrate distributed energy resources to power a next-gen grid. 
+  <div class="tagbar">
+    <span class="tagbar-label">Filter</span>
+    <a class="tag" href="?tag=food" data-tag="food">food <span class="count">0</span></a>
+    <a class="tag" href="?tag=travel" data-tag="travel">travel <span class="count">0</span></a>
+    <a class="tag" href="?tag=friends" data-tag="friends">friends <span class="count">0</span></a>
+    <a class="tag" href="?tag=hobbies" data-tag="hobbies">hobbies <span class="count">1</span></a>
+    <a class="tag" href="?tag=life" data-tag="life">life <span class="count">1</span></a>
+  </div>
+  <div class="filter-note" id="filter-note">
+    <span>Showing only <span class="what" id="filter-what"></span></span>
+    <span class="tally" id="filter-tally"></span>
+    <a class="clear" href="#" data-tag="">show everything</a>
+  </div>
 
-</p>
+  <hr class="rule">
+
+  <main id="feed">
+<article class="entry" id="starting-the-journal"
+         data-tags="life,hobbies">
+  <h2 class="entry-title"><a href="#starting-the-journal">Starting the Journal</a></h2>
+  <div class="meta-bar">
+    <time datetime="2026-08-06T18:30:00">August 6, 2026 · 6:30 PM</time><span class="dot">·</span><a class="tag" href="?tag=life" data-tag="life">life</a><a class="tag" href="?tag=hobbies" data-tag="hobbies">hobbies</a>
+    <a class="anchor" href="#starting-the-journal" aria-label="Link to this entry">#</a>
+  </div>
+  <div class="entry-body">
+<p>This is the first entry, which means it is mostly here to prove that the
+machinery works. Everything below is written in LaTeX in
+<code>blog/src/</code> and turned into this page by <code>build.py</code>.</p>
+<p>Paragraphs are separated by a blank line, the way they are in any LaTeX
+document. Quotes and dashes get converted properly — “like this” — so I
+can keep writing the way I already type.</p>
+<h3>What goes here</h3>
+<p>Food, travel, friends, hobbies, life. Those five tags sit at the top of the
+page; clicking one narrows the feed and says so. Clicking it again clears the
+filter.</p>
+<ul>
+<li><strong>Food</strong> — what I cooked, what I ate, what went wrong.</li>
+<li><strong>Travel</strong> — where I went and whether it was worth the flight.</li>
+<li><strong>Friends</strong> — the people who make Atlanta feel like home.</li>
+<li><strong>Hobbies</strong> — tabletop games, side projects, whatever is current.</li>
+<li><strong>Life</strong> — everything that resists a neater label.</li>
+</ul>
+<blockquote><p>Time is steadily moving for all of us, which is the entire reason to write any
+of this down.</p></blockquote>
+<h3>Notes on the machinery</h3>
+<p>Footnotes work and collect at the bottom of the entry.<sup class="fnref"><a href="#fn1">1</a></sup> So does inline math,
+which I will inevitably need: the efficiency of a converter is
+\(\eta = P_{\mathrm{out}} / P_{\mathrm{in}}\), and display math gets its own line.</p>
+<div class="math-block">\[
+  P_{\mathrm{loss}} = P_{\mathrm{cond}} + P_{\mathrm{sw}} + P_{\mathrm{core}}
+\]</div>
+<hr class="rule tight">
+<p>Images sit inline with a caption underneath.</p>
+<figure><img src="../assets/PESGM_group.jpg" alt="PES General Meeting." loading="lazy"><figcaption>PES General Meeting.</figcaption></figure>
+<p>That is the whole system. Write a <code>.tex</code> file, run <code>python
+build.py</code>, look at it locally, push when it reads right.</p><ol class="footnotes">
+<li id="fn1">This is a
+footnote. It is not very interesting, but it renders.</li>
+</ol>
+  </div>
+  
+  <hr class="rule">
+</article>
+  </main>
+
+  <div class="empty-note" id="empty-note">
+    No entries carry that tag yet.
+  </div>
+
+<footer class="site-footer">
+  <div>© <span class="year">2026</span> Soham Manjrekar</div>
+  <div class="credit">Layout owes a debt to <a href="https://parkzer.com" target="_blank" rel="noopener noreferrer">Adam Parkzer’s site</a>.</div>
+</footer>
+</div>
+
 <script>
-  (function () {
-    // Set your birthday here: year, monthIndex (0=Jan), day
-    const dob = new Date(2002, 4, 18); // May 18, 2002
-
-    function computeAge(refDate = new Date()) {
-      let age = refDate.getFullYear() - dob.getFullYear();
-      const hasHadBirthday =
-        refDate.getMonth() > dob.getMonth() ||
-        (refDate.getMonth() === dob.getMonth() && refDate.getDate() >= dob.getDate());
-      if (!hasHadBirthday) age--;
-      return age;
-    }
-
-    function updateAge() {
-      document.getElementById("age").textContent = computeAge();
-    }
-
-    // Initial paint
-    updateAge();
-
-    // Schedule an update at the next birthday (so it flips without a reload)
-    const now = new Date();
-    let next = new Date(now.getFullYear(), dob.getMonth(), dob.getDate(), 0, 0, 1);
-    if (next <= now) next.setFullYear(next.getFullYear() + 1);
-    setTimeout(function tick() {
-      updateAge();
-      // Schedule again for the following year
-      next.setFullYear(next.getFullYear() + 1);
-      setTimeout(tick, next - new Date());
-    }, next - now);
-  })();
+(function () {
+  var stop = function (e) { e.preventDefault(); return false; };
+  ['copy', 'cut', 'contextmenu', 'dragstart', 'selectstart'].forEach(function (evt) {
+    document.addEventListener(evt, function (e) {
+      if (e.target.closest && e.target.closest('input, textarea')) return;
+      return stop(e);
+    });
+  });
+})();
 </script>
 
-In my free time, I enjoy writing, traveling, and working on side projects. I also run tabletop roleplaying games for friends, a new hobby for me! I’m always eager to learn new things and push myself with fresh challenges.
-<br><br>
-This Journal is both a record and an experiment. Through it, I hope to capture snapshots of thoughts and experiences as I move forward in my academic, professional, and personal journey. To traverse this, you can scroll to view entries in reverse chronological order, or sort by category. 
-</p>
+<script>
+(function () {
+  var feed  = document.getElementById('feed');
+  if (!feed) return;
+  var items = Array.prototype.slice.call(feed.querySelectorAll('.entry'));
+  var note  = document.getElementById('filter-note');
+  var what  = document.getElementById('filter-what');
+  var tally = document.getElementById('filter-tally');
+  var empty = document.getElementById('empty-note');
 
-
-      <div class="cats-nav">
-        <a href="?cat=travel">Travel</a> |
-        <a href="?cat=projects">Hobbies</a> |
-        <a href="?cat=life">Life</a> |
-        <a href="?cat=life">Finance</a> |
-        <a href="?cat=life">Sports</a> |
-        <a href="?">All</a>
-      </div>
-    </section>
-
-    <hr class="rule" />
-
-    <!-- POSTS -->
-    <main id="posts">
-
-<article data-category="travel">
-  <h2>
-    <a class="post-title" href="posts/new_post.html" target="_blank" rel="noopener noreferrer">Post Title Goes Here</a>
-  </h2>
-  <div class="meta-bar">
-    <a class="post-date" href="posts/new_post.html" target="_blank" rel="noopener noreferrer">August 6, 2025, 5:27 PM</a>
-    <span>•</span>
-    <a class="category-pill" href="?cat=travel">travel</a>
-  </div>
-  <p>Excerpt text here.</p>
-</article>
-
-
-    </main>
-
-    <hr class="rule" />
-
-<footer>
-  <div>© <span id="year"></span> Soham Manjrekar</div>
-  <div class="cats-nav">
-        <a href="?cat=travel">Travel</a> |
-        <a href="?cat=projects">Hobbys</a> |
-        <a href="?cat=life">Life</a> |
-        <a href="?cat=life">Finance</a> |
-        <a href="?cat=life">Sports</a> |
-        <a href="?">All</a>
-      </div>
-  <div style="margin-top: 8px; font-size: 13px; color: #9a9278; font-style: italic;">
-    Inspired by <a href="https://parkzer.com" target="_blank" rel="noopener noreferrer"> Adam Parkzer’s design</a>.  
-    All styling credits go to him.
-  </div>
-</footer>
-  </div>
-
-  <script>
-    // Open post titles and dates in a new tab
-    document.querySelectorAll('.post-title, .post-date').forEach(a => {
-      a.setAttribute('target','_blank');
-      a.setAttribute('rel','noopener noreferrer');
+  function apply(tag) {
+    tag = (tag || '').toLowerCase();
+    var shown = 0;
+    items.forEach(function (el) {
+      var tags = (el.dataset.tags || '').split(',');
+      var hit  = !tag || tags.indexOf(tag) !== -1;
+      el.hidden = !hit;
+      if (hit) shown++;
     });
-
-    // Category filtering via ?cat=travel etc.
-    (function(){
-      const params = new URLSearchParams(window.location.search);
-      const cat = (params.get('cat') || '').toLowerCase();
-      const posts = Array.from(document.querySelectorAll('main article'));
-      if(!cat) return;
-
-      posts.forEach(el => {
-        const matches = (el.dataset.category || '').toLowerCase() === cat;
-        el.style.display = matches ? '' : 'none';
-      });
-
-      // Optional: update intro line to indicate filter
-      const intro = document.getElementById('intro');
-      const label = cat[0]?.toUpperCase() + cat.slice(1);
-      if(intro && label){
-        const note = document.createElement('p');
-        note.style.fontFamily = '"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif';
-        note.style.color = '#6f6a5a';
-        note.style.fontSize = '14px';
-        note.textContent = 'Showing category: ' + label + ' — use the links to switch or clear.';
-        intro.appendChild(note);
+    document.querySelectorAll('.tagbar .tag').forEach(function (a) {
+      a.classList.toggle('is-active', !!tag && a.dataset.tag === tag);
+    });
+    if (note) {
+      note.classList.toggle('is-on', !!tag);
+      if (tag) {
+        what.textContent  = tag;
+        tally.textContent = shown + (shown === 1 ? ' entry' : ' entries');
       }
-    })();
+    }
+    if (empty) empty.classList.toggle('is-on', !!tag && shown === 0);
+    document.title = document.title.replace(/ \u2014 filtered.*$/, '') +
+                     (tag ? ' \u2014 filtered: ' + tag : '');
+  }
 
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  function fromUrl() {
+    return new URLSearchParams(window.location.search).get('tag') || '';
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a.tag, .clear');
+    if (!a) return;
+    e.preventDefault();
+    var tag = a.dataset.tag || '';
+    if (tag && tag === fromUrl()) tag = '';          // click again to clear
+    var url = tag ? '?tag=' + encodeURIComponent(tag) : window.location.pathname;
+    history.pushState({ tag: tag }, '', url);
+    apply(tag);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('popstate', function () { apply(fromUrl()); });
+  apply(fromUrl());
+})();
+</script>
 </body>
 </html>

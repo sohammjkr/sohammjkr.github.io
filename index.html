@@ -1,182 +1,382 @@
 <!DOCTYPE html>
+<!--
+  index.html — the home page.
+
+  This is the one page that build.py does NOT generate; edit it by hand.
+  It shares CSS/site.css with the blog and the projects pages, so anything you
+  change in the stylesheet applies here too.
+
+  The résumé link appears in the nav below and in build.py (RESUME_PDF).
+  Change it in both places when a newer PDF goes into files/.
+-->
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soham Manjrekar</title>
+<meta name="description" content="Soham Manjrekar — power electronics engineer at GridTran, MSECE from Georgia Tech, BSEE from the University of Illinois Urbana-Champaign.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <!-- Title -->
-    <title>Soham Manjrekar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
+<link rel="stylesheet" href="CSS/site.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/CSS/main.css" />
-    <link rel="stylesheet" href="/CSS/index.css" />
+<body>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<nav class="site-nav"><ul>
+  <li><a href="index.html" class="active">Home</a></li>
+  <li><a href="blog/blog.html">Journal</a></li>
+  <li><a href="projects/projects.html">Projects</a></li>
+  <li><a href="files/sohammjkr_resume_10_25.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+</ul></nav>
 
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-    />
-    
-  </head>
+<div class="wrap">
 
-  <body>
-    <!-- Navigation Bar -->
-          <nav class="navbar">
-        <div class="nav-container">
-          <ul class="nav-menu" id="navMenu">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link active">Soham Manjrekar</a>
-            </li>
-            <li class="nav-item">
-              <a href="/files/smanjrekar_RESUME_09_25.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a href="/Project/projects.html" class="nav-link" target="_blank" rel="noopener noreferrer">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="/blog/blog.html" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a>
-            </li>
-            
+  <header class="masthead">
+    <h1 class="brand">
+      <img class="brand-mark" src="favicon.svg" alt="">
+      <span>SOHAM MANJREKAR</span>
+    </h1>
+    <div class="tagline">Power Electronics &middot; Atlanta, Georgia</div>
+  </header>
+
+  <!-- ================= photo band ================= -->
+  <div class="slider">
+    <div class="slides">
+      <img src="assets/profile1.jpg" alt="">
+      <img src="assets/PESGM_group.jpg" alt="">
+      <img src="assets/Lads.jpg" alt="">
+      <img src="assets/pwrsprkys.jpg" alt="">
+      <img src="assets/GovernorSchoolBall.jpg" alt="">
+      <img src="assets/profile2.jpg" alt="">
+      <img src="assets/standLads.jpg" alt="">
+      <img src="assets/Funny202.jpg" alt="">
+      <img src="assets/SubodhAmandaFamilyPhoto.jpg" alt="">
+      <img src="assets/Serious2020.jpg" alt="">
+      <!-- duplicate set, so the marquee loops seamlessly -->
+      <img src="assets/profile1.jpg" alt="">
+      <img src="assets/PESGM_group.jpg" alt="">
+      <img src="assets/Lads.jpg" alt="">
+      <img src="assets/pwrsprkys.jpg" alt="">
+      <img src="assets/GovernorSchoolBall.jpg" alt="">
+      <img src="assets/profile2.jpg" alt="">
+      <img src="assets/standLads.jpg" alt="">
+      <img src="assets/Funny202.jpg" alt="">
+      <img src="assets/SubodhAmandaFamilyPhoto.jpg" alt="">
+      <img src="assets/Serious2020.jpg" alt="">
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- ================= intro ================= -->
+  <section>
+    <p>Welcome to my page.</p>
+    <p>
+      I am a founding engineer at
+      <a href="https://gridtran.com" target="_blank" rel="noopener noreferrer"
+         style="font-weight:700; text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:2px;">GridTran</a>
+      as a Power Electronics Engineer, where we work on the bleeding edge of next-generation high-power DC infrastructure for AI datacenters. 
+    </p>
+    <p>
+      My interests span power electronics, power systems, electric machines and
+      entrepreneurship. I care about understanding the larger problems that
+      the power and energy community face as a field, and about developing the
+      engineering solutions that solve them to drive the energy transition and empower
+      communities.
+    </p>
+    <p>
+      You can find my past projects and write-ups on the
+      <a href="projects/projects.html">projects page</a>, review my
+      <a href="files/sohammjkr_resume_10_25.pdf" target="_blank" rel="noopener noreferrer">resume</a>,
+      or catch up on my latest activities on my
+      <a href="blog/blog.html">Journal</a>.
+    </p>
+  </section>
+
+
+  <hr class="rule">
+
+  <!-- ================= skillset =================
+       Every tile carries a t-* class that sets --t, its category colour.
+       The palette lives in CSS/site.css under "skill tiles".
+  -->
+  <section>
+    <h2 class="section-head">Skillset</h2>
+    <p class="skillset-intro">
+    My experience covers multiple domains of power electronics architecture,
+    design and validation.
+    </p>
+
+    <div class="skillcards">
+
+    <article class="skillcard">
+      <h3>Electrical</h3>
+      <ul>
+        <li class="tile t-pcba">
+          <span class="tile-tag">PCBA design</span>
+          <ul>
+            <li>Schematic capture and layout in Cadence Allegro and Altium
+                Designer</li>
+            <li>High-voltage, high-current switching planes</li>
+            <li>Power stages built around SiC MOSFETs and Si IGBTs modules of various packages </li>
+            <li>Sensitive analog and sensing circuitry, and digital logic circuits schematic and layout</li>
           </ul>
-        </div>
-      </nav>
+        </li>
+        <li class="tile t-mag">
+          <span class="tile-tag">Magnetics</span>
+          <ul>
+            <li>High-frequency magnetics design for transformers and reactors
+                above 15 kHz</li>
+            <li>Ultra-low leakage transformers at medium voltage (MV), design
+                and verification</li>
+            <li>High-current, low-inductance busbars and interconnects</li>
+            <li>Thermal modeling and heat-sink/liquid cooling design</li>
+          </ul>
+        </li>
+        <li class="tile t-vendor">
+          <span class="tile-tag">Vendor communication</span>
+          <ul>
+            <li>Automated manufacturing file generation</li>
+            <li>Design-for-manufacturing and design-for-test verification</li>
+            <li>Vendor communication through sample prototyping and testing</li>
+            <li>Quoting and ordering PCBAs in volumes from the hundreds into the
+                thousands</li>
+          </ul>
+        </li>
+        <li class="tile t-test">
+          <span class="tile-tag">Test &amp; validation</span>
+          <ul>
+            <li>Switching performance validation, both hard-switching and
+                soft-switching, Double Pulse Test (DPT)</li>
+            <li>Operating points from 48 Vdc to 2.0 kVdc and 120 Vac to
+                34.5 kVac</li>
+            <li>Power levels from 1 kW to 500 kW</li>
+          </ul>
+        </li>
+        <li class="tile t-hv">
+          <span class="tile-tag">High voltage</span>
+          <ul>
+            <li>High-voltage and high-current safety practice, including
+                lockout/tagout</li>
+            <li>Arc flash mitigation</li>
+            <li>Safe handling of high-energy storage devices</li>
+            <li> Basic Insulation Level (BIL) and Partial Discharge (PD) testing, and mitigation strategies through design iteration</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
 
-    <section id="content">
-        <!-- Avatar image slider -->
-        <div class="slider">
-          <div class="slides">
-            <!-- 1st set -->
-            <img src="/assets/Funny202.jpg" alt="Funny202" />
-            <img src="/assets/GovernorSchoolBall.jpg" alt="GovernorSchoolBall" />
-            <img src="/assets/Lads.jpg" alt="Lads" />
-            <img src="/assets/profile1.jpg" alt="profile1" />
-            <img src="/assets/Serious2020.jpg" alt="Serious2020" />
-            <img src="/assets/profile2.jpg" alt="profile2" />
-            <img src="/assets/pwrsprkys.jpg" alt="pwrsprkys" />
-            <img src="/assets/standLads.jpg" alt="standLads" />
-            <img src="/assets/SubodhAmandaFamilyPhoto.jpg" alt="SubodhAmandaFamilyPhoto" />
-            <img src="/assets/PESGM_group.jpg" alt="PESGM" />
+    <article class="skillcard">
+      <h3>Firmware &amp; Control</h3>
+      <ul>
+        <li class="tile t-fpga">
+          <span class="tile-tag">FPGA</span>
+          <ul>
+            <li>State machine and VHDL programming</li>
+            <li>Generalized frameworks for multimodal converter operation</li>
+            <li>Control and communication architecture linking a leader
+                controller to its follower controllers</li>
+          </ul>
+        </li>
+        <li class="tile t-dsp">
+          <span class="tile-tag">DSP</span>
+          <ul>
+            <li>Real-time programming and closed-loop control</li>
+            <li>Grid-forming and grid-following operation</li>
+            <li>High-speed digital and analog signal acquisition and
+                processing</li>
+            <li>Control algorithms coordinating a converter across multiple
+                stages and slices</li>
+          </ul>
+        </li>
+        <li class="tile t-sw">
+          <span class="tile-tag">Software</span>
+          <ul>
+            <li>HMI and GUI development, including the software front end for
+                cabinet access</li>
+            <li>OpenSQL and MySQL database management for over-the-air updates,
+                logging and maintenance</li>
+            <li>Software for test automation, data acquisition and analysis</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
 
-            <!-- 2nd set (duplicate for seamless loop) -->
-            <img src="/assets/Funny202.jpg" alt="Funny202" />
-            <img src="/assets/GovernorSchoolBall.jpg" alt="GovernorSchoolBall" />
-            <img src="/assets/Lads.jpg" alt="Lads" />
-            <img src="/assets/profile1.jpg" alt="profile1" />
-            <img src="/assets/Serious2020.jpg" alt="Serious2020" />
-            <img src="/assets/profile2.jpg" alt="profile2" />
-            <img src="/assets/pwrsprkys.jpg" alt="pwrsprkys" />
-            <img src="/assets/standLads.jpg" alt="standLads" />
-            <img src="/assets/SubodhAmandaFamilyPhoto.jpg" alt="SubodhAmandaFamilyPhoto" />
-            <img src="/assets/PESGM_group.jpg" alt="PESGM" />
+    <article class="skillcard">
+      <h3>Mechanical</h3>
+      <ul>
+        <li class="tile t-thermal">
+          <span class="tile-tag">Thermal</span>
+          <ul>
+            <li>Air cooling and liquid cooling systems</li>
+            <li>Heat sink design and thermal management across the converter</li>
+          </ul>
+        </li>
+        <li class="tile t-pkg">
+          <span class="tile-tag">Packaging</span>
+          <ul>
+            <li>Converter packaging, enclosure design and mounting</li>
+            <li>EMI and EMC design considerations</li>
+          </ul>
+        </li>
+        <li class="tile t-prod">
+          <span class="tile-tag">Product requirements</span>
+          <ul>
+            <li>Product rollout, UL testing and certification</li>
+            <li>Meeting safety, performance and environmental standards</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
 
-          </div>
-        </div>
-      </div>
+    </div>
+  </section>
 
-            <!-- About Section -->
-      <div class="about-section">
-        <div class="about-content">
-          <h2>Welcome to my Website!</h2>
-          <div class="current-work">
-            <h4>Current Professional Focus</h4>
-            <p>
-              I am an <strong>MSECE</strong> student at the <strong><span style="color:#b8860b;">Georgia Institute of Technology</span></strong>, working on my thesis under <strong><span style="color:#b8860b;">Prof. Deepak Divan</span></strong> at the 
-              
-              <strong>
-                <a href="https://cde.gatech.edu" target="_blank" rel="noopener noreferrer" class="cde-link">
-                  Center for Distributed Energy (CDE)
-                </a>
-              </strong> 
-              
-              as a <strong>Graduate Research Assistant</strong>. My research focuses on designing, modeling, and prototyping power converters that integrate distributed energy resources to support the next-generation grid.
-            </p>
-            
-            
-            <p>
-              I also serve as Chair of the <strong>
-                <a href="https://ieee-pes.org" target="_blank" rel="noopener noreferrer" class="ieee-gradient">
-                  IEEE Power &amp; Energy Society
-                </a>
-              </strong>
-               at Georgia Tech, where I lead student initiatives and foster industry engagement. I am passionate about developing practical solutions that accelerate the energy transition and empower communities around the world.
-            </p>
-          </div>
+  <hr class="rule">
 
+  <!-- ================= work + study, newest first =================
+       Colour coding lives in CSS/site.css under "work / study cards".
+       Each card picks a palette with a job-<org> class; add a new block
+       there to introduce another organisation.
+  -->
+  <section class="narrow">
+    <h2 class="section-head">Academic and Professional History</h2>
+    <div class="cards">
+      <article class="job job-gridtran">
+        <div class="job-when">Oct 2025 &ndash; Present</div>
+        <h3 class="job-org">
+          <a href="https://gridtran.com" target="_blank" rel="noopener noreferrer">GridTran</a>
+        </h3>
+        <div class="job-role">Founding Engineer, Power Electronics &middot; Atlanta, GA</div>
+        <ul class="job-points">
+          <li>
+            Direct report: <span class="person">Dr.&nbsp;Deepak Divan</span>,
+            <strong>CTO</strong>
+          </li>
+        </ul>
+      </article>
 
-          <h4>Academic History</h4>
-          <!-- Academic Timeline -->
-          <div class="timeline">
-            <div class="timeline-item gatech">
-              <div class="timeline-card gatech">
-                <div class="timeline-year">2024 - 2025</div>
-                <div class="timeline-title">Georgia Institute of Technology</div>
-                <div class="timeline-subtitle">Master of Science in Electrical and Computer Engineering</div>
-              </div>
-            </div>
-            
-            <div class="timeline-item uiuc">
-              <div class="timeline-card uiuc">
-                <div class="timeline-year">2020 - 2024</div>
-                <div class="timeline-title">University of Illinois Urbana-Champaign</div>
-                <div class="timeline-subtitle">Bachelor of Science in Electrical and Computer Engineering</div>
-                <div class="timeline-description">
-                  <ul>
-                    <li>
-                      <strong>Undergraduate Researcher</strong><br>
-                      <span style="font-weight: normal; color: #aaa;">Advisor: Arijit Banerjee</span>
-                    </li>
-                    <li><strong>Grainger Power Engineering Award</strong></li>
-                    <li><strong>Frank C. Mock Scholarship</strong></li>
-                  </ul>
-                </div>
-                
-              </div>
-            </div>
-
-          </div>
-
-
-        </div>
-      </div>
-           <!-- Social Section -->
-           <div class="social-section">
-            <h4 class="social-title">Connect With Me</h4>
-            <ul class="icons">
+      <article class="job job-gatech">
+        <div class="job-when">Aug 2024 &ndash; Oct 2025</div>
+        <h3 class="job-org">
+          <a href="https://www.gatech.edu" target="_blank" rel="noopener noreferrer">Georgia
+          Institute of Technology</a>
+        </h3>
+        <div class="job-role">Atlanta, GA</div>
+        <ul class="job-points">
+          <li>
+            <strong>Master of Science w/ Thesis</strong>
+            <ul>
               <li>
-                <a href="https://ieeexplore.ieee.org/author/854462305536516" title="IEEE Xplore Author Page"><i class="fas fa-university"></i></a>
-              </li>
-              <li>
-                <a href="mailto:smanjrekar6@gatech.edu" title="Email"><i class="fas fa-envelope"></i></a>
-              </li>
-              <li>
-                <a href="https://github.com/sohammjkr" title="GitHub"><i class="fab fa-github"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/sohammjkr/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                Thesis Advisor: <span class="person">Prof.&nbsp;Deepak Divan</span>,
+                <strong>John E. Pippin Chair Professor</strong>
               </li>
             </ul>
-          </div>
-          <footer style="text-align: center; padding: 10px 0; color: #7a6e4c; font-size: 12px;">
-            <h3 style="font-weight: normal; color: #7a6e4c;">
-              Built with care, coffee, and curiosity — thanks for visiting.
-            </h3>
-            <p>© 2025 Soham Manjrekar</p>
-          </footer>
-          
+          </li>
+          <li>
+            <strong>Graduate Research Assistant</strong> at the
+            <a class="inst" href="https://cde.gatech.edu" target="_blank" rel="noopener noreferrer">Center
+            for Distributed Energy</a>
+            <ul>
+              <li>
+                Research Advisor: <span class="person">Prof.&nbsp;Deepak Divan</span>,
+                <strong>Center Director</strong>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="inst" href="https://ieee-pes.org" target="_blank" rel="noopener noreferrer">IEEE
+            Power and Energy Society</a>
+            <ul>
+              <li>
+                Faculty Advisor: <span class="person">Jean-Carlos Hernandez-Mejia</span>,
+                <strong><a class="inst" href="https://neetrac.gatech.edu"
+                   target="_blank" rel="noopener noreferrer">NEETRAC</a> Director</strong>
+                <ul>
+                  <li>Board Chair (2025)</li>
+                  <li>Communication Chair (2024)</li>
+                </ul>
+               </li>
+            </ul>
+          </li>
+        </ul>
+      </article>
 
-    </section>
+      <article class="job job-uiuc">
+        <div class="job-when">Aug 2020 &ndash; May 2024</div>
+        <h3 class="job-org">
+          <a href="https://illinois.edu" target="_blank" rel="noopener noreferrer">University
+          of Illinois Urbana-Champaign</a>
+        </h3>
+        <div class="job-role">Champaign, IL</div>
+        <ul class="job-points">
+          <li>
+            <strong>Bachelor of Science in Electrical &amp; Computer Engineering</strong>
+            <ul>
+              <li>
+                <a class="inst" href="https://techmgmt.illinois.edu"
+                   target="_blank" rel="noopener noreferrer">Hoeft Technology &amp;
+                   Management</a> Minor
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Undergraduate Researcher</strong> at the
+            <a class="inst" href="https://ece.illinois.edu/research/areas/power"
+               target="_blank" rel="noopener noreferrer">Power and Energy Group</a>
+            <ul>
+              <li>
+                Research Advisor: <span class="person">Prof.&nbsp;Arijit Banerjee</span>,
+                <strong>Associate Professor</strong>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div>
+          <span class="honor">Frank C. Mock Scholarship &middot; 2023</span>
+          <span class="honor">Grainger Power Engineering Award &middot; 2024</span>
+        </div>
+      </article>
+    </div>
+  </section>
 
+  <hr class="rule">
 
-  </body>
+  <!-- ================= elsewhere ================= -->
+  <section class="center">
+    <h2 class="section-head" style="text-align:center">Elsewhere</h2>
+    <ul class="icons">
+      <li><a href="https://ieeexplore.ieee.org/author/854462305536516"
+             title="IEEE Xplore author page" target="_blank" rel="noopener noreferrer"
+             aria-label="IEEE Xplore"><i class="fas fa-university"></i></a></li>
+      <li><a href="mailto:smanjrekar6@gatech.edu" title="Email"
+             aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+      <li><a href="https://github.com/sohammjkr" title="GitHub"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/sohammjkr/" title="LinkedIn"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+  </section>
+
+  <hr class="rule">
+
+  <footer class="site-footer">
+    <div style="margin-top:6px">&copy; <span id="year">2026</span> Soham Manjrekar</div>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
 </html>

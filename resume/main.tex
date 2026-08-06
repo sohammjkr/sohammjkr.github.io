@@ -1,0 +1,303 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[maxnames=99]{biblatex}
+\addbibresource{Publications.bib}
+
+% Bold "Soham Manjrekar" in author lists
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifstrequal{#1}{Manjrekar}{\textbf{#1}}{#1}}
+
+\renewcommand*{\mkbibnamegiven}[3]{%
+  \ifstrequal{#1}{Soham}{\textbf{#1}}{#1}}
+
+\newcommand{\printpublications}[3][]{%
+    \nocite{*} % Include all entries in the bibliography
+    \printbibliography[title={Publications}, #1]
+}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemWithDate}[2]{%
+  \item\small{%
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      {#1} & {#2} \\
+    \end{tabular*}
+  }
+}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Soham Manjrekar} \\ \vspace{1pt}
+    \small +1(919) 455-5909 $|$ \href{smanjrekar6@gatech.edu}{\underline{smanjrekar6@gatech.edu}} $|$ 
+    \href{https://linkedin.com/in/sohammjkr/}{\underline{linkedin.com/in/sohammjkr/}} $|$
+    \href{https://github.com/sohammjkr/}{\underline{github.com/sohammjkr}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+        {Georgia Institute of Technology}{Aug. 2024 -- Dec. 2025}
+        {Master of Science in Electrical Engineering}{Thesis Advisor: Dr. Deepak Divan} 
+  \resumeItemListStart
+    \resumeItem{Chair, IEEE Power \& Energy Society Student Chapter}
+  \resumeItemListEnd
+    \resumeSubheading
+      {University of Illinois Urbana-Champaign}{Aug. 2020 -- May 2024}
+      {Bachelor of Science in Electrical Engineering}{}
+  \resumeItemListStart
+    \resumeItem{Hoeft Technology and Management Minor}
+  \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Research and Work Experience}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {Power Electronics Engineer} {Oct. 2025 -- Present}
+      {GridTran - Endeavour} {Atlanta, GA}
+      \resumeItemListStart
+        \resumeItem{Designing efficient, scalable, and robust MVSST's for a variety of applications including renewable integration, datacenter power delivery, and powering the grid.}
+        \resumeItemListEnd
+        
+    \resumeSubheading
+      {Graduate Research Assistant} {Aug. 2024 -- Present}
+      {Georgia Institute of Technology -- Center for Distributed Energy (CDE)} {Atlanta, GA}
+      \resumeItemListStart
+        \resumeItem{Research Advisor: Dr. Deepak Divan}
+        \resumeItem{Research focused on designing, modeling and prototyping grid-connected inverters which integrate distributed energy resources to be rapidly adopted and scaled for industrial use}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Undergraduate Research Assistant} {Aug. 2023 -- May 2024}
+      {University of Illinois Urbana-Champaign -- Power and Energy Group} {Champaign, IL}
+      \resumeItemListStart
+        \resumeItem{Advisor: Dr. Arijit Banerjee}
+        \resumeItem{Research to experimentally characterize transformer core losses when excited by a signal of multiple frequencies}
+      \resumeItemListEnd
+  
+    \resumeSubheading
+      {Electrical Engineering Intern}{May 2023 -- Aug. 2023}
+      {Northrop Grumman - Mission Systems}{Baltimore, MD}
+      \resumeItemListStart
+        \resumeItem{Tested and validated Electronic Warfare (EW) systems aboard the EA-18G Growler platform}
+        \resumeItem{Supported design and analysis of the Power Processing Unit (PPU) for electrical systems on the F-35 Lightning II}
+
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Electrical Engineering Intern}{May 2022 -- Aug. 2022}
+      {Black \& Veatch - Power Delivery}{Overland Park, KS}
+      \resumeItemListStart
+        \resumeItem{Worked on the physical design of GIS substations across the Midwest and performed a site survey to validate lightning arresters}
+        \resumeItem{Developed proposal for street-side EV charging bays presented to City Council of Kansas City}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Electrical Engineering Intern}{May 2021 -- Oct. 2021}
+      {American Battery Solutions}{Lake Orion, MI}
+      \resumeItemListStart
+        \resumeItem{Developed an automated system with Python scripts to report simulated requirement testing and validation of battery packs in an ETAS LABCAR with a real BMS}
+        \resumeItem{Built a low-cost CANalyzer alternative using open-source software and economical hardware to transmit CAN signals directly to a mobile app or web server}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+    {Medium Voltage Inertia-Less Isolated Converter}{}
+    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
+    \resumeItemListStart
+        \resumeItem{Design, prototyping of a multi-level, medium-voltage, single-stage isolated converter, 800 Vdc to 2.4 kVac per slice. Work included topology definition, high-frequency magnetics design, control and protection implementation, hardware and firmware testing and validation.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Regenerative Clamp Converter - \textit{Thesis Topic}}{}
+    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
+    \resumeItemListStart
+      \resumeItem{Design and analysis of regenerative clamp converters to recover leakage-inductor energy in high-power isolated converter topologies, reducing device stress and improving efficiency; extended clamp architecture into a multiport interface enabling PV/DER integration via the auxiliary port while maintaining clamping functionality.}
+    \resumeItemListEnd
+\newpage
+\resumeSubheading
+    {Integrated Home Energy Fast Charger} {}
+    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
+    \resumeItemListStart
+      \resumeItem{Design of a 50 kW bidirectional home fast charger, 120 Vac split-phase to 250-400 Vdc, with interleaved PFC, active power decoupling, and isolated DC–DC stage. Supported automatic PV/storage integration, and EV charging using SiC MOSFETs.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Rogowski Coil Analog Current Sensor} {}
+    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
+    \resumeItemListStart
+      \resumeItem{Design and validation of a wideband, low cost, analog Rogowski coil current sensor for closed loop current control of high frequency power converters. }
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Single-Stage Isolated DC–AC Energy Router} {}
+    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
+    \resumeItemListStart
+      \resumeItem{Designed and prototyped a 1 kW single-stage isolated converter based on the inertia-less isolated converter, delivering 240 Vac from a 48 Vdc source with a $\Sigma-\Delta$ modulation scheme.}
+    \resumeItemListEnd
+    
+%\resumeSubheading
+%  {Power Quality Monitor and Submetering Device}{}
+%  {ECE Senior Capstone, University of Illinois Urbana–Champaign}{Champaign, IL}
+%  \resumeItemListStart
+%    \resumeItem{Designed and prototyped a low-cost sub-meter with integrated power-quality monitoring with ADE9153A/ADE9430 ICs, and bluetooth/Wi-Fi data transfer with an ESP32; implemented real-time cloud telemetry, 24+ hour self-powered operation, and web-based GUI}
+%  \resumeItemListEnd
+
+\resumeSubheading
+  {Machine Learning for Weld Acoustics Monitoring}{}
+  {Caterpillar Inc. and University of Illinois Urbana–Champaign}{Peoria, IL}
+  \resumeItemListStart
+    \resumeItem{Developed a machine learning system to classify weld quality from acoustic signals using MFCC feature pipelines and SVM classifiers; built Python-based GUI feedback, Arduino/LED prototype alert stack, and achieved 75–84\% test accuracy on Caterpillar welding lab datasets.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\printpublications[title={Publications \& Patents}]
+
+
+%-----------AWARDS-----------
+\section{Awards}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+      {\textbf{Frank C. Mock Scholarship}} {Dec. 2023}
+          \resumeItemListStart
+            \resumeItem{This scholarship is given in honor of the Frank C. Mock family to be used to help top ECE students}
+          \resumeItemListEnd
+      \resumeProjectHeading
+      {\textbf{Grainger Power Engineering Award}} {May 2024}
+          \resumeItemListStart
+            \resumeItem{To reward highly qualified and well-motivated undergraduate and graduate students who have chosen to pursue a field of study in electric power engineering}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+     
+
+%
+%-----------Technical SKILLS-----------
+
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Modeling \& Simulation}{: MATLAB/Simulink, PLECS, LTspice, PSIM} \\
+     \textbf{Hardware Tools}{: Cadence Allegro/OrCAD, Altium, KiCad, Oscilloscope, Power analyzers, LEM Sensor Platform, TI DSPs (C2000 series), Intel FPGA (DE0-Nano)} \\
+     \textbf{Programming}{: Python (NumPy, scikit-learn, Librosa), C/C++, SystemVerilog, MATLAB, JavaScript, HTML/CSS} \\
+     \textbf{Developer Tools}{: Git, VS Code, Quartus, Code Composer Studio, Eclipse} \\
+    }}
+\end{itemize}
+%-------------------------------------------
+\end{document}

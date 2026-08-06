@@ -1,0 +1,46 @@
+\title{Integrated Home Energy Fast Charger}
+\subtitle{Center for Distributed Energy, Georgia Tech · Atlanta, GA}
+\period{2024 -- 2025}
+\date{2025-06}
+\status{Patent filed}
+\order{3}
+\tags{power electronics, ev charging, solar, storage, hardware}
+
+\link{Patent disclosure}{https://ieeexplore.ieee.org/author/854462305536516}
+
+\begin{document}
+
+A 50~kW bidirectional home fast charger that takes 120~Vac split-phase in and
+delivers 250--400~Vdc to a vehicle, with PV and storage folded into the same
+box rather than bolted on beside it.
+
+\section{Architecture}
+
+\begin{itemize}
+  \item Interleaved PFC front end on the split-phase input.
+  \item Active power decoupling, which removes the bulk energy-storage
+        capacitance a single-phase system would otherwise need.
+  \item Isolated DC--DC stage built on SiC MOSFETs.
+  \item Bidirectional operation, so the vehicle can support the house as well
+        as draw from it.
+  \item Automatic integration of PV and storage alongside EV charging.
+\end{itemize}
+
+\section{Ratings}
+
+\begin{tabular}{ll}
+  Parameter & Value \\
+  Power & 50 kW, bidirectional \\
+  Input & 120 Vac split-phase \\
+  Output & 250 -- 400 Vdc \\
+  Devices & SiC MOSFETs \\
+\end{tabular}
+
+\section{Related patent}
+
+The automatic PV integration path is the subject of a provisional patent
+disclosure: D.~Divan, J.~Benzaquen and S.~Manjrekar, ``Automatic Integration of
+PV Solar Energy into Multiport Dual Active Bridge Converter-Based EV Chargers,''
+Georgia Institute of Technology, June 2025.
+
+\end{document}

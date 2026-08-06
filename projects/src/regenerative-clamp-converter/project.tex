@@ -1,0 +1,44 @@
+\title{Regenerative Clamp Converter}
+\subtitle{MS thesis · Center for Distributed Energy, Georgia Tech · Advisor: Dr.\ Deepak Divan}
+\period{2025}
+\date{2025-12}
+\status{MS Thesis}
+\order{1}
+\tags{power electronics, thesis, hardware, magnetics, solar}
+
+\link{Read the thesis (PDF)}{/thesis/Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf}
+
+\begin{document}
+
+Design and analysis of regenerative clamp converters that recover
+leakage-inductor energy in high-power isolated converter topologies, reducing
+device stress and improving efficiency. The clamp architecture was then extended
+into a multiport interface, so the auxiliary port can integrate PV or another
+distributed energy resource while still doing its job as a clamp.
+
+\section{The problem}
+
+In high-power isolated topologies, energy stored in the transformer's leakage
+inductance has to go somewhere at every switching transition. A dissipative
+clamp turns it into heat and voltage stress on the devices. Recovering that
+energy instead of burning it buys back efficiency and lets the switches be
+sized against a lower peak voltage.
+
+\section{What the work covers}
+
+\begin{itemize}
+  \item Analysis and modelling of the regenerative clamp, including the
+        conditions under which leakage energy is returned to the source rather
+        than dissipated.
+  \item Reduction of device voltage stress and the resulting effect on
+        converter efficiency in high-power isolated topologies.
+  \item Extension of the clamp into a multiport interface: the auxiliary port
+        carries a PV or DER input while the clamping function is preserved.
+  \item Simulation and hardware validation of the proposed architecture.
+\end{itemize}
+
+\section{Thesis}
+
+\pdf{/thesis/Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf}{Design and Analysis of a Regenerative Clamp Converter for Energy Capture and Recovery in High Power Converter Topologies}
+
+\end{document}

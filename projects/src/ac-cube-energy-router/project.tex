@@ -1,0 +1,55 @@
+\title{AC Cube --- Single-Stage PV/Battery/Grid Energy Router}
+\subtitle{Center for Distributed Energy, Georgia Tech · ECCE-Asia 2025, Bengaluru}
+\period{2024 -- 2025}
+\date{2025-08}
+\status{Published}
+\order{4}
+\tags{power electronics, publication, grid, solar, storage, controls}
+
+\link{Paper (IEEE Xplore)}{https://doi.org/10.1109/ECCE-Asia63110.2025.11111930}
+
+\begin{document}
+
+A single-stage isolated converter that unifies PV, battery and grid into one
+conversion stage instead of the usual stack of separate converters. Built on the
+inertia-less isolated converter, the prototype delivers 240~Vac from a 48~Vdc
+source using a $\Sigma$--$\Delta$ modulation scheme.
+
+\section{Why single-stage}
+
+A conventional PV-plus-storage installation chains several converters together,
+each with its own DC link, its own capacitor bank and its own losses. Collapsing
+that into one isolated stage removes the intermediate storage element --- the
+``inertia'' --- and with it the component that most often ends the system's
+life.
+
+\section{Approach}
+
+\begin{itemize}
+  \item Bidirectional single-stage isolated topology with an ultra-low-leakage
+        transformer.
+  \item Pulse density modulation ($\Sigma$--$\Delta$) for AC synthesis.
+  \item Zero-voltage and zero-current switching across the operating range.
+  \item AC-side switching, with PV, battery pack and grid all routed through the
+        one stage.
+\end{itemize}
+
+\section{Prototype}
+
+\begin{tabular}{ll}
+  Parameter & Value \\
+  Power & 1 kW \\
+  Input & 48 Vdc \\
+  Output & 240 Vac \\
+  Modulation & $\Sigma$--$\Delta$ / pulse density \\
+\end{tabular}
+
+\section{Citation}
+
+S.~Manjrekar, A.~Marellapudi, S.~Belkhode, J.~Benzaquen and D.~Divan,
+``\href{https://doi.org/10.1109/ECCE-Asia63110.2025.11111930}{`AC Cube': A
+Single-Stage PV/Battery/Grid Energy Router},'' \textit{2025 IEEE Energy
+Conversion Congress \& Exposition Asia (ECCE-Asia)}, Bengaluru, India, 2025,
+pp.\ 1--6.
+
+\end{document}

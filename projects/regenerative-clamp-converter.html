@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regenerative Clamp Converter — Soham Manjrekar</title>
+<meta name="description" content="MS thesis · Center for Distributed Energy, Georgia Tech · Advisor: Dr. Deepak Divan">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/site.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<body>
+<nav class="site-nav"><ul>
+  <li><a href="../index.html">Home</a></li>
+  <li><a href="../blog/blog.html">Journal</a></li>
+  <li><a href="projects.html" class="active">Projects</a></li>
+  <li><a href="../files/sohammjkr_resume_10_25.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+</ul></nav>
+<div class="wrap">
+
+  <header class="masthead">
+    <h1 class="brand"><a href="../index.html"><img class="brand-mark"
+       src="../favicon.svg" alt=""><span>SOHAM MANJREKAR</span></a></h1>
+    <div class="tagline"><a href="projects.html"
+       style="color:inherit;text-decoration:none">← All projects</a></div>
+  </header>
+
+  <hr class="rule">
+
+  <main>
+<article class="entry" id="regenerative-clamp-converter"
+         data-tags="power electronics,thesis,hardware,magnetics,solar">
+  <h2 class="entry-title">Regenerative Clamp Converter</h2>
+  <div class="entry-sub">MS thesis · Center for Distributed Energy, Georgia Tech · Advisor: Dr. Deepak Divan</div>
+  <div class="meta-bar">
+    <span>2025</span><span class="honor">MS Thesis</span><span class="dot">·</span><a class="tag" href="?tag=power%20electronics" data-tag="power electronics">power electronics</a><a class="tag" href="?tag=thesis" data-tag="thesis">thesis</a><a class="tag" href="?tag=hardware" data-tag="hardware">hardware</a><a class="tag" href="?tag=magnetics" data-tag="magnetics">magnetics</a><a class="tag" href="?tag=solar" data-tag="solar">solar</a>
+  </div>
+  <div class="linkrow"><a class="btn primary" href="../thesis/Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf" target="_blank" rel="noopener noreferrer">Read the thesis (PDF)</a></div>
+  <div class="entry-body">
+<p>Design and analysis of regenerative clamp converters that recover
+leakage-inductor energy in high-power isolated converter topologies, reducing
+device stress and improving efficiency. The clamp architecture was then extended
+into a multiport interface, so the auxiliary port can integrate PV or another
+distributed energy resource while still doing its job as a clamp.</p>
+<h3>The problem</h3>
+<p>In high-power isolated topologies, energy stored in the transformer’s leakage
+inductance has to go somewhere at every switching transition. A dissipative
+clamp turns it into heat and voltage stress on the devices. Recovering that
+energy instead of burning it buys back efficiency and lets the switches be
+sized against a lower peak voltage.</p>
+<h3>What the work covers</h3>
+<ul>
+<li>Analysis and modelling of the regenerative clamp, including the
+conditions under which leakage energy is returned to the source rather
+than dissipated.</li>
+<li>Reduction of device voltage stress and the resulting effect on
+converter efficiency in high-power isolated topologies.</li>
+<li>Extension of the clamp into a multiport interface: the auxiliary port
+carries a PV or DER input while the clamping function is preserved.</li>
+<li>Simulation and hardware validation of the proposed architecture.</li>
+</ul>
+<h3>Thesis</h3>
+<details class="pdf-embed">
+  <summary>Design and Analysis of a Regenerative Clamp Converter for Energy Capture and Recovery in High Power Converter Topologies<span class="pdf-file">Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf</span></summary>
+  <iframe class="pdf-frame" src="../thesis/Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf#view=FitH" title="Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf" loading="lazy"></iframe>
+  <div class="pdf-fallback">Not rendering? <a href="../thesis/Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf" target="_blank" rel="noopener noreferrer">Open the PDF in a new tab</a>.</div>
+</details>
+  </div>
+</article>
+  </main>
+
+  <hr class="rule">
+  <p class="center"><a class="btn" href="projects.html">Back to all projects</a></p>
+
+<footer class="site-footer">
+  <div>© <span class="year">2026</span> Soham Manjrekar</div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+% ---------------------------------------------------------------------------
+% A starter entry. It exists so the pipeline has something to render and so you
+% can see every supported construct in the browser. Delete it once you have
+% real posts — or keep it and rewrite it, whichever is less work.
+% ---------------------------------------------------------------------------
+
+\title{Starting the Journal}
+\date{2026-08-06 18:30}
+\tags{life, hobbies}
+
+\begin{document}
+
+This is the first entry, which means it is mostly here to prove that the
+machinery works. Everything below is written in LaTeX in
+\texttt{blog/src/} and turned into this page by \texttt{build.py}.
+
+Paragraphs are separated by a blank line, the way they are in any \LaTeX{}
+document. Quotes and dashes get converted properly --- ``like this'' --- so I
+can keep writing the way I already type.
+
+\section{What goes here}
+
+Food, travel, friends, hobbies, life. Those five tags sit at the top of the
+page; clicking one narrows the feed and says so. Clicking it again clears the
+filter.
+
+\begin{itemize}
+  \item \textbf{Food} --- what I cooked, what I ate, what went wrong.
+  \item \textbf{Travel} --- where I went and whether it was worth the flight.
+  \item \textbf{Friends} --- the people who make Atlanta feel like home.
+  \item \textbf{Hobbies} --- tabletop games, side projects, whatever is current.
+  \item \textbf{Life} --- everything that resists a neater label.
+\end{itemize}
+
+\begin{quote}
+Time is steadily moving for all of us, which is the entire reason to write any
+of this down.
+\end{quote}
+
+\section{Notes on the machinery}
+
+Footnotes work and collect at the bottom of the entry.\footnote{This is a
+footnote. It is not very interesting, but it renders.} So does inline math,
+which I will inevitably need: the efficiency of a converter is
+$\eta = P_{\mathrm{out}} / P_{\mathrm{in}}$, and display math gets its own line.
+
+\[
+  P_{\mathrm{loss}} = P_{\mathrm{cond}} + P_{\mathrm{sw}} + P_{\mathrm{core}}
+\]
+
+\sep
+
+Images sit inline with a caption underneath.
+
+\img{/assets/PESGM_group.jpg}{PES General Meeting.}
+
+That is the whole system. Write a \texttt{.tex} file, run \texttt{python
+build.py}, look at it locally, push when it reads right.
+
+\end{document}

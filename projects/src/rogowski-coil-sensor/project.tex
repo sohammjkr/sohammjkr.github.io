@@ -1,0 +1,31 @@
+\title{Rogowski-Coil Analog Current Sensor}
+\subtitle{Center for Distributed Energy, Georgia Tech · Atlanta, GA}
+\period{2024 -- 2025}
+\date{2025-03}
+\status{Validated}
+\order{7}
+\tags{power electronics, hardware, controls, measurement}
+
+\begin{document}
+
+A wideband, low-cost analog Rogowski coil current sensor, designed for
+closed-loop current control in high-frequency power converters.
+
+\section{Why build one}
+
+Commercial current sensors with the bandwidth these converters need are
+expensive and physically large, which is a problem when the whole point of the
+converter is density. A Rogowski coil is inherently non-intrusive and cheap; the
+difficulty is the integrator that turns $\mathrm{d}i/\mathrm{d}t$ back into a
+usable current signal without drift or bandwidth loss.
+
+\section{The work}
+
+\begin{itemize}
+  \item Analog integrator design on PCB, with parameter sweeps across the
+        integrator network.
+  \item Bandwidth and accuracy characterisation against a reference sensor.
+  \item Validation in closed-loop current control of a high-frequency converter.
+\end{itemize}
+
+\end{document}

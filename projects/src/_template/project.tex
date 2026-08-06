@@ -1,0 +1,72 @@
+% ===========================================================================
+% PROJECT TEMPLATE
+%
+% 1. Copy this whole folder to  projects/src/your-project-slug/
+%    The folder name becomes the URL:  projects/your-project-slug.html
+% 2. Drop any supplementary PDFs, images or data files into that same folder.
+% 3. Fill in the metadata, write the body, then run  python build.py.
+%
+% Folders starting with "_" are ignored, so this template is never published.
+%
+% ---------------------------------------------------------------------------
+% PATH RULES
+%   A path starting with "/" is relative to the repo root and is linked in
+%   place — nothing gets copied. Use this for big files that already live in
+%   the repo:            \pdf{/thesis/my_thesis.pdf}{Full thesis}
+%
+%   Any other path is relative to THIS folder, and the file is copied next to
+%   the generated page at build time:
+%                        \pdf{report.pdf}{Final report}
+%                        \img{bench.jpg}{The prototype on the bench.}
+% ===========================================================================
+
+% --- metadata --------------------------------------------------------------
+\title{Project Title}
+\subtitle{Where it was done · which lab, company or course}
+\period{Aug 2024 -- Present}      % free text, shown in the meta bar
+\date{2025-06}                    % YYYY, YYYY-MM or YYYY-MM-DD; used for sorting
+\status{Ongoing}                  % optional pill: Ongoing / Published / Shipped
+\order{50}                        % lower number sorts higher; default 999
+\tags{power electronics, hardware}
+
+% Buttons under the title. Repeat as needed; the first one is highlighted.
+\link{Paper}{https://doi.org/10.1109/EXAMPLE}
+\link{Report (PDF)}{report.pdf}
+
+% --- body ------------------------------------------------------------------
+\begin{document}
+
+One or two sentences on what the thing is and why it exists. This paragraph is
+what someone reads before deciding whether to keep going.
+
+\section{What it does}
+
+The full write-up. All the usual constructs are available: \textbf{bold},
+\textit{italics}, \texttt{monospace}, \href{https://example.com}{links},
+footnotes,\footnote{Collected at the bottom of the entry.} lists, block quotes,
+tables and math --- inline like $\eta = P_{\mathrm{out}}/P_{\mathrm{in}}$, or
+set on its own line:
+
+\[
+  V_{\mathrm{out}} = n \, D \, V_{\mathrm{in}}
+\]
+
+\begin{itemize}
+  \item A specification worth calling out.
+  \item Another one.
+\end{itemize}
+
+\section{Specifications}
+
+\begin{tabular}{ll}
+  Parameter & Value \\
+  Input     & 800 Vdc \\
+  Output    & 2.4 kVac \\
+  Switching & 100 kHz \\
+\end{tabular}
+
+\section{Documents}
+
+\pdf{report.pdf}{Read the full report}
+
+\end{document}
