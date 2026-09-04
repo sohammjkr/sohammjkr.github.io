@@ -15,6 +15,9 @@
 % --- metadata --------------------------------------------------------------
 \title{Post Title Goes Here}
 \date{2026-01-01 18:30}          % YYYY-MM-DD, optionally with HH:MM (24h)
+% \date{2026-01-01 to 2026-01-04}   % a range prints as "January 1-4, 2026"
+\location{Austin, Texas}        % shown next to the date; multi-stop trips
+                               % read "Atlanta, GA - Cary, NC - Washington, DC"
 \tags{life, food}                % any of: food, travel, friends, hobbies, life
 % \link{Something related}{https://example.com}   % optional buttons, repeatable
 
@@ -40,6 +43,13 @@ Block quotes look like this.
 \end{quote}
 
 \img{/assets/profile1.jpg}{A caption for the picture.}
+
+Figures default to 75%% of the text column. Size one explicitly with an
+optional argument: a bare number is a percentage, and 	exttt{small},
+	exttt{medium} or 	exttt{full} also work. Never write the percent sign in
+the argument, it starts a LaTeX comment and eats the rest of the line.
+
+\img[50]{/assets/profile1.jpg}{Half the column, for tall photos.}
 
 \sep
 

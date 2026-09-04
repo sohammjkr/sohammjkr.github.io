@@ -41,7 +41,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 SITE_NAME    = "Soham Manjrekar"
 SITE_BRAND   = "SOHAM MANJREKAR"
-RESUME_PDF   = "files/sohammjkr_resume_10_25.pdf"   # root-relative; nav links here
+RESUME_PDF   = "files/FA26_Resume.pdf"   # root-relative; the viewer embeds this
+RESUME_PAGE  = "resume.html"              # nav links here, so a click never downloads
 DOB          = date(2002, 5, 18)                     # powers the \age command
 
 # Tags that always appear in the blog tag bar, in this order, even at zero posts.
@@ -597,8 +598,10 @@ def render_flow(chunk: str, ctx: Ctx) -> str:
             (a,), i = read_args(chunk, i, 1)
             parts.append(f'<div class="callout">{render_body(a, ctx)}</div>')
         elif cmd == "img":
+            i = skip_ws(chunk, i)
+            size, i = read_opt(chunk, i)
             (path, cap), i = read_args(chunk, i, 2)
-            parts.append(figure_html(ctx.resolve(path), cap, ctx))
+            parts.append(figure_html(ctx.resolve(path), cap, ctx, size))
         elif cmd == "pdf":
             (path, cap), i = read_args(chunk, i, 2)
             parts.append(pdf_html(ctx.resolve(path), cap, ctx, os.path.basename(path)))
@@ -727,11 +730,22 @@ def render_tabular(inner: str, ctx: Ctx) -> str:
     return "".join(out)
 
 
-def figure_html(src: str, caption: str, ctx: Ctx) -> str:
+FIG_SIZES = {"small", "medium", "full"}
+
+
+def figure_html(src: str, caption: str, ctx: Ctx, size: str = None) -> str:
     cap = (f"<figcaption>{convert_inline(caption, ctx)}</figcaption>"
            if caption.strip() else "")
     alt = attr(plain(caption) or "figure")
-    return (f'<figure><img src="{attr(src)}" alt="{alt}" loading="lazy">'
+    key = (size or "").strip().lower()
+    pct = key.replace("\\", "").replace("%", "")
+    if pct.isdigit() and 1 <= int(pct) <= 100:  # \img[70]{..}{..}
+        cls = f' class="fig-scaled" style="--figw:{int(pct)}%"'
+    elif key in FIG_SIZES:                     # \img[small]{..}{..}
+        cls = f' class="fig-{key}"'
+    else:
+        cls = ""
+    return (f'<figure{cls}><img src="{attr(src)}" alt="{alt}" loading="lazy">'
             f"{cap}</figure>")
 
 
@@ -853,7 +867,7 @@ def attachments_html(items: list, slug: str) -> str:
 # ---------------------------------------------------------------------------
 
 META_1 = ["title", "subtitle", "date", "tags", "excerpt", "period",
-          "status", "order", "slug", "cover"]
+          "status", "order", "slug", "cover", "location"]
 
 
 def parse_doc(path: str, ctx: Ctx) -> dict:
@@ -914,6 +928,31 @@ def parse_date(s: str):
     return None, False
 
 
+RANGE_SEPS = (" to ", " -- ", " – ", " - ", "--", "..", "–")
+
+
+def split_range(s: str):
+    r"""\date{2025-07-26 to 2025-07-28} -> ("2025-07-26", "2025-07-28")."""
+    s = (s or "").strip()
+    for sep in RANGE_SEPS:
+        if sep in s:
+            a, _, b = s.partition(sep)
+            return a.strip(), b.strip()
+    return s, None
+
+
+def fmt_range(a: datetime, b: datetime) -> str:
+    """July 26–28, 2025 / March 30 – April 2, 2026 / across years."""
+    if (a.year, a.month) == (b.year, b.month):
+        return (a.strftime("%B ") + str(a.day) + "–" + str(b.day)
+                + a.strftime(", %Y"))
+    if a.year == b.year:
+        return (a.strftime("%B ") + str(a.day) + " – "
+                + b.strftime("%B ") + str(b.day) + b.strftime(", %Y"))
+    return (a.strftime("%B ") + str(a.day) + a.strftime(", %Y") + " – "
+            + b.strftime("%B ") + str(b.day) + b.strftime(", %Y"))
+
+
 def fmt_date(dt: datetime, with_time: bool, precision: str) -> str:
     day = str(dt.day)
     if precision == "%Y":
@@ -925,6 +964,15 @@ def fmt_date(dt: datetime, with_time: bool, precision: str) -> str:
         hour = dt.hour % 12 or 12
         out += f" \u00b7 {hour}:{dt.minute:02d} {'AM' if dt.hour < 12 else 'PM'}"
     return out
+
+
+def date_label(dt, dt_end, with_time, raw_start, raw_end) -> str:
+    if dt == datetime.min:
+        return "undated"
+    if (dt_end and date_precision(raw_start) == "full"
+            and date_precision(raw_end) == "full" and dt_end > dt):
+        return fmt_range(dt, dt_end)
+    return fmt_date(dt, with_time, date_precision(raw_start))
 
 
 def date_precision(s: str) -> str:
@@ -952,12 +1000,13 @@ def nav_html(prefix: str, active: str) -> str:
         ("Projects", f"{prefix}projects/projects_main.html" if prefix == "" else
                      ("projects_main.html" if active == "projects" else
                       f"{prefix}projects/projects_main.html"), "projects"),
-        ("Resume", f"{prefix}{RESUME_PDF}", "resume"),
+        ("Resume", f"{prefix}{RESUME_PAGE}", "resume"),
     ]
     lis = []
     for label, href, key in items:
         cls = ' class="active"' if key == active else ""
-        blank = ' target="_blank" rel="noopener noreferrer"' if key == "resume" else ""
+        blank = (' target="_blank" rel="noopener noreferrer"'
+                 if key == "resume" and active != "resume" else "")
         lis.append(f'<li><a href="{attr(href)}"{cls}{blank}>{label}</a></li>')
     return '<nav class="site-nav"><ul>\n  ' + "\n  ".join(lis) + "\n</ul></nav>"
 
@@ -1119,7 +1168,11 @@ def build_blog() -> int:
         if not raw_date:
             fm = re.match(r"^(\d{4}-\d{2}-\d{2})", stem)
             raw_date = fm.group(1) if fm else ""
-        dt, with_time = parse_date(raw_date)
+        raw_start, raw_end = split_range(raw_date)
+        dt, with_time = parse_date(raw_start)   # sorting uses the start
+        dt_end, _ = parse_date(raw_end) if raw_end else (None, False)
+        if raw_end and dt_end is None:
+            warn(f"{name}: unreadable end of date range {raw_end!r}")
         if dt is None:
             warn(f"{name}: no readable \\date{{...}} — sorted last")
             dt, with_time = datetime.min, False
@@ -1133,15 +1186,16 @@ def build_blog() -> int:
             "title": ctx.unstash(convert_inline(raw_title, ctx)),
             "slug": meta["slug"],
             "dt": dt,
-            "date_label": fmt_date(dt, with_time, date_precision(raw_date))
-                          if dt != datetime.min else "undated",
+            "date_label": date_label(dt, dt_end, with_time, raw_start, raw_end),
             "iso": dt.isoformat() if dt != datetime.min else "",
+            "iso_end": dt_end.date().isoformat() if dt_end else "",
+            "location": ctx.unstash(convert_inline(meta.get("location", ""), ctx)),
             "tags": split_tags(meta.get("tags", "")),
             "links": [(l, ctx.resolve(u)) for l, u in meta["links"]],
             "html": body + notes,
         })
 
-    posts.sort(key=lambda p: p["dt"], reverse=True)
+    posts.sort(key=lambda p: p["dt"])   # oldest first, chronological
 
     counts: dict = {t: 0 for t in BLOG_TAGS}
     for p in posts:
@@ -1152,6 +1206,8 @@ def build_blog() -> int:
     for p in posts:
         pills = ('<span class="dot">\u00b7</span>'
                  + "".join(tag_html(t) for t in p["tags"])) if p["tags"] else ""
+        where = ('<span class="dot">\u00b7</span>'
+                 f'<span class="where">{p["location"]}</span>') if p["location"] else ""
         links = ""
         if p["links"]:
             links = ('<div class="linkrow">'
@@ -1159,13 +1215,15 @@ def build_blog() -> int:
                                f'rel="noopener noreferrer">{esc(l)}</a>'
                                for l, u in p["links"])
                      + "</div>")
-        time_el = (f'<time datetime="{attr(p["iso"])}">{esc(p["date_label"])}</time>'
+        dend = f' data-date-end="{attr(p["iso_end"])}"' if p["iso_end"] else ""
+        time_el = (f'<time datetime="{attr(p["iso"])}"{dend}>'
+                   f'{esc(p["date_label"])}</time>'
                    if p["iso"] else f'<span>{esc(p["date_label"])}</span>')
         entries.append(f"""<article class="entry" id="{attr(p['slug'])}"
          data-tags="{attr(','.join(p['tags']))}">
   <h2 class="entry-title"><a href="#{attr(p['slug'])}">{p['title']}</a></h2>
   <div class="meta-bar">
-    {time_el}{pills}
+    {time_el}{where}{pills}
     <a class="anchor" href="#{attr(p['slug'])}" aria-label="Link to this entry">#</a>
   </div>
   <div class="entry-body">
@@ -1416,12 +1474,58 @@ def write(path: str, text: str) -> None:
     print(f"  wrote {os.path.relpath(path, ROOT).replace(os.sep, '/')}")
 
 
+def build_resume() -> None:
+    """A real HTML page around the resume PDF.
+
+    The nav used to link straight at the PDF. A browser set to "download PDFs
+    instead of opening them" turns that click into a save dialog, so the nav
+    now points here: an HTML page cannot download, and the PDF is embedded with
+    direct-open and download links beside it for anything that will not render.
+    """
+    page = f"""{page_head(f"Résumé — {SITE_NAME}", "",
+                          "Resume of Soham Manjrekar, power electronics engineer.",
+                          False)}
+<body>
+{nav_html("", "resume")}
+<div class="wrap">
+
+  <header class="masthead">
+    <h1 class="brand"><a href="index.html"><img class="brand-mark"
+       src="favicon.svg" alt=""><span>{SITE_BRAND}</span></a></h1>
+    <div class="tagline">Résumé</div>
+  </header>
+
+  <div class="linkrow">
+    <a class="btn" href="{RESUME_PDF}" target="_blank"
+       rel="noopener noreferrer">Open the PDF in a new tab</a>
+    <a class="btn" href="{RESUME_PDF}" download>Download the PDF</a>
+  </div>
+
+  <main class="resume-view">
+    <iframe class="resume-frame" src="{RESUME_PDF}#view=FitH"
+            title="Résumé of {esc(SITE_NAME)}"></iframe>
+    <div class="pdf-fallback">Not rendering in your browser?
+      <a href="{RESUME_PDF}" target="_blank" rel="noopener noreferrer">Open the
+      PDF directly</a>.</div>
+  </main>
+
+{footer_html(credit=False)}
+</div>
+</body>
+</html>
+"""
+    write(os.path.join(ROOT, RESUME_PAGE), page)
+
+
 def build() -> None:
     del WARNINGS[:]
     del DEFERRED_CHECKS[:]
     print("building sohammjkr.github.io")
     n_posts = build_blog()
     n_proj = build_projects()
+    build_resume()
+    if not os.path.exists(os.path.join(ROOT, RESUME_PDF)):
+        warn(f"{RESUME_PAGE} embeds {RESUME_PDF}, which does not exist")
 
     for abs_path, as_written, where in DEFERRED_CHECKS:
         if not os.path.exists(abs_path):
