@@ -1195,7 +1195,7 @@ def build_blog() -> int:
             "html": body + notes,
         })
 
-    posts.sort(key=lambda p: p["dt"])   # oldest first, chronological
+    posts.sort(key=lambda p: p["dt"], reverse=True)   # newest first
 
     counts: dict = {t: 0 for t in BLOG_TAGS}
     for p in posts:
