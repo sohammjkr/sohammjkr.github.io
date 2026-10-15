@@ -43,37 +43,28 @@
   </div>
   
   <div class="entry-body">
-<p>Design and analysis of regenerative clamp converters that recover
-leakage-inductor energy in high-power isolated converter topologies, reducing
-device stress and improving efficiency. The clamp architecture was then extended
-into a multiport interface, so the auxiliary port can integrate PV or another
-distributed energy resource while still doing its job as a clamp.</p>
+<p>The Regenerative Clamp Converter (RCC) is an energy capture and recovery circuit
+for the Inertia-less Isolated Converter (IIC), a single-stage, high-frequency
+isolated converter with no DC link. Every switch transition traps energy in the
+transformer’s leakage inductance. A conventional clamp burns it as heat; the RCC
+captures it and returns it to the main power path through a small series
+recovery transformer. It sits wholly on one side of the isolation barrier, so
+the host converter’s modulation and primary-side bridge are unchanged.</p>
 <h3>The problem</h3>
-<p>In high-power isolated topologies, energy stored in the transformer’s leakage
-inductance has to go somewhere at every switching transition. A dissipative
-clamp turns it into heat and voltage stress on the devices. Recovering that
-energy instead of burning it buys back efficiency and lets the switches be
-sized against a lower peak voltage.</p>
-<h3>What the work covers</h3>
-<ul>
-<li>Analysis and modelling of the regenerative clamp, including the
-conditions under which leakage energy is returned to the source rather
-than dissipated.</li>
-<li>Reduction of device voltage stress and the resulting effect on
-converter efficiency in high-power isolated topologies.</li>
-<li>Extension of the clamp into a multiport interface: the auxiliary port
-carries a PV or DER input while the clamping function is preserved.</li>
-<li>Simulation and hardware validation of the proposed architecture.</li>
-</ul>
+<p>The IIC is an isolated DC/AC matrix converter. It has no intermediate energy
+storage, so the energy trapped in the leakage inductance and the device
+parasitics has nowhere to go. The energy is released at each switch transition and drives the
+secondary voltage toward twice the reflected DC voltage. A clamp is
+required to drive this converter to higher power levels, and while
+dissipative clamps exist, an active clamp may enable higher converter
+efficiencies.</p>
 <section class="attachments" id="documents">
   <h3 class="attachments-head">Documents</h3>
 <figure class="doc-embed">
   <figcaption class="doc-head">
-    <span class="doc-label">MS thesis<span class="doc-file">Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf</span></span>
     <a class="btn primary" href="../thesis/Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf" target="_blank" rel="noopener noreferrer">Open PDF ↗</a>
   </figcaption>
   <iframe class="pdf-frame" src="../thesis/Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf#view=FitH" title="MS thesis" loading="lazy"></iframe>
-  <div class="pdf-fallback">Not rendering? <a href="../thesis/Design_and_Analysis_of_a_Regenerative_Clamp_Converter_for_Energy_Capture_and_Recovery_in_High_Power_Converter_Topologies.pdf" target="_blank" rel="noopener noreferrer">Open the PDF in a new tab</a>.</div>
 </figure>
 </section>
   </div>

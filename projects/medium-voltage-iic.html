@@ -43,29 +43,29 @@
   </div>
   
   <div class="entry-body">
-<p>Design and prototyping of a multi-level, medium-voltage, single-stage isolated
-converter — 800 Vdc to 2.4 kVac per slice. The single-stage approach removes
-the intermediate DC link that a conventional two-stage design needs, which takes
-out a large electrolytic capacitor bank and the reliability problem that comes
-with it.</p>
+<p>The Inertia-less Isolated Converter (IIC) is an isolated DC/AC converter with
+no energy storage between its input and output. A DC bridge drives a
+high-frequency transformer with a quasi-square wave, and a bidirectional
+blocking bridge on the secondary connects that wave straight to the AC output.</p>
+<p>This project took the IIC to medium voltage: a multi-level, single-stage
+version built from series slices, designed, built and tested at the Center for
+Distributed Energy.</p>
 <h3>Scope of the work</h3>
 <ul>
 <li>Topology definition for the multi-level medium-voltage stage.</li>
-<li>High-frequency magnetics design, including the isolation transformer.</li>
+<li>Magnetics design of a medium-voltage, high-frequency power transformer.</li>
 <li>Control and protection implementation.</li>
 <li>Hardware bring-up, firmware, and test and validation on the bench.</li>
 </ul>
 <h3>Ratings</h3>
-<div class="table-scroll"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Input</td><td>800 Vdc</td></tr><tr><td>Output</td><td>2.4 kVac per slice</td></tr><tr><td>Stages</td><td>Single-stage, isolated</td></tr><tr><td>Structure</td><td>Multi-level</td></tr></tbody></table></div>
+<div class="table-scroll"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Input</td><td>800 Vdc</td></tr><tr><td>Output</td><td>2.4 kVrms, 10 Arms at 60 Hz</td></tr><tr><td>Power</td><td>24 kVA</td></tr></tbody></table></div>
 <section class="attachments" id="documents">
   <h3 class="attachments-head">Documents</h3>
 <figure class="doc-embed">
   <figcaption class="doc-head">
-    <span class="doc-label">Slides<span class="doc-file">mv2dc_slides.pdf</span></span>
     <a class="btn primary" href="../assets/mv2dc_slides.pdf" target="_blank" rel="noopener noreferrer">Open PDF ↗</a>
   </figcaption>
   <iframe class="pdf-frame" src="../assets/mv2dc_slides.pdf#view=FitH" title="Slides" loading="lazy"></iframe>
-  <div class="pdf-fallback">Not rendering? <a href="../assets/mv2dc_slides.pdf" target="_blank" rel="noopener noreferrer">Open the PDF in a new tab</a>.</div>
 </figure>
 </section>
   </div>

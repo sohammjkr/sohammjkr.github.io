@@ -10,17 +10,20 @@
 
 \begin{document}
 
-Design and prototyping of a multi-level, medium-voltage, single-stage isolated
-converter --- 800~Vdc to 2.4~kVac per slice. The single-stage approach removes
-the intermediate DC link that a conventional two-stage design needs, which takes
-out a large electrolytic capacitor bank and the reliability problem that comes
-with it.
+The Inertia-less Isolated Converter (IIC) is an isolated DC/AC converter with
+no energy storage between its input and output. A DC bridge drives a
+high-frequency transformer with a quasi-square wave, and a bidirectional
+blocking bridge on the secondary connects that wave straight to the AC output.
+
+This project took the IIC to medium voltage: a multi-level, single-stage
+version built from series slices, designed, built and tested at the Center for
+Distributed Energy.
 
 \section{Scope of the work}
 
 \begin{itemize}
   \item Topology definition for the multi-level medium-voltage stage.
-  \item High-frequency magnetics design, including the isolation transformer.
+  \item Magnetics design of a medium-voltage, high-frequency power transformer.
   \item Control and protection implementation.
   \item Hardware bring-up, firmware, and test and validation on the bench.
 \end{itemize}
@@ -30,9 +33,8 @@ with it.
 \begin{tabular}{ll}
   Parameter & Value \\
   Input & 800 Vdc \\
-  Output & 2.4 kVac per slice \\
-  Stages & Single-stage, isolated \\
-  Structure & Multi-level \\
+  Output & 2.4 kVrms, 10 Arms at 60 Hz \\
+  Power & 24 kVA \\
 \end{tabular}
 
 \end{document}

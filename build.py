@@ -841,20 +841,17 @@ def attachments_html(items: list, slug: str) -> str:
                 f'Download {esc(i["kind"])}</a></div>\n'
                 "</div>")
             continue
+        src_note = (f'  <div class="pdf-fallback">{orig.strip()}</div>\n'
+                    if i["original"] else "")
         blocks.append(
             '<figure class="doc-embed">\n'
             '  <figcaption class="doc-head">\n'
-            f'    <span class="doc-label">{esc(i["label"])}'
-            f'<span class="doc-file">{esc(i["filename"])}</span></span>\n'
             f'    <a class="btn primary" href="{attr(i["pdf"])}" '
             'target="_blank" rel="noopener noreferrer">Open PDF ↗</a>\n'
             "  </figcaption>\n"
             f'  <iframe class="pdf-frame" src="{attr(i["pdf"])}#view=FitH" '
             f'title="{attr(i["label"])}" loading="lazy"></iframe>\n'
-            '  <div class="pdf-fallback">Not rendering? '
-            f'<a href="{attr(i["pdf"])}" target="_blank" '
-            'rel="noopener noreferrer">Open the PDF in a new tab</a>.'
-            f"{orig}</div>\n"
+            f"{src_note}"
             "</figure>")
 
     return ('<section class="attachments" id="documents">\n'
