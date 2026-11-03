@@ -1471,14 +1471,46 @@ def write(path: str, text: str) -> None:
     print(f"  wrote {os.path.relpath(path, ROOT).replace(os.sep, '/')}")
 
 
-def build_resume() -> None:
-    """A real HTML page around the resume PDF.
+def render_resume_pages() -> list[str]:
+    """Rasterise each page of the resume PDF to assets/resume/page-N.png.
 
-    The nav used to link straight at the PDF. A browser set to "download PDFs
-    instead of opening them" turns that click into a save dialog, so the nav
-    now points here: an HTML page cannot download, and the PDF is embedded with
-    direct-open and download links beside it for anything that will not render.
+    The resume page shows these images instead of an embedded PDF viewer, so it
+    looks the same in every browser. Returns root-relative paths, or [] if
+    PyMuPDF is missing or the PDF is.
     """
+    pdf = os.path.join(ROOT, RESUME_PDF)
+    if not os.path.exists(pdf):
+        return []
+    try:
+        import pymupdf
+    except ImportError:
+        warn("PyMuPDF not installed; resume page cannot render the PDF")
+        return []
+    outdir = os.path.join(ROOT, "assets", "resume")
+    os.makedirs(outdir, exist_ok=True)
+    for old in os.listdir(outdir):
+        if old.startswith("page-") and old.endswith(".png"):
+            os.remove(os.path.join(outdir, old))
+    paths = []
+    with pymupdf.open(pdf) as doc:
+        for i, pg in enumerate(doc, 1):
+            rel = f"assets/resume/page-{i}.png"
+            pg.get_pixmap(dpi=160).save(os.path.join(ROOT, rel))
+            paths.append(rel)
+    return paths
+
+
+def build_resume() -> None:
+    """A real HTML page showing the resume PDF as page images.
+
+    The nav links here rather than at the PDF, so a browser set to "download
+    PDFs instead of opening them" never turns the click into a save dialog.
+    """
+    pages = render_resume_pages()
+    imgs = chr(10).join(
+        f'    <img class="resume-page" src="{p}" alt="Résumé of '
+        f'{esc(SITE_NAME)}, page {i}" draggable="false">'
+        for i, p in enumerate(pages, 1))
     page = f"""{page_head(f"Résumé — {SITE_NAME}", "",
                           "Resume of Soham Manjrekar, power electronics engineer.",
                           False)}
@@ -1489,7 +1521,6 @@ def build_resume() -> None:
   <header class="masthead">
     <h1 class="brand"><a href="index.html"><img class="brand-mark"
        src="favicon.svg" alt=""><span>{SITE_BRAND}</span></a></h1>
-    <div class="tagline">Résumé</div>
   </header>
 
   <div class="linkrow">
@@ -1499,11 +1530,7 @@ def build_resume() -> None:
   </div>
 
   <main class="resume-view">
-    <iframe class="resume-frame" src="{RESUME_PDF}#view=FitH"
-            title="Résumé of {esc(SITE_NAME)}"></iframe>
-    <div class="pdf-fallback">Not rendering in your browser?
-      <a href="{RESUME_PDF}" target="_blank" rel="noopener noreferrer">Open the
-      PDF directly</a>.</div>
+{imgs}
   </main>
 
 {footer_html(credit=False)}

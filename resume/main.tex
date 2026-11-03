@@ -7,7 +7,7 @@
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage[maxnames=99]{biblatex}
+\usepackage[maxnames=99,sorting=none]{biblatex}
 \addbibresource{Publications.bib}
 
 % Bold "Soham Manjrekar" in author lists
@@ -16,6 +16,9 @@
 
 \renewcommand*{\mkbibnamegiven}[3]{%
   \ifstrequal{#1}{Soham}{\textbf{#1}}{#1}}
+
+% Drop the "In:" biblatex prints before the venue
+\renewbibmacro{in:}{}
 
 \newcommand{\printpublications}[3][]{%
     \nocite{*} % Include all entries in the bibliography
@@ -34,6 +37,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
+\usepackage{comment}
 
 
 %----------FONT OPTIONS----------
@@ -79,7 +83,7 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1\vspace{-2pt}}
   }
 }
 
@@ -123,20 +127,12 @@
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
-
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
     \textbf{\Huge \scshape Soham Manjrekar} \\ \vspace{1pt}
     \small +1(919) 455-5909 $|$ \href{smanjrekar6@gatech.edu}{\underline{smanjrekar6@gatech.edu}} $|$ 
     \href{https://linkedin.com/in/sohammjkr/}{\underline{linkedin.com/in/sohammjkr/}} $|$
-    \href{https://github.com/sohammjkr/}{\underline{github.com/sohammjkr}}
+    \href{https://sohammjkr.github.io/}{\underline{sohammjkr.github.io/}}
 \end{center}
 
 
@@ -152,9 +148,6 @@
     \resumeSubheading
       {University of Illinois Urbana-Champaign}{Aug. 2020 -- May 2024}
       {Bachelor of Science in Electrical Engineering}{}
-  \resumeItemListStart
-    \resumeItem{Hoeft Technology and Management Minor}
-  \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -163,13 +156,15 @@
   \resumeSubHeadingListStart
       \resumeSubheading
       {Power Electronics Engineer} {Oct. 2025 -- Present}
-      {GridTran - Endeavour} {Atlanta, GA}
+      {GridTran - Endeavour (Founding Engineer)} {Atlanta, GA}
       \resumeItemListStart
-        \resumeItem{Designing efficient, scalable, and robust MVSST's for a variety of applications including renewable integration, datacenter power delivery, and powering the grid.}
+        \resumeItem{Designing a $>$98.6\% efficient, multi-megawatt, 34.5\,kVac -- 800\,Vdc Medium-Voltage Solid-State Transformer (MVSST) for a beachhead market of datacenter power delivery}
+
+        \resumeItem{Co-led Electrical, Mechanical, and Firmware teams through iterative design, validation, and test sprints, rapidly de-risking core technology prototypes in preparation for a New Product Introduction (NPI) line}
         \resumeItemListEnd
         
     \resumeSubheading
-      {Graduate Research Assistant} {Aug. 2024 -- Present}
+      {Graduate Research Assistant} {Aug. 2024 -- Oct. 2025}
       {Georgia Institute of Technology -- Center for Distributed Energy (CDE)} {Atlanta, GA}
       \resumeItemListStart
         \resumeItem{Research Advisor: Dr. Deepak Divan}
@@ -188,83 +183,51 @@
       {Electrical Engineering Intern}{May 2023 -- Aug. 2023}
       {Northrop Grumman - Mission Systems}{Baltimore, MD}
       \resumeItemListStart
-        \resumeItem{Tested and validated Electronic Warfare (EW) systems aboard the EA-18G Growler platform}
         \resumeItem{Supported design and analysis of the Power Processing Unit (PPU) for electrical systems on the F-35 Lightning II}
 
       \resumeItemListEnd
       
-    \resumeSubheading
-      {Electrical Engineering Intern}{May 2022 -- Aug. 2022}
-      {Black \& Veatch - Power Delivery}{Overland Park, KS}
-      \resumeItemListStart
-        \resumeItem{Worked on the physical design of GIS substations across the Midwest and performed a site survey to validate lightning arresters}
-        \resumeItem{Developed proposal for street-side EV charging bays presented to City Council of Kansas City}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Electrical Engineering Intern}{May 2021 -- Oct. 2021}
-      {American Battery Solutions}{Lake Orion, MI}
-      \resumeItemListStart
-        \resumeItem{Developed an automated system with Python scripts to report simulated requirement testing and validation of battery packs in an ETAS LABCAR with a real BMS}
-        \resumeItem{Built a low-cost CANalyzer alternative using open-source software and economical hardware to transmit CAN signals directly to a mobile app or web server}
-      \resumeItemListEnd
-      
   \resumeSubHeadingListEnd
+  
 
 %-----------PROJECTS-----------
-\section{Projects}
+\section{Selected Projects}
 \resumeSubHeadingListStart
+
+\resumeSubheading
+    {Regenerative Clamp Converter - \textit{Thesis Dissertation}}{}
+    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
+    \resumeItemListStart
+      \resumeItem{Design and analysis of an active clamping circuit to enable higher power processing in single-stage, inertia-less, isolated converters by capturing and recovering trapped energy in the circuit}
+      \resumeItem{400 V\textsubscript{DC} to 600 V\textsubscript{AC,rms}, 3.6 kW hardware prototype, simulated at 80 kW; reduced losses by $>$90\%}
+    \resumeItemListEnd
 
 \resumeSubheading
     {Medium Voltage Inertia-Less Isolated Converter}{}
     {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
     \resumeItemListStart
-        \resumeItem{Design, prototyping of a multi-level, medium-voltage, single-stage isolated converter, 800 Vdc to 2.4 kVac per slice. Work included topology definition, high-frequency magnetics design, control and protection implementation, hardware and firmware testing and validation.}
+        \resumeItem{Designed, prototyped, and validated a multi-level, single-stage, inertia-less isolated converter}
+        \resumeItem{800 V\textsubscript{dc} to 2.4 kV\textsubscript{AC,pk} per level, rated for 250 kW}
     \resumeItemListEnd
-
-\resumeSubheading
-    {Regenerative Clamp Converter - \textit{Thesis Topic}}{}
-    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
-    \resumeItemListStart
-      \resumeItem{Design and analysis of regenerative clamp converters to recover leakage-inductor energy in high-power isolated converter topologies, reducing device stress and improving efficiency; extended clamp architecture into a multiport interface enabling PV/DER integration via the auxiliary port while maintaining clamping functionality.}
-    \resumeItemListEnd
-\newpage
+    
 \resumeSubheading
     {Integrated Home Energy Fast Charger} {}
     {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
     \resumeItemListStart
-      \resumeItem{Design of a 50 kW bidirectional home fast charger, 120 Vac split-phase to 250-400 Vdc, with interleaved PFC, active power decoupling, and isolated DC–DC stage. Supported automatic PV/storage integration, and EV charging using SiC MOSFETs.}
+      \resumeItem{Design of a bidirectional, multi-stage, isolated home backup and EV charger with automatic PV/storage integration}
+      \resumeItem{250--400 V\textsubscript{DC} to 120 V\textsubscript{AC} split-phase, rated for 50 kW}
     \resumeItemListEnd
 
 \resumeSubheading
-    {Rogowski Coil Analog Current Sensor} {}
+    {Bidirectional, Single-Stage, Inertia-less, Isolated DC/AC Energy Router} {}
     {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
     \resumeItemListStart
-      \resumeItem{Design and validation of a wideband, low cost, analog Rogowski coil current sensor for closed loop current control of high frequency power converters. }
-    \resumeItemListEnd
-
-\resumeSubheading
-    {Single-Stage Isolated DC–AC Energy Router} {}
-    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
-    \resumeItemListStart
-      \resumeItem{Designed and prototyped a 1 kW single-stage isolated converter based on the inertia-less isolated converter, delivering 240 Vac from a 48 Vdc source with a $\Sigma-\Delta$ modulation scheme.}
+      \resumeItem{Designed and prototyped a bidirectional, single-stage, inertia-less, isolated DC/AC energy router with a $\Sigma$-$\Delta$ pulse-density modulation scheme for islanded, off-grid applications}
+      \resumeItem{48 V\textsubscript{DC} to 240 V\textsubscript{AC}, rated for 1 kW}
     \resumeItemListEnd
     
-%\resumeSubheading
-%  {Power Quality Monitor and Submetering Device}{}
-%  {ECE Senior Capstone, University of Illinois Urbana–Champaign}{Champaign, IL}
-%  \resumeItemListStart
-%    \resumeItem{Designed and prototyped a low-cost sub-meter with integrated power-quality monitoring with ADE9153A/ADE9430 ICs, and bluetooth/Wi-Fi data transfer with an ESP32; implemented real-time cloud telemetry, 24+ hour self-powered operation, and web-based GUI}
-%  \resumeItemListEnd
-
-\resumeSubheading
-  {Machine Learning for Weld Acoustics Monitoring}{}
-  {Caterpillar Inc. and University of Illinois Urbana–Champaign}{Peoria, IL}
-  \resumeItemListStart
-    \resumeItem{Developed a machine learning system to classify weld quality from acoustic signals using MFCC feature pipelines and SVM classifiers; built Python-based GUI feedback, Arduino/LED prototype alert stack, and achieved 75–84\% test accuracy on Caterpillar welding lab datasets.}
-  \resumeItemListEnd
-
 \resumeSubHeadingListEnd
+
 
 %-----------PUBLICATIONS-----------
 \printpublications[title={Publications \& Patents}]
@@ -275,14 +238,8 @@
     \resumeSubHeadingListStart
       \resumeProjectHeading
       {\textbf{Frank C. Mock Scholarship}} {Dec. 2023}
-          \resumeItemListStart
-            \resumeItem{This scholarship is given in honor of the Frank C. Mock family to be used to help top ECE students}
-          \resumeItemListEnd
       \resumeProjectHeading
       {\textbf{Grainger Power Engineering Award}} {May 2024}
-          \resumeItemListStart
-            \resumeItem{To reward highly qualified and well-motivated undergraduate and graduate students who have chosen to pursue a field of study in electric power engineering}
-          \resumeItemListEnd
     \resumeSubHeadingListEnd
      
 
@@ -290,13 +247,15 @@
 %-----------Technical SKILLS-----------
 
 
-\section{Technical Skills}
+\section{Skills and Proficiencies}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Modeling \& Simulation}{: MATLAB/Simulink, PLECS, LTspice, PSIM} \\
-     \textbf{Hardware Tools}{: Cadence Allegro/OrCAD, Altium, KiCad, Oscilloscope, Power analyzers, LEM Sensor Platform, TI DSPs (C2000 series), Intel FPGA (DE0-Nano)} \\
-     \textbf{Programming}{: Python (NumPy, scikit-learn, Librosa), C/C++, SystemVerilog, MATLAB, JavaScript, HTML/CSS} \\
-     \textbf{Developer Tools}{: Git, VS Code, Quartus, Code Composer Studio, Eclipse} \\
+     \textbf{Modeling \& Simulation}{: MATLAB/Simulink, PLECS, PSCAD, LTspice; hardware-in-the-loop (HIL) with ETAS LABCAR and OPAL-RT} \\
+     \textbf{PCB \& Mechanical CAD}{: Cadence Allegro PCB Designer and OrCAD schematic capture, Altium 365, KiCad, EAGLE; SolidWorks, 3DEXPERIENCE, Autodesk Fusion 360, OpenSCAD, Blender; rapid additive (FFF, SLA) and subtractive (CNC milling, laser cutting) manufacturing} \\
+     \textbf{Power-Stage Testing}{: Hard- and soft-switching characterization (double-pulse testing); high-frequency transformer and inductor characterization; calorimetric efficiency; thermal runaway testing; back-to-back converter power validation} \\
+     \textbf{Insulation Testing}{: Hi-Pot, basic insulation level (BIL), partial discharge (PD), surge and impulse testing} \\
+     \textbf{Embedded \& Programming}{: TI C2000 DSP platform (C/C++, Code Composer Studio); SystemVerilog on Intel (Altera) FPGAs (Quartus Prime); Python, Swift} \\
+     \textbf{Prototyping \& Manufacturing}{: Soldering and ultrasonic welding; DFM/DFT-driven PCB design and laminate selection (Tg, CTI, thermal and insulation performance); automated manufacturing file creation, BOM management, PCBA RFQs and fabrication EQs} \\
     }}
 \end{itemize}
 %-------------------------------------------

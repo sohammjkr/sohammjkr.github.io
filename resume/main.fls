@@ -1,8 +1,8 @@
-PWD c:/Users/manjr/OneDrive - Endeavour Energy/Desktop/Claude/03_Soham_Site/sohammjkr.github.io/resume
+PWD C:/Users/manjr/OneDrive - Endeavour Energy/Desktop/Claude/03_Soham_Site/sohammjkr.github.io/resume
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/manjr/OneDrive - Endeavour Energy/Desktop/Claude/03_Soham_Site/sohammjkr.github.io/resume/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -149,6 +149,8 @@ INPUT c:/texlive/2026/texmf-dist/tex/generic/pdftex/glyphtounicode.tex
 INPUT c:/texlive/2026/texmf-dist/tex/generic/pdftex/glyphtounicode.tex
 INPUT c:/texlive/2026/texmf-dist/tex/generic/pdftex/glyphtounicode.tex
 INPUT c:/texlive/2026/texmf-dist/tex/generic/pdftex/glyphtounicode.tex
+INPUT c:/texlive/2026/texmf-dist/tex/latex/comment/comment.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/comment/comment.sty
 INPUT ./main.aux
 INPUT ./main.aux
 INPUT main.aux
@@ -208,7 +210,9 @@ INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb

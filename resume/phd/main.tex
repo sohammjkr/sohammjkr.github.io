@@ -1,0 +1,262 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[maxnames=99,sorting=none]{biblatex}
+\addbibresource{Publications.bib}
+
+% Bold "Soham Manjrekar" in author lists
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifstrequal{#1}{Manjrekar}{\textbf{#1}}{#1}}
+
+\renewcommand*{\mkbibnamegiven}[3]{%
+  \ifstrequal{#1}{Soham}{\textbf{#1}}{#1}}
+
+% Drop the "In:" biblatex prints before the venue
+\renewbibmacro{in:}{}
+
+\newcommand{\printpublications}[3][]{%
+    \nocite{*} % Include all entries in the bibliography
+    \printbibliography[title={Publications}, #1]
+}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{comment}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemWithDate}[2]{%
+  \item\small{%
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      {#1} & {#2} \\
+    \end{tabular*}
+  }
+}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{center}
+    \textbf{\Huge \scshape Soham Manjrekar} \\ \vspace{1pt}
+    \small +1(919) 455-5909 $|$ \href{smanjrekar6@gatech.edu}{\underline{smanjrekar6@gatech.edu}} $|$ 
+    \href{https://linkedin.com/in/sohammjkr/}{\underline{linkedin.com/in/sohammjkr/}} $|$
+    \href{https://sohammjkr.github.io/}{\underline{sohammjkr.github.io/}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+        {Georgia Institute of Technology}{Aug. 2024 -- Dec. 2025}
+        {Master of Science in Electrical Engineering}{Thesis Advisor: Dr. Deepak Divan} 
+  \resumeItemListStart
+    \resumeItem{Chair, IEEE Power \& Energy Society Student Chapter}
+  \resumeItemListEnd
+    \resumeSubheading
+      {University of Illinois Urbana-Champaign}{Aug. 2020 -- May 2024}
+      {Bachelor of Science in Electrical Engineering}{}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Research and Work Experience}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {Power Electronics Engineer} {Oct. 2025 -- Present}
+      {GridTran - Endeavour (Founding Engineer)} {Atlanta, GA}
+      \resumeItemListStart
+        \resumeItem{Designing a $>$98.6\% efficient, multi-megawatt, 34.5\,kVac -- 800\,Vdc Medium-Voltage Solid-State Transformer (MVSST) for a beachhead market of datacenter power delivery}
+
+        \resumeItem{Co-led Electrical, Mechanical, and Firmware teams through iterative design, validation, and test sprints, rapidly de-risking core technology prototypes in preparation for a New Product Introduction (NPI) line}
+        \resumeItemListEnd
+        
+    \resumeSubheading
+      {Graduate Research Assistant} {Aug. 2024 -- Oct. 2025}
+      {Georgia Institute of Technology -- Center for Distributed Energy (CDE)} {Atlanta, GA}
+      \resumeItemListStart
+        \resumeItem{Research Advisor: Dr. Deepak Divan}
+        \resumeItem{Research focused on designing, modeling and prototyping grid-connected inverters which integrate distributed energy resources to be rapidly adopted and scaled for industrial use}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Undergraduate Research Assistant} {Aug. 2023 -- May 2024}
+      {University of Illinois Urbana-Champaign -- Power and Energy Group} {Champaign, IL}
+      \resumeItemListStart
+        \resumeItem{Advisor: Dr. Arijit Banerjee}
+        \resumeItem{Research to experimentally characterize transformer core losses when excited by a signal of multiple frequencies}
+      \resumeItemListEnd
+  
+    \resumeSubheading
+      {Electrical Engineering Intern}{May 2023 -- Aug. 2023}
+      {Northrop Grumman - Mission Systems}{Baltimore, MD}
+      \resumeItemListStart
+        \resumeItem{Supported design and analysis of the Power Processing Unit (PPU) for electrical systems on the F-35 Lightning II}
+
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+  
+
+%-----------PROJECTS-----------
+\section{Selected Projects}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+    {Regenerative Clamp Converter - \textit{Thesis Dissertation}}{}
+    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
+    \resumeItemListStart
+      \resumeItem{Design and analysis of an active clamping circuit to enable higher power processing in single-stage, inertia-less, isolated converters by capturing and recovering trapped energy in the circuit}
+      \resumeItem{400 V\textsubscript{DC} to 600 V\textsubscript{AC,rms}, 3.6 kW hardware prototype, simulated at 80 kW; reduced losses by $>$90\%}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Medium Voltage Inertia-Less Isolated Converter}{}
+    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
+    \resumeItemListStart
+        \resumeItem{Designed, prototyped, and validated a multi-level, single-stage, inertia-less isolated converter}
+        \resumeItem{800 V\textsubscript{dc} to 2.4 kV\textsubscript{AC,pk} per level, rated for 250 kW}
+    \resumeItemListEnd
+    
+\resumeSubheading
+    {Integrated Home Energy Fast Charger} {}
+    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
+    \resumeItemListStart
+      \resumeItem{Design of a bidirectional, multi-stage, isolated home backup and EV charger with automatic PV/storage integration}
+      \resumeItem{250--400 V\textsubscript{DC} to 120 V\textsubscript{AC} split-phase, rated for 50 kW}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Bidirectional, Single-Stage, Inertia-less, Isolated DC/AC Energy Router} {}
+    {Center for Distributed Energy (CDE), Georgia Institute of Technology}{Atlanta, GA}
+    \resumeItemListStart
+      \resumeItem{Designed and prototyped a bidirectional, single-stage, inertia-less, isolated DC/AC energy router with a $\Sigma$-$\Delta$ pulse-density modulation scheme for islanded, off-grid applications}
+      \resumeItem{48 V\textsubscript{DC} to 240 V\textsubscript{AC}, rated for 1 kW}
+    \resumeItemListEnd
+    
+\resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------
+\printpublications[title={Publications \& Patents}]
+
+
+%-----------AWARDS-----------
+\section{Awards}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+      {\textbf{Frank C. Mock Scholarship}} {Dec. 2023}
+      \resumeProjectHeading
+      {\textbf{Grainger Power Engineering Award}} {May 2024}
+    \resumeSubHeadingListEnd
+     
+
+%
+%-----------Technical SKILLS-----------
+
+
+\section{Skills and Proficiencies}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Modeling \& Simulation}{: MATLAB/Simulink, PLECS, PSCAD, LTspice; hardware-in-the-loop (HIL) with ETAS LABCAR and OPAL-RT} \\
+     \textbf{PCB \& Mechanical CAD}{: Cadence Allegro PCB Designer and OrCAD schematic capture, Altium 365, KiCad, EAGLE; SolidWorks, 3DEXPERIENCE, Autodesk Fusion 360, OpenSCAD, Blender; rapid additive (FFF, SLA) and subtractive (CNC milling, laser cutting) manufacturing} \\
+     \textbf{Power-Stage Testing}{: Hard- and soft-switching characterization (double-pulse testing); high-frequency transformer and inductor characterization; calorimetric efficiency; thermal runaway testing; back-to-back converter power validation} \\
+     \textbf{Insulation Testing}{: Hi-Pot, basic insulation level (BIL), partial discharge (PD), surge and impulse testing} \\
+     \textbf{Embedded \& Programming}{: TI C2000 DSP platform (C/C++, Code Composer Studio); SystemVerilog on Intel (Altera) FPGAs (Quartus Prime); Python, Swift} \\
+     \textbf{Prototyping \& Manufacturing}{: Soldering and ultrasonic welding; DFM/DFT-driven PCB design and laminate selection (Tg, CTI, thermal and insulation performance); automated manufacturing file creation, BOM management, PCBA RFQs and fabrication EQs} \\
+    }}
+\end{itemize}
+%-------------------------------------------
+\end{document}
