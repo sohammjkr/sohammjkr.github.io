@@ -1526,7 +1526,7 @@ def build_resume() -> None:
   <div class="linkrow">
     <a class="btn" href="{RESUME_PDF}" target="_blank"
        rel="noopener noreferrer">Open the PDF in a new tab</a>
-    <a class="btn" href="{RESUME_PDF}" download>Download the PDF</a>
+    <a class="btn" href="{RESUME_PDF}" download="SMM_FA26_Resume.pdf">Download the PDF</a>
   </div>
 
   <main class="resume-view">
