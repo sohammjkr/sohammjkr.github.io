@@ -370,6 +370,7 @@ def protect(text: str, ctx: Ctx) -> str:
 WRAP = {
     "textbf": ("<strong>", "</strong>"),
     "bf": ("<strong>", "</strong>"),
+    "me": ('<strong class="me">', "</strong>"),
     "textit": ("<em>", "</em>"),
     "emph": ("<em>", "</em>"),
     "it": ("<em>", "</em>"),
