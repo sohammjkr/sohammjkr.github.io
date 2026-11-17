@@ -21,161 +21,243 @@
   \datalist[entry]{none/global//global/global/global}
     \entry{RCC_APEC}{inproceedings}{}{}
       \name{author}{4}{}{%
-        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
-           family={{\textbf{~Manjrekar}}},
-           familyi={~\bibinitperiod},
-           given={{\textbf{Soham}}},
-           giveni={S\bibinitperiod}}}%
-        {{hash=0c5a08a4587516f7a64cba601957fb07}{%
-           family={\bibnamedelima Nallamatti},
-           familyi={\bibinitperiod\bibinitdelim N\bibinitperiod},
-           given={Poornachandra\bibnamedelima Rao},
-           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
-           family={\bibnamedelima Benzaquen},
-           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Joseph},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
-           family={\bibnamedelima Divan},
-           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={Deepak},
-           giveni={D\bibinitperiod}}}%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=71fe4b31705dfa5732b6bbf9b09275a2}{%
+           family={P.\bibnamedelimi R.\bibnamedelimi Nallamatti},
+           familyi={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ffabee73be72293676bce6218a8a8a6d}{%
+           family={D.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
-      \strng{namehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{fullhash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{fullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{bibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authorbibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authornamehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authorfullhash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authorfullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{namehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{fullhash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{fullhashraw}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{bibnamehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authorbibnamehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authornamehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authorfullhash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authorfullhashraw}{7f3449e9105b8375c87f20b6ee26b10b}
       \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE Applied Power Electronics Conference \& Exposition (APEC)}
+      \field{booktitle}{Proc. IEEE Appl. Power Electron. Conf. Expo. (APEC)}
       \field{title}{A Regenerative Clamp Converter for Energy Capture and Recovery in High-Power Single-Stage Isolated Converters}
       \field{year}{Accepted/Selected for Dialogue Preview Session (DPS), March 2027}
       \true{nocite}
       \keyw{PV Microinverter; Tri-port; Sigma-delta modulation; Simulation; Prototypes; Bidirectional DC/AC conversion; High frequency isolation; Microinverter; Single-stage; Ultra-low leakage inductance}
     \endentry
-    \entry{SSIIMM_TPEL}{inproceedings}{}{}
+    \entry{SSIIMM_Saturation}{inproceedings}{}{}
       \name{author}{4}{}{%
-        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
-           family={{\textbf{~Manjrekar}}},
-           familyi={~\bibinitperiod},
-           given={{\textbf{Soham}}},
-           giveni={S\bibinitperiod}}}%
-        {{hash=0c5a08a4587516f7a64cba601957fb07}{%
-           family={\bibnamedelima Nallamatti},
-           familyi={\bibinitperiod\bibinitdelim N\bibinitperiod},
-           given={Poornachandra\bibnamedelima Rao},
-           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
-           family={\bibnamedelima Benzaquen},
-           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Joseph},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
-           family={\bibnamedelima Divan},
-           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={Deepak},
-           giveni={D\bibinitperiod}}}%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=71fe4b31705dfa5732b6bbf9b09275a2}{%
+           family={P.\bibnamedelimi R.\bibnamedelimi Nallamatti},
+           familyi={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ffabee73be72293676bce6218a8a8a6d}{%
+           family={D.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
-      \strng{namehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{fullhash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{fullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{bibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authorbibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authornamehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authorfullhash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authorfullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{namehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{fullhash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{fullhashraw}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{bibnamehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authorbibnamehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authornamehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authorfullhash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authorfullhashraw}{7f3449e9105b8375c87f20b6ee26b10b}
       \field{extraname}{2}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE Transactions on Power Electronics}
-      \field{title}{Soft Switching Isolated Inertia-less Modular Multilevel (SSIIMM) Converter}
-      \field{year}{In Review, November, 2026}
-      \true{nocite}
-    \endentry
-    \entry{SSIIMM_Saturation}{inproceedings}{}{}
-      \name{author}{4}{}{%
-        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
-           family={{\textbf{~Manjrekar}}},
-           familyi={~\bibinitperiod},
-           given={{\textbf{Soham}}},
-           giveni={S\bibinitperiod}}}%
-        {{hash=0c5a08a4587516f7a64cba601957fb07}{%
-           family={\bibnamedelima Nallamatti},
-           familyi={\bibinitperiod\bibinitdelim N\bibinitperiod},
-           given={Poornachandra\bibnamedelima Rao},
-           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
-           family={\bibnamedelima Benzaquen},
-           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Joseph},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
-           family={\bibnamedelima Divan},
-           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={Deepak},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{fullhash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{fullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{bibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authorbibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authornamehash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authorfullhash}{34adb145d183e00f696db6fa6acd4ab7}
-      \strng{authorfullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
-      \field{extraname}{3}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE Transactions on Power Electronics}
+      \field{booktitle}{IEEE Trans. Power Electron.}
       \field{title}{Comparative Analysis of Transformer Saturation in High-Frequency Single-Stage Inertia-less Isolated Converters under PWM and Pulse-Density Modulation}
       \field{year}{In Review, November, 2026}
       \true{nocite}
     \endentry
-    \entry{SSIIMM_Converter}{misc}{}{}
-      \name{author}{4}{}{%
-        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
-           family={\bibnamedelima Divan},
-           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={Deepak},
-           giveni={D\bibinitperiod}}}%
-        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
-           family={\bibnamedelima Benzaquen},
-           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Joseph},
-           giveni={J\bibinitperiod}}}%
-        {{hash=0c5a08a4587516f7a64cba601957fb07}{%
-           family={\bibnamedelima Nallamatti},
-           familyi={\bibinitperiod\bibinitdelim N\bibinitperiod},
-           given={Poornachandra\bibnamedelima Rao},
-           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
-           family={{\textbf{~Manjrekar}}},
-           familyi={~\bibinitperiod},
-           given={{\textbf{Soham}}},
-           giveni={S\bibinitperiod}}}%
+    \entry{GFM_Nonidealities_TPEL}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=6078c482fbf51ec66415ca085b8f5c1d}{%
+           family={P.\bibnamedelimi M.\bibnamedelimi Gajare},
+           familyi={P\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=bf678259ac731aaecc937243b6ccaf18}{%
+           family={Z.\bibnamedelimi Zeng},
+           familyi={Z\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=a0b046f83ee0c1caf22a97c74720786b}{%
+           family={A.\bibnamedelimi Marellapudi},
+           familyi={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=74de3132ea29b8473e7bc57b5b8297e1}{%
+           family={J.\bibnamedelimi Sugijanto},
+           familyi={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=69475891a92d4bf085e59f05ffd1fccc}{%
+           family={M.\bibnamedelimi Saeedifard},
+           familyi={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=2bb804be1a40dd78de6ee5b9e5a7bfdc}{%
+           family={D.\bibnamedelimi M.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
-      \strng{namehash}{029454b9a1642a2facdaf8603306f09e}
-      \strng{fullhash}{029454b9a1642a2facdaf8603306f09e}
-      \strng{fullhashraw}{029454b9a1642a2facdaf8603306f09e}
-      \strng{bibnamehash}{029454b9a1642a2facdaf8603306f09e}
-      \strng{authorbibnamehash}{029454b9a1642a2facdaf8603306f09e}
-      \strng{authornamehash}{029454b9a1642a2facdaf8603306f09e}
-      \strng{authorfullhash}{029454b9a1642a2facdaf8603306f09e}
-      \strng{authorfullhashraw}{029454b9a1642a2facdaf8603306f09e}
+      \strng{namehash}{d324912646bb34814cc98a66b777d93e}
+      \strng{fullhash}{d324912646bb34814cc98a66b777d93e}
+      \strng{fullhashraw}{d324912646bb34814cc98a66b777d93e}
+      \strng{bibnamehash}{d324912646bb34814cc98a66b777d93e}
+      \strng{authorbibnamehash}{d324912646bb34814cc98a66b777d93e}
+      \strng{authornamehash}{d324912646bb34814cc98a66b777d93e}
+      \strng{authorfullhash}{d324912646bb34814cc98a66b777d93e}
+      \strng{authorfullhashraw}{d324912646bb34814cc98a66b777d93e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Trans. Power Electron.}
+      \field{title}{Impact of Switching Nonidealities and Inner Loops on the Dynamics of Grid-Forming Inverters}
+      \field{year}{In Review, November, 2026}
+      \true{nocite}
+    \endentry
+    \entry{PseudoDAB_Hybrid_Inverter}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=ffabee73be72293676bce6218a8a8a6d}{%
+           family={D.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=71fe4b31705dfa5732b6bbf9b09275a2}{%
+           family={P.\bibnamedelimi R.\bibnamedelimi Nallamatti},
+           familyi={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=6c2ab25ca73d0f97eed10986d35d3ebf}{%
+           family={P.\bibnamedelimi Gajare},
+           familyi={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc5a4589be15a7be9012b192e5523aff}
+      \strng{fullhash}{dc5a4589be15a7be9012b192e5523aff}
+      \strng{fullhashraw}{dc5a4589be15a7be9012b192e5523aff}
+      \strng{bibnamehash}{dc5a4589be15a7be9012b192e5523aff}
+      \strng{authorbibnamehash}{dc5a4589be15a7be9012b192e5523aff}
+      \strng{authornamehash}{dc5a4589be15a7be9012b192e5523aff}
+      \strng{authorfullhash}{dc5a4589be15a7be9012b192e5523aff}
+      \strng{authorfullhashraw}{dc5a4589be15a7be9012b192e5523aff}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Provisional Patent Disclosure, GridTran}
+      \field{title}{Hybrid Voltage and Current Source (HVACS) Cycloconverter}
+      \field{year}{November, 2026}
+      \true{nocite}
+    \endentry
+    \entry{SSIIMM_TPEL}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=71fe4b31705dfa5732b6bbf9b09275a2}{%
+           family={P.\bibnamedelimi R.\bibnamedelimi Nallamatti},
+           familyi={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ffabee73be72293676bce6218a8a8a6d}{%
+           family={D.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{fullhash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{fullhashraw}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{bibnamehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authorbibnamehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authornamehash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authorfullhash}{7f3449e9105b8375c87f20b6ee26b10b}
+      \strng{authorfullhashraw}{7f3449e9105b8375c87f20b6ee26b10b}
+      \field{extraname}{3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Trans. Power Electron.}
+      \field{title}{Soft Switching Isolated Inertia-less Modular Multilevel (SSIIMM) Converter}
+      \field{year}{In Review, October, 2026}
+      \true{nocite}
+    \endentry
+    \entry{RailRing_Comm}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=ffabee73be72293676bce6218a8a8a6d}{%
+           family={D.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=71fe4b31705dfa5732b6bbf9b09275a2}{%
+           family={P.\bibnamedelimi R.\bibnamedelimi Nallamatti},
+           familyi={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=55891674c314c65def924039d5984b48}{%
+           family={S.\bibnamedelimi Itum},
+           familyi={S\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{688ca7e911d1cdcac01f67540759f222}
+      \strng{fullhash}{688ca7e911d1cdcac01f67540759f222}
+      \strng{fullhashraw}{688ca7e911d1cdcac01f67540759f222}
+      \strng{bibnamehash}{688ca7e911d1cdcac01f67540759f222}
+      \strng{authorbibnamehash}{688ca7e911d1cdcac01f67540759f222}
+      \strng{authornamehash}{688ca7e911d1cdcac01f67540759f222}
+      \strng{authorfullhash}{688ca7e911d1cdcac01f67540759f222}
+      \strng{authorfullhashraw}{688ca7e911d1cdcac01f67540759f222}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Provisional Patent Disclosure, GridTran}
+      \field{title}{Self-Identifying, Self-Synchronizing Ring-Bus Communication Protocol for FPGAs in Medium-Voltage Applications}
+      \field{year}{April, 2026}
+      \true{nocite}
+    \endentry
+    \entry{SSIIMM_Converter}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=ffabee73be72293676bce6218a8a8a6d}{%
+           family={D.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=71fe4b31705dfa5732b6bbf9b09275a2}{%
+           family={P.\bibnamedelimi R.\bibnamedelimi Nallamatti},
+           familyi={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{dbf83a14cc7c34093206fcc264294910}
+      \strng{fullhash}{dbf83a14cc7c34093206fcc264294910}
+      \strng{fullhashraw}{dbf83a14cc7c34093206fcc264294910}
+      \strng{bibnamehash}{dbf83a14cc7c34093206fcc264294910}
+      \strng{authorbibnamehash}{dbf83a14cc7c34093206fcc264294910}
+      \strng{authornamehash}{dbf83a14cc7c34093206fcc264294910}
+      \strng{authorfullhash}{dbf83a14cc7c34093206fcc264294910}
+      \strng{authorfullhashraw}{dbf83a14cc7c34093206fcc264294910}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Provisional Patent Disclosure, GridTran}
@@ -185,50 +267,38 @@
     \endentry
     \entry{HEMU}{inproceedings}{}{}
       \name{author}{6}{}{%
-        {{hash=632a8f8772075479e73151855ba42cdf}{%
-           family={\bibnamedelima Hao},
-           familyi={\bibinitperiod\bibinitdelim H\bibinitperiod},
-           given={Ruomu},
-           giveni={R\bibinitperiod}}}%
-        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
-           family={{\textbf{~Manjrekar}}},
-           familyi={~\bibinitperiod},
-           given={{\textbf{Soham}}},
-           giveni={S\bibinitperiod}}}%
-        {{hash=68d71c19ad1aa4fa0c3c34bcc3cdf48d}{%
-           family={\bibnamedelima Belkhode},
-           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Satish},
-           giveni={S\bibinitperiod}}}%
-        {{hash=e062447f379aeebf3714979edd0f9e24}{%
-           family={\bibnamedelima Marellapudi},
-           familyi={\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={Aniruddh},
-           giveni={A\bibinitperiod}}}%
-        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
-           family={\bibnamedelima Benzaquen},
-           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Joseph},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
-           family={\bibnamedelima Divan},
-           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={Deepak},
-           giveni={D\bibinitperiod}}}%
+        {{hash=61881f4b3abbe97028d6507f0f54b92a}{%
+           family={R.\bibnamedelimi Hao},
+           familyi={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=d9de966f7a3522e8f57444eb9c4ca4c6}{%
+           family={S.\bibnamedelimi Belkhode},
+           familyi={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=a0b046f83ee0c1caf22a97c74720786b}{%
+           family={A.\bibnamedelimi Marellapudi},
+           familyi={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ffabee73be72293676bce6218a8a8a6d}{%
+           family={D.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
-      \strng{namehash}{1bb91af1ca1c6870990749e510fa17f2}
-      \strng{fullhash}{1bb91af1ca1c6870990749e510fa17f2}
-      \strng{fullhashraw}{1bb91af1ca1c6870990749e510fa17f2}
-      \strng{bibnamehash}{1bb91af1ca1c6870990749e510fa17f2}
-      \strng{authorbibnamehash}{1bb91af1ca1c6870990749e510fa17f2}
-      \strng{authornamehash}{1bb91af1ca1c6870990749e510fa17f2}
-      \strng{authorfullhash}{1bb91af1ca1c6870990749e510fa17f2}
-      \strng{authorfullhashraw}{1bb91af1ca1c6870990749e510fa17f2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \strng{namehash}{516a7ba7cf5ac10bc5139035d3f1b584}
+      \strng{fullhash}{516a7ba7cf5ac10bc5139035d3f1b584}
+      \strng{fullhashraw}{516a7ba7cf5ac10bc5139035d3f1b584}
+      \strng{bibnamehash}{516a7ba7cf5ac10bc5139035d3f1b584}
+      \strng{authorbibnamehash}{516a7ba7cf5ac10bc5139035d3f1b584}
+      \strng{authornamehash}{516a7ba7cf5ac10bc5139035d3f1b584}
+      \strng{authorfullhash}{516a7ba7cf5ac10bc5139035d3f1b584}
+      \strng{authorfullhashraw}{516a7ba7cf5ac10bc5139035d3f1b584}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE Energy Conversion Congress \& Expo (ECCE)}
+      \field{booktitle}{Proc. IEEE Energy Convers. Congr. Expo. (ECCE)}
       \field{title}{A Multiport Bidirectional HF-Link Split-phase DC/DC/AC Universal Minimal Converter}
       \field{year}{October, 2025}
       \true{nocite}
@@ -239,32 +309,26 @@
     \endentry
     \entry{PV_integration}{misc}{}{}
       \name{author}{3}{}{%
-        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
-           family={\bibnamedelima Divan},
-           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={Deepak},
-           giveni={D\bibinitperiod}}}%
-        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
-           family={\bibnamedelima Benzaquen},
-           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Joseph},
-           giveni={J\bibinitperiod}}}%
-        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
-           family={{\textbf{~Manjrekar}}},
-           familyi={~\bibinitperiod},
-           given={{\textbf{Soham}}},
-           giveni={S\bibinitperiod}}}%
+        {{hash=ffabee73be72293676bce6218a8a8a6d}{%
+           family={D.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
       }
-      \strng{namehash}{4d002554bdd2785ba7561575eb991fe5}
-      \strng{fullhash}{4d002554bdd2785ba7561575eb991fe5}
-      \strng{fullhashraw}{4d002554bdd2785ba7561575eb991fe5}
-      \strng{bibnamehash}{4d002554bdd2785ba7561575eb991fe5}
-      \strng{authorbibnamehash}{4d002554bdd2785ba7561575eb991fe5}
-      \strng{authornamehash}{4d002554bdd2785ba7561575eb991fe5}
-      \strng{authorfullhash}{4d002554bdd2785ba7561575eb991fe5}
-      \strng{authorfullhashraw}{4d002554bdd2785ba7561575eb991fe5}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \strng{namehash}{1dc78b6b0a98a7a3e1225455ad8b52b4}
+      \strng{fullhash}{1dc78b6b0a98a7a3e1225455ad8b52b4}
+      \strng{fullhashraw}{1dc78b6b0a98a7a3e1225455ad8b52b4}
+      \strng{bibnamehash}{1dc78b6b0a98a7a3e1225455ad8b52b4}
+      \strng{authorbibnamehash}{1dc78b6b0a98a7a3e1225455ad8b52b4}
+      \strng{authornamehash}{1dc78b6b0a98a7a3e1225455ad8b52b4}
+      \strng{authorfullhash}{1dc78b6b0a98a7a3e1225455ad8b52b4}
+      \strng{authorfullhashraw}{1dc78b6b0a98a7a3e1225455ad8b52b4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Provisional Patent Disclosure, Georgia Institute of Technology}
@@ -274,45 +338,35 @@
     \endentry
     \entry{AC_Cube}{inproceedings}{}{}
       \name{author}{5}{}{%
-        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
-           family={{\textbf{~Manjrekar}}},
-           familyi={~\bibinitperiod},
-           given={{\textbf{Soham}}},
-           giveni={S\bibinitperiod}}}%
-        {{hash=e062447f379aeebf3714979edd0f9e24}{%
-           family={\bibnamedelima Marellapudi},
-           familyi={\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={Aniruddh},
-           giveni={A\bibinitperiod}}}%
-        {{hash=68d71c19ad1aa4fa0c3c34bcc3cdf48d}{%
-           family={\bibnamedelima Belkhode},
-           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Satish},
-           giveni={S\bibinitperiod}}}%
-        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
-           family={\bibnamedelima Benzaquen},
-           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Joseph},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
-           family={\bibnamedelima Divan},
-           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={Deepak},
-           giveni={D\bibinitperiod}}}%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=a0b046f83ee0c1caf22a97c74720786b}{%
+           family={A.\bibnamedelimi Marellapudi},
+           familyi={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=d9de966f7a3522e8f57444eb9c4ca4c6}{%
+           family={S.\bibnamedelimi Belkhode},
+           familyi={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ffabee73be72293676bce6218a8a8a6d}{%
+           family={D.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
-      \strng{namehash}{e9b26f50d8dd0c55fc2058604b358e13}
-      \strng{fullhash}{e9b26f50d8dd0c55fc2058604b358e13}
-      \strng{fullhashraw}{e9b26f50d8dd0c55fc2058604b358e13}
-      \strng{bibnamehash}{e9b26f50d8dd0c55fc2058604b358e13}
-      \strng{authorbibnamehash}{e9b26f50d8dd0c55fc2058604b358e13}
-      \strng{authornamehash}{e9b26f50d8dd0c55fc2058604b358e13}
-      \strng{authorfullhash}{e9b26f50d8dd0c55fc2058604b358e13}
-      \strng{authorfullhashraw}{e9b26f50d8dd0c55fc2058604b358e13}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \strng{namehash}{16ca25af37ecbd70e7ef01746c2fddd7}
+      \strng{fullhash}{16ca25af37ecbd70e7ef01746c2fddd7}
+      \strng{fullhashraw}{16ca25af37ecbd70e7ef01746c2fddd7}
+      \strng{bibnamehash}{16ca25af37ecbd70e7ef01746c2fddd7}
+      \strng{authorbibnamehash}{16ca25af37ecbd70e7ef01746c2fddd7}
+      \strng{authornamehash}{16ca25af37ecbd70e7ef01746c2fddd7}
+      \strng{authorfullhash}{16ca25af37ecbd70e7ef01746c2fddd7}
+      \strng{authorfullhashraw}{16ca25af37ecbd70e7ef01746c2fddd7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{2025 IEEE Energy Conversion Congress \& Exposition Asia (ECCE-Asia)}
+      \field{booktitle}{Proc. IEEE Energy Convers. Congr. Expo. Asia (ECCE-Asia)}
       \field{title}{{AC Cube: A Single-Stage PV/Battery/Grid Energy Router}}
       \field{year}{May, 2025}
       \true{nocite}
@@ -325,50 +379,38 @@
     \endentry
     \entry{Solar_Plug}{inproceedings}{}{}
       \name{author}{6}{}{%
-        {{hash=4355b6793deaf0fb520ba0a7fee628fa}{%
-           family={\bibnamedelima Prabhu},
-           familyi={\bibinitperiod\bibinitdelim P\bibinitperiod},
-           given={Navami},
-           giveni={N\bibinitperiod}}}%
-        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
-           family={{\textbf{~Manjrekar}}},
-           familyi={~\bibinitperiod},
-           given={{\textbf{Soham}}},
-           giveni={S\bibinitperiod}}}%
-        {{hash=6c3ff49dbb86ed319af91c394dac54cb}{%
-           family={\bibnamedelima Sriram},
-           familyi={\bibinitperiod\bibinitdelim S\bibinitperiod},
-           given={Ritvik},
-           giveni={R\bibinitperiod}}}%
-        {{hash=e062447f379aeebf3714979edd0f9e24}{%
-           family={\bibnamedelima Marellapudi},
-           familyi={\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={Aniruddh},
-           giveni={A\bibinitperiod}}}%
-        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
-           family={\bibnamedelima Benzaquen},
-           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Joseph},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
-           family={\bibnamedelima Divan},
-           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={Deepak},
-           giveni={D\bibinitperiod}}}%
+        {{hash=4df3c25420c572450e74217ea318453b}{%
+           family={N.\bibnamedelimi Prabhu},
+           familyi={N\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=10bc76bef4f5ad3c8b97b5375803755e}{%
+           family={{\textbf{S.~Manjrekar}}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=9c1075c934430ddecaea87483d1153e4}{%
+           family={R.\bibnamedelimi Sriram},
+           familyi={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=a0b046f83ee0c1caf22a97c74720786b}{%
+           family={A.\bibnamedelimi Marellapudi},
+           familyi={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3af822bbdaf0977dea2b3378c0cc010a}{%
+           family={J.\bibnamedelimi Benzaquen},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ffabee73be72293676bce6218a8a8a6d}{%
+           family={D.\bibnamedelimi Divan},
+           familyi={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
-      \strng{namehash}{e28e91da796985953957fd93e8b98133}
-      \strng{fullhash}{e28e91da796985953957fd93e8b98133}
-      \strng{fullhashraw}{e28e91da796985953957fd93e8b98133}
-      \strng{bibnamehash}{e28e91da796985953957fd93e8b98133}
-      \strng{authorbibnamehash}{e28e91da796985953957fd93e8b98133}
-      \strng{authornamehash}{e28e91da796985953957fd93e8b98133}
-      \strng{authorfullhash}{e28e91da796985953957fd93e8b98133}
-      \strng{authorfullhashraw}{e28e91da796985953957fd93e8b98133}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \strng{namehash}{42b943eeaea322989770ab05d8fd2091}
+      \strng{fullhash}{42b943eeaea322989770ab05d8fd2091}
+      \strng{fullhashraw}{42b943eeaea322989770ab05d8fd2091}
+      \strng{bibnamehash}{42b943eeaea322989770ab05d8fd2091}
+      \strng{authorbibnamehash}{42b943eeaea322989770ab05d8fd2091}
+      \strng{authornamehash}{42b943eeaea322989770ab05d8fd2091}
+      \strng{authorfullhash}{42b943eeaea322989770ab05d8fd2091}
+      \strng{authorfullhashraw}{42b943eeaea322989770ab05d8fd2091}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE International Decentralized Energy Access Solutions (IDEAS) Conference}
+      \field{booktitle}{Proc. IEEE Int. Decentralized Energy Access Solutions (IDEAS) Conf.}
       \field{title}{Solar Plug – Universal Off-Grid Microconverter for Low-Cost Tier-1-4 Energy Access}
       \field{year}{January, 2025}
       \true{nocite}

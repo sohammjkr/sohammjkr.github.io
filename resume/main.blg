@@ -1,24 +1,27 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[99] biber-MSWIN64:342> INFO - === 
-[144] Biber.pm:421> INFO - Reading 'main.bcf'
-[251] Biber.pm:999> INFO - Using all citekeys in bib section 0
-[262] Biber.pm:4487> INFO - Processing section 0
-[271] Biber.pm:4678> INFO - Looking for bibtex file 'Publications.bib' for section 0
-[347] bibtex.pm:1713> INFO - LaTeX decoding ...
-[370] bibtex.pm:1519> INFO - Found BibTeX data source 'Publications.bib'
-[453] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[453] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[453] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[453] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[457] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[463] bbl.pm:779> INFO - Output to main.bbl
-[464] Biber.pm:132> WARN - legacy year field 'January, 2025' in entry 'Solar_Plug' is not an integer - this will probably not sort properly.
-[464] Biber.pm:132> WARN - legacy year field 'Accepted/Selected for Dialogue Preview Session (DPS), March 2027' in entry 'RCC_APEC' is not an integer - this will probably not sort properly.
-[464] Biber.pm:132> WARN - legacy year field 'May, 2025' in entry 'AC_Cube' is not an integer - this will probably not sort properly.
-[464] Biber.pm:132> WARN - legacy year field 'June, 2025' in entry 'PV_integration' is not an integer - this will probably not sort properly.
-[464] Biber.pm:132> WARN - legacy year field 'October, 2025' in entry 'HEMU' is not an integer - this will probably not sort properly.
-[464] Biber.pm:132> WARN - legacy year field 'In Review, November, 2026' in entry 'SSIIMM_Saturation' is not an integer - this will probably not sort properly.
-[464] Biber.pm:132> WARN - legacy year field 'March, 2026' in entry 'SSIIMM_Converter' is not an integer - this will probably not sort properly.
-[464] Biber.pm:132> WARN - legacy year field 'In Review, November, 2026' in entry 'SSIIMM_TPEL' is not an integer - this will probably not sort properly.
-[464] Biber.pm:134> INFO - WARNINGS: 8
+[100] biber-MSWIN64:342> INFO - === 
+[141] Biber.pm:421> INFO - Reading 'main.bcf'
+[242] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[253] Biber.pm:4487> INFO - Processing section 0
+[263] Biber.pm:4678> INFO - Looking for bibtex file 'Publications.bib' for section 0
+[352] bibtex.pm:1713> INFO - LaTeX decoding ...
+[380] bibtex.pm:1519> INFO - Found BibTeX data source 'Publications.bib'
+[480] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[480] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[480] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[480] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[486] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[493] bbl.pm:779> INFO - Output to main.bbl
+[494] Biber.pm:132> WARN - legacy year field 'In Review, November, 2026' in entry 'SSIIMM_Saturation' is not an integer - this will probably not sort properly.
+[495] Biber.pm:132> WARN - legacy year field 'Accepted/Selected for Dialogue Preview Session (DPS), March 2027' in entry 'RCC_APEC' is not an integer - this will probably not sort properly.
+[495] Biber.pm:132> WARN - legacy year field 'June, 2025' in entry 'PV_integration' is not an integer - this will probably not sort properly.
+[495] Biber.pm:132> WARN - legacy year field 'March, 2026' in entry 'SSIIMM_Converter' is not an integer - this will probably not sort properly.
+[495] Biber.pm:132> WARN - legacy year field 'In Review, November, 2026' in entry 'GFM_Nonidealities_TPEL' is not an integer - this will probably not sort properly.
+[495] Biber.pm:132> WARN - legacy year field 'May, 2025' in entry 'AC_Cube' is not an integer - this will probably not sort properly.
+[495] Biber.pm:132> WARN - legacy year field 'April, 2026' in entry 'RailRing_Comm' is not an integer - this will probably not sort properly.
+[495] Biber.pm:132> WARN - legacy year field 'January, 2025' in entry 'Solar_Plug' is not an integer - this will probably not sort properly.
+[495] Biber.pm:132> WARN - legacy year field 'November, 2026' in entry 'PseudoDAB_Hybrid_Inverter' is not an integer - this will probably not sort properly.
+[495] Biber.pm:132> WARN - legacy year field 'October, 2025' in entry 'HEMU' is not an integer - this will probably not sort properly.
+[496] Biber.pm:132> WARN - legacy year field 'In Review, October, 2026' in entry 'SSIIMM_TPEL' is not an integer - this will probably not sort properly.
+[496] Biber.pm:134> INFO - WARNINGS: 11

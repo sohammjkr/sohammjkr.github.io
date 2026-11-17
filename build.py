@@ -41,7 +41,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 SITE_NAME    = "Soham Manjrekar"
 SITE_BRAND   = "SOHAM MANJREKAR"
-RESUME_PDF   = "files/FA26_Resume.pdf"   # root-relative; the viewer embeds this
+RESUME_PDF   = "files/SMM_FA26_Resume.pdf"   # root-relative; the viewer embeds this
 RESUME_PAGE  = "resume.html"              # nav links here, so a click never downloads
 DOB          = date(2002, 5, 18)                     # powers the \age command
 
@@ -998,7 +998,7 @@ def nav_html(prefix: str, active: str) -> str:
         ("Projects", f"{prefix}projects/projects_main.html" if prefix == "" else
                      ("projects_main.html" if active == "projects" else
                       f"{prefix}projects/projects_main.html"), "projects"),
-        ("Resume", f"{prefix}{RESUME_PAGE}", "resume"),
+        ("Resume", f"{prefix}{RESUME_PDF}", "resume"),
     ]
     lis = []
     for label, href, key in items:

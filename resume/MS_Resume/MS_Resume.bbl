@@ -1,0 +1,383 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{RCC_APEC}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
+           family={{\textbf{~Manjrekar}}},
+           familyi={~\bibinitperiod},
+           given={{\textbf{Soham}}},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0c5a08a4587516f7a64cba601957fb07}{%
+           family={\bibnamedelima Nallamatti},
+           familyi={\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Poornachandra\bibnamedelima Rao},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
+           family={\bibnamedelima Benzaquen},
+           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
+           family={\bibnamedelima Divan},
+           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{fullhash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{fullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{bibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authorbibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authornamehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authorfullhash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authorfullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Applied Power Electronics Conference \& Exposition (APEC)}
+      \field{title}{A Regenerative Clamp Converter for Energy Capture and Recovery in High-Power Single-Stage Isolated Converters}
+      \field{year}{Accepted/Selected for Dialogue Preview Session (DPS), March 2027}
+      \true{nocite}
+      \keyw{PV Microinverter; Tri-port; Sigma-delta modulation; Simulation; Prototypes; Bidirectional DC/AC conversion; High frequency isolation; Microinverter; Single-stage; Ultra-low leakage inductance}
+    \endentry
+    \entry{SSIIMM_TPEL}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
+           family={{\textbf{~Manjrekar}}},
+           familyi={~\bibinitperiod},
+           given={{\textbf{Soham}}},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0c5a08a4587516f7a64cba601957fb07}{%
+           family={\bibnamedelima Nallamatti},
+           familyi={\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Poornachandra\bibnamedelima Rao},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
+           family={\bibnamedelima Benzaquen},
+           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
+           family={\bibnamedelima Divan},
+           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{fullhash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{fullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{bibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authorbibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authornamehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authorfullhash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authorfullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Transactions on Power Electronics}
+      \field{title}{Soft Switching Isolated Inertia-less Modular Multilevel (SSIIMM) Converter}
+      \field{year}{In Review, November, 2026}
+      \true{nocite}
+    \endentry
+    \entry{SSIIMM_Saturation}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
+           family={{\textbf{~Manjrekar}}},
+           familyi={~\bibinitperiod},
+           given={{\textbf{Soham}}},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0c5a08a4587516f7a64cba601957fb07}{%
+           family={\bibnamedelima Nallamatti},
+           familyi={\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Poornachandra\bibnamedelima Rao},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
+           family={\bibnamedelima Benzaquen},
+           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
+           family={\bibnamedelima Divan},
+           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{fullhash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{fullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{bibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authorbibnamehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authornamehash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authorfullhash}{34adb145d183e00f696db6fa6acd4ab7}
+      \strng{authorfullhashraw}{34adb145d183e00f696db6fa6acd4ab7}
+      \field{extraname}{3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Transactions on Power Electronics}
+      \field{title}{Comparative Analysis of Transformer Saturation in High-Frequency Single-Stage Inertia-less Isolated Converters under PWM and Pulse-Density Modulation}
+      \field{year}{In Review, November, 2026}
+      \true{nocite}
+    \endentry
+    \entry{SSIIMM_Converter}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
+           family={\bibnamedelima Divan},
+           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
+           family={\bibnamedelima Benzaquen},
+           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0c5a08a4587516f7a64cba601957fb07}{%
+           family={\bibnamedelima Nallamatti},
+           familyi={\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Poornachandra\bibnamedelima Rao},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
+           family={{\textbf{~Manjrekar}}},
+           familyi={~\bibinitperiod},
+           given={{\textbf{Soham}}},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{029454b9a1642a2facdaf8603306f09e}
+      \strng{fullhash}{029454b9a1642a2facdaf8603306f09e}
+      \strng{fullhashraw}{029454b9a1642a2facdaf8603306f09e}
+      \strng{bibnamehash}{029454b9a1642a2facdaf8603306f09e}
+      \strng{authorbibnamehash}{029454b9a1642a2facdaf8603306f09e}
+      \strng{authornamehash}{029454b9a1642a2facdaf8603306f09e}
+      \strng{authorfullhash}{029454b9a1642a2facdaf8603306f09e}
+      \strng{authorfullhashraw}{029454b9a1642a2facdaf8603306f09e}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Provisional Patent Disclosure, GridTran}
+      \field{title}{Soft Switching Isolated Inertia-less Modular Multilevel (SSIIMM) Converter}
+      \field{year}{March, 2026}
+      \true{nocite}
+    \endentry
+    \entry{HEMU}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=632a8f8772075479e73151855ba42cdf}{%
+           family={\bibnamedelima Hao},
+           familyi={\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Ruomu},
+           giveni={R\bibinitperiod}}}%
+        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
+           family={{\textbf{~Manjrekar}}},
+           familyi={~\bibinitperiod},
+           given={{\textbf{Soham}}},
+           giveni={S\bibinitperiod}}}%
+        {{hash=68d71c19ad1aa4fa0c3c34bcc3cdf48d}{%
+           family={\bibnamedelima Belkhode},
+           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Satish},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e062447f379aeebf3714979edd0f9e24}{%
+           family={\bibnamedelima Marellapudi},
+           familyi={\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Aniruddh},
+           giveni={A\bibinitperiod}}}%
+        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
+           family={\bibnamedelima Benzaquen},
+           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
+           family={\bibnamedelima Divan},
+           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{1bb91af1ca1c6870990749e510fa17f2}
+      \strng{fullhash}{1bb91af1ca1c6870990749e510fa17f2}
+      \strng{fullhashraw}{1bb91af1ca1c6870990749e510fa17f2}
+      \strng{bibnamehash}{1bb91af1ca1c6870990749e510fa17f2}
+      \strng{authorbibnamehash}{1bb91af1ca1c6870990749e510fa17f2}
+      \strng{authornamehash}{1bb91af1ca1c6870990749e510fa17f2}
+      \strng{authorfullhash}{1bb91af1ca1c6870990749e510fa17f2}
+      \strng{authorfullhashraw}{1bb91af1ca1c6870990749e510fa17f2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Energy Conversion Congress \& Expo (ECCE)}
+      \field{title}{A Multiport Bidirectional HF-Link Split-phase DC/DC/AC Universal Minimal Converter}
+      \field{year}{October, 2025}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1109/ECCE58356.2025.11259542
+      \endverb
+      \keyw{PV Microinverter; Tri-port; Sigma-delta modulation; Simulation; Prototypes; Bidirectional DC/AC conversion; High frequency isolation; Microinverter; Single-stage; Ultra-low leakage inductance}
+    \endentry
+    \entry{PV_integration}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
+           family={\bibnamedelima Divan},
+           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
+           family={\bibnamedelima Benzaquen},
+           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
+           family={{\textbf{~Manjrekar}}},
+           familyi={~\bibinitperiod},
+           given={{\textbf{Soham}}},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d002554bdd2785ba7561575eb991fe5}
+      \strng{fullhash}{4d002554bdd2785ba7561575eb991fe5}
+      \strng{fullhashraw}{4d002554bdd2785ba7561575eb991fe5}
+      \strng{bibnamehash}{4d002554bdd2785ba7561575eb991fe5}
+      \strng{authorbibnamehash}{4d002554bdd2785ba7561575eb991fe5}
+      \strng{authornamehash}{4d002554bdd2785ba7561575eb991fe5}
+      \strng{authorfullhash}{4d002554bdd2785ba7561575eb991fe5}
+      \strng{authorfullhashraw}{4d002554bdd2785ba7561575eb991fe5}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Provisional Patent Disclosure, Georgia Institute of Technology}
+      \field{title}{Automatic Integration of PV Solar Energy into Multiport Dual Active Bridge Converter-Based EV Chargers}
+      \field{year}{June, 2025}
+      \true{nocite}
+    \endentry
+    \entry{AC_Cube}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
+           family={{\textbf{~Manjrekar}}},
+           familyi={~\bibinitperiod},
+           given={{\textbf{Soham}}},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e062447f379aeebf3714979edd0f9e24}{%
+           family={\bibnamedelima Marellapudi},
+           familyi={\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Aniruddh},
+           giveni={A\bibinitperiod}}}%
+        {{hash=68d71c19ad1aa4fa0c3c34bcc3cdf48d}{%
+           family={\bibnamedelima Belkhode},
+           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Satish},
+           giveni={S\bibinitperiod}}}%
+        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
+           family={\bibnamedelima Benzaquen},
+           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
+           family={\bibnamedelima Divan},
+           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9b26f50d8dd0c55fc2058604b358e13}
+      \strng{fullhash}{e9b26f50d8dd0c55fc2058604b358e13}
+      \strng{fullhashraw}{e9b26f50d8dd0c55fc2058604b358e13}
+      \strng{bibnamehash}{e9b26f50d8dd0c55fc2058604b358e13}
+      \strng{authorbibnamehash}{e9b26f50d8dd0c55fc2058604b358e13}
+      \strng{authornamehash}{e9b26f50d8dd0c55fc2058604b358e13}
+      \strng{authorfullhash}{e9b26f50d8dd0c55fc2058604b358e13}
+      \strng{authorfullhashraw}{e9b26f50d8dd0c55fc2058604b358e13}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 IEEE Energy Conversion Congress \& Exposition Asia (ECCE-Asia)}
+      \field{title}{{AC Cube: A Single-Stage PV/Battery/Grid Energy Router}}
+      \field{year}{May, 2025}
+      \true{nocite}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ECCE-Asia63110.2025.11111930
+      \endverb
+      \keyw{Bridge circuits; Switches; Zero voltage switching; Pulse width modulation; Transformers; Batteries; Topology; Reliability; Zero current switching; Voltage control; single-stage inverter; inertia-less isolated converter; bidirectional; ZVS; ZCS; pulse density modulation; AC switching; ultra-low leakage transformer; battery pack; PV solar}
+    \endentry
+    \entry{Solar_Plug}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=4355b6793deaf0fb520ba0a7fee628fa}{%
+           family={\bibnamedelima Prabhu},
+           familyi={\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Navami},
+           giveni={N\bibinitperiod}}}%
+        {{hash=728ddfddfec7c9b0dacda34963ec0129}{%
+           family={{\textbf{~Manjrekar}}},
+           familyi={~\bibinitperiod},
+           given={{\textbf{Soham}}},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6c3ff49dbb86ed319af91c394dac54cb}{%
+           family={\bibnamedelima Sriram},
+           familyi={\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Ritvik},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e062447f379aeebf3714979edd0f9e24}{%
+           family={\bibnamedelima Marellapudi},
+           familyi={\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Aniruddh},
+           giveni={A\bibinitperiod}}}%
+        {{hash=46f8a5f012aaede351e8c4a63b11193e}{%
+           family={\bibnamedelima Benzaquen},
+           familyi={\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4ac0938271b2b1d5f9b9c18ab41cb25f}{%
+           family={\bibnamedelima Divan},
+           familyi={\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e28e91da796985953957fd93e8b98133}
+      \strng{fullhash}{e28e91da796985953957fd93e8b98133}
+      \strng{fullhashraw}{e28e91da796985953957fd93e8b98133}
+      \strng{bibnamehash}{e28e91da796985953957fd93e8b98133}
+      \strng{authorbibnamehash}{e28e91da796985953957fd93e8b98133}
+      \strng{authornamehash}{e28e91da796985953957fd93e8b98133}
+      \strng{authorfullhash}{e28e91da796985953957fd93e8b98133}
+      \strng{authorfullhashraw}{e28e91da796985953957fd93e8b98133}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Decentralized Energy Access Solutions (IDEAS) Conference}
+      \field{title}{Solar Plug – Universal Off-Grid Microconverter for Low-Cost Tier-1-4 Energy Access}
+      \field{year}{January, 2025}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1109/IDEAS62193.2025.11157522
+      \endverb
+      \keyw{Energy Access; Decentralized; Off-Grid Solutions; Microinverter; Direct PV inverter; Costs; Density measurement; Simulation; Prototypes; Microinverter}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
