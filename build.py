@@ -51,13 +51,13 @@ BLOG_TAGS = ["food", "travel", "friends", "hobbies", "life"]
 # The project filter bar, in this order. Tags are matched lowercase; anything a
 # project declares that is not listed here still works, it just sorts to the end.
 PROJECT_TAGS = ["converters", "sensors", "control", "uiuc", "gt", "ml/ai",
-                "product"]
+                "product", "patent"]
 
 # Display-only casing. Tags are stored and filtered lowercase; this is purely
 # what the pill reads as, so acronyms do not come out as "uiuc" and "ml/ai".
 TAG_LABELS = {"converters": "Converters", "sensors": "Sensors",
               "control": "Control", "uiuc": "UIUC", "gt": "GT",
-              "ml/ai": "ML/AI", "product": "Product"}
+              "ml/ai": "ML/AI", "product": "Product", "patent": "Patent"}
 
 MATHJAX = (
     '<script>window.MathJax={tex:{inlineMath:[["\\\\(","\\\\)"]],'

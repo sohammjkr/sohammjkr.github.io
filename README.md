@@ -96,7 +96,7 @@ linking to directly.
 ### Filter tags
 
 The project filter bar is fixed, in this order, by `PROJECT_TAGS` in
-`build.py`: **converters, sensors, control, uiuc, gt, ml/ai, product**. Tags are matched
+`build.py`: **converters, sensors, control, uiuc, gt, ml/ai, product, patent**. Tags are matched
 lower-cased; `TAG_LABELS` beside it sets the casing the pill actually reads as,
 so `gt` shows up as **GT**. A tag outside the list still works — it just sorts
 to the end of the bar.

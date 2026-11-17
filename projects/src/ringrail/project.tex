@@ -1,0 +1,44 @@
+\title{RingRail: A Self-Identifying, Self-Synchronizing Ring-Bus Communication Protocol for FPGAs in Medium-Voltage Applications}
+\subtitle{GridTran · Atlanta, GA}
+\period{2026}
+\date{2026-04}
+\order{2}
+\tags{control, patent}
+
+\attach{Slides}{/assets/ringrail_slides.pdf}
+
+\begin{document}
+
+RingRail is the fibre control bus for a modular medium-voltage converter. One
+main FPGA commands a series stack of bridge boards, each with its own FPGA
+floating at a different potential, over optical rings. A board learns its
+address from where it sits in the ring, and every board switches on the same
+edge however far down the ring it is.
+
+\section{How it works}
+
+\begin{itemize}
+  \item \textbf{Two trains per ring.} A slow train carries CRC-checked command
+        frames out and status back. A fast train carries only a timing tick.
+        The slow train says what to do, the fast train says when.
+  \item \textbf{Self-identifying.} A board's index is its position in the ring,
+        picked up from the traffic. There is no address switch, every board of
+        a class runs the same image, and two boards can be swapped without
+        reconfiguring anything.
+  \item \textbf{Self-synchronizing.} Each board delays its trigger by the hops
+        still ahead of the pulse, so all of them fire together, and a local
+        phase-locked loop tracks the main FPGA across crystal offsets and
+        rides over a lost tick.
+  \item \textbf{Fail-safe.} The main FPGA watches its own frames come back
+        around the ring. A broken ring or a lost timebase takes every board to
+        a safe state.
+\end{itemize}
+
+\section{Patent}
+
+D.~Divan, J.~Benzaquen, P.~R.~Nallamatti, S.~Manjrekar and S.~Itum,
+``Self-Identifying, Self-Synchronizing Ring-Bus Communication Protocol for
+FPGAs in Medium-Voltage Applications,'' provisional patent disclosure,
+GridTran, April 2026.
+
+\end{document}

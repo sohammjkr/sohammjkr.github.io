@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RingRail: A Self-Identifying, Self-Synchronizing Ring-Bus Communication Protocol for FPGAs in Medium-Voltage Applications — Soham Manjrekar</title>
+<meta name="description" content="GridTran · Atlanta, GA">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/site.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<body>
+<nav class="site-nav"><ul>
+  <li><a href="../index.html">Home</a></li>
+  <li><a href="../blog/blog.html">Journal</a></li>
+  <li><a href="projects_main.html" class="active">Projects</a></li>
+  <li><a href="../files/SMM_FA26_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+</ul></nav>
+<div class="wrap">
+
+  <header class="masthead">
+    <h1 class="brand"><a href="../index.html"><img class="brand-mark"
+       src="../favicon.svg" alt=""><span>SOHAM MANJREKAR</span></a></h1>
+    <div class="tagline"><a href="projects_main.html"
+       style="color:inherit;text-decoration:none">← All projects</a></div>
+  </header>
+
+  <hr class="rule">
+
+  <main>
+<article class="entry" id="ringrail"
+         data-tags="control,patent">
+  <h2 class="entry-title">RingRail: A Self-Identifying, Self-Synchronizing Ring-Bus Communication Protocol for FPGAs in Medium-Voltage Applications</h2>
+  <div class="entry-sub">GridTran · Atlanta, GA</div>
+  <div class="meta-bar">
+    <span>2026</span><span class="dot">·</span><a class="tag" href="?tag=control" data-tag="control" data-label="Control">Control</a><a class="tag" href="?tag=patent" data-tag="patent" data-label="Patent">Patent</a>
+  </div>
+  
+  <div class="entry-body">
+<p>RingRail is the fibre control bus for a modular medium-voltage converter. One
+main FPGA commands a series stack of bridge boards, each with its own FPGA
+floating at a different potential, over optical rings. A board learns its
+address from where it sits in the ring, and every board switches on the same
+edge however far down the ring it is.</p>
+<h3>How it works</h3>
+<ul>
+<li><strong>Two trains per ring.</strong> A slow train carries CRC-checked command
+frames out and status back. A fast train carries only a timing tick.
+The slow train says what to do, the fast train says when.</li>
+<li><strong>Self-identifying.</strong> A board’s index is its position in the ring,
+picked up from the traffic. There is no address switch, every board of
+a class runs the same image, and two boards can be swapped without
+reconfiguring anything.</li>
+<li><strong>Self-synchronizing.</strong> Each board delays its trigger by the hops
+still ahead of the pulse, so all of them fire together, and a local
+phase-locked loop tracks the main FPGA across crystal offsets and
+rides over a lost tick.</li>
+<li><strong>Fail-safe.</strong> The main FPGA watches its own frames come back
+around the ring. A broken ring or a lost timebase takes every board to
+a safe state.</li>
+</ul>
+<h3>Patent</h3>
+<p>D. Divan, J. Benzaquen, P. R. Nallamatti, S. Manjrekar and S. Itum,
+“Self-Identifying, Self-Synchronizing Ring-Bus Communication Protocol for
+FPGAs in Medium-Voltage Applications,” provisional patent disclosure,
+GridTran, April 2026.</p>
+<section class="attachments" id="documents">
+  <h3 class="attachments-head">Documents</h3>
+<figure class="doc-embed">
+  <figcaption class="doc-head">
+    <a class="btn primary" href="../assets/ringrail_slides.pdf" target="_blank" rel="noopener noreferrer">Open PDF ↗</a>
+  </figcaption>
+  <iframe class="pdf-frame" src="../assets/ringrail_slides.pdf#view=FitH" title="Slides" loading="lazy"></iframe>
+</figure>
+</section>
+  </div>
+</article>
+  </main>
+
+  <hr class="rule">
+  <p class="center"><a class="btn" href="projects_main.html">Back to all projects</a></p>
+
+<footer class="site-footer">
+  <div>© <span class="year">2026</span> Soham Manjrekar</div>
+</footer>
+</div>
+</body>
+</html>
